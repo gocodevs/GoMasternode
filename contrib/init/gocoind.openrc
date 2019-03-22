@@ -5,21 +5,21 @@
 if [ -d "/var/lib/gocoin/.gocoin" ]; then
 	BITCOIND_DEFAULT_DATADIR="/var/lib/gocoin/.gocoin"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/blocknoded"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/gocoind"
 fi
 
 BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/gocoin/gocoin.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/blocknoded}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/blocknoded.pid}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/gocoind}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/gocoind.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
 BITCOIND_USER=${BITCOIND_USER:-gocoin}
 BITCOIND_GROUP=${BITCOIND_GROUP:-gocoin}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/blocknoded}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/gocoind}
 
 name="Gocoin Core Daemon"
 description="Gocoin crypto-currency p2p network daemon"
 
-command="/usr/bin/blocknoded"
+command="/usr/bin/gocoind"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run blocknoded."
+		eerror "ERROR: You must set a secure rpcpassword to run gocoind."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "

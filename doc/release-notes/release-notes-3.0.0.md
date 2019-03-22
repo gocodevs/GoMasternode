@@ -19,7 +19,7 @@ Users updating from a previous version after the 13th of October will require a 
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Gocoin-Qt (on Mac) or blocknoded/gocoin-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Gocoin-Qt (on Mac) or gocoind/gocoin-qt (on Linux).
 
 Compatibility
 ==============
@@ -43,53 +43,53 @@ frequently tested on them.
 Notable Changes
 ===============
 
-Zerocoin (zBND) Protocol
+Zerocoin (zGOC) Protocol
 ---------------------
 
-At long last, the zBND release is here and the zerocoin protocol has been fully implemented! This allows users to send transactions with 100% fungible coins and absolutely zero history or link-ability to their previous owners.
+At long last, the zGOC release is here and the zerocoin protocol has been fully implemented! This allows users to send transactions with 100% fungible coins and absolutely zero history or link-ability to their previous owners.
 
-The Zerocoin protocol allows user to convert (mint) their *GOC* to zerocoins, which we call *zBND*. When zBND are converted back to GOC there is no trail associated with the coins being sent, such as who originally minted those coins. Essentially the only thing the receiver of the zBND transaction will see is that it came from the zerocoin protocol.
+The Zerocoin protocol allows user to convert (mint) their *GOC* to zerocoins, which we call *zGOC*. When zGOC are converted back to GOC there is no trail associated with the coins being sent, such as who originally minted those coins. Essentially the only thing the receiver of the zGOC transaction will see is that it came from the zerocoin protocol.
 
-### zBND Denominations
-zBND comes in specific denominations of 1, 5, 10, 50, 100, 500, 1000, and 5000. A denomination is a similar concept to paper currency, where you can hold a $100 bill but there is no available $99 bill for you to hold.
+### zGOC Denominations
+zGOC comes in specific denominations of 1, 5, 10, 50, 100, 500, 1000, and 5000. A denomination is a similar concept to paper currency, where you can hold a $100 bill but there is no available $99 bill for you to hold.
 
-Other implementations of the zerocoin protocol only allow for spending of one denomination/zerocoin at a time. The Gocoin implementation of zerocoin allows users to spend any amount of zBND they would like (with certain limitations). If a user held two denominations of 5 and they send 7.75 to a merchant, the wallet will automatically grab the two denominations of 5 and then issue 2.25 GOC in change to the spender. There is currently a limit of up to 6 individual zerocoin `coins` that can be combined into a spend, where each `coin` could be a different or similar denomination
+Other implementations of the zerocoin protocol only allow for spending of one denomination/zerocoin at a time. The Gocoin implementation of zerocoin allows users to spend any amount of zGOC they would like (with certain limitations). If a user held two denominations of 5 and they send 7.75 to a merchant, the wallet will automatically grab the two denominations of 5 and then issue 2.25 GOC in change to the spender. There is currently a limit of up to 6 individual zerocoin `coins` that can be combined into a spend, where each `coin` could be a different or similar denomination
 
 The Gocoin zerocoin implementation is structured in such a way that denominations aren't needed to be known by the average user.
 
 ### Fees
-zBnd transactions require more computation and disk space than typical Gocoin transactions, and as such require a higher transaction fee in order to prevent network spam. Fees are only charged when minting zBnd, each minted denomination is charged a flat rate of 0.01 Goc. zBnd spends are not charged a transaction fee unless the change is minted into zBnd, see the *Minting Change* section for details on fees for zBnd spends with minted change.
+zGoc transactions require more computation and disk space than typical Gocoin transactions, and as such require a higher transaction fee in order to prevent network spam. Fees are only charged when minting zGoc, each minted denomination is charged a flat rate of 0.01 Goc. zGoc spends are not charged a transaction fee unless the change is minted into zGoc, see the *Minting Change* section for details on fees for zGoc spends with minted change.
 
-### Converting GOC to zBND (*zBND Mint*)
-**GUI** - Conversion from GOC to zBND can be done using the `Privacy Dialog` in the QT wallet. Enter the amount of GOC you would like to convert and click `Mint Zerocoin`.
+### Converting GOC to zGOC (*zGOC Mint*)
+**GUI** - Conversion from GOC to zGOC can be done using the `Privacy Dialog` in the QT wallet. Enter the amount of GOC you would like to convert and click `Mint Zerocoin`.
 
-**RPC** - Conversion from GOC to zBND can be done using the `mintzerocoin` command.
+**RPC** - Conversion from GOC to zGOC can be done using the `mintzerocoin` command.
 
-**Automint** - The Gocoin wallet is set to convert 10% of the wallets available GOC to zBND automatically. This can be adjusted in the GUI within the Options dialog, which allows the preferred % to be adjusted as well as the ability to set the preferred zBND denomination that will be minted. Automint is set to be triggered when additional blocks are added to the block chain and is programmed *not* to convert your coins all at once.
+**Automint** - The Gocoin wallet is set to convert 10% of the wallets available GOC to zGOC automatically. This can be adjusted in the GUI within the Options dialog, which allows the preferred % to be adjusted as well as the ability to set the preferred zGOC denomination that will be minted. Automint is set to be triggered when additional blocks are added to the block chain and is programmed *not* to convert your coins all at once.
 
 Automint can be disabled by adding `enablezeromint=0` to the wallet configuration file. The preferred mint % and denomination can also be set by the configuration file using `zeromintpercentage=<n>` and `preferredDenom=<n>`.
 
-### Converting zBND to GOC (*zBND Spend*)
-Redeeming zBND is done by converting it back to GOC. With the 3.0.0 software release, users are not able to send zBND to each other directly in an atomic fashion.
+### Converting zGOC to GOC (*zGOC Spend*)
+Redeeming zGOC is done by converting it back to GOC. With the 3.0.0 software release, users are not able to send zGOC to each other directly in an atomic fashion.
 
-**GUI** - Conversion from zBND to GOC can be done using the `Privacy Dialog` in the QT wallet. Enter a Gocoin address that you would like to Pay To, enter the amount of GOC the receiver should be sent, click `Spend Zerocoin`.
+**GUI** - Conversion from zGOC to GOC can be done using the `Privacy Dialog` in the QT wallet. Enter a Gocoin address that you would like to Pay To, enter the amount of GOC the receiver should be sent, click `Spend Zerocoin`.
 
-**RPC** - Conversion from zBND to GOC can be done using the `spendzerocoin` command.
+**RPC** - Conversion from zGOC to GOC can be done using the `spendzerocoin` command.
 
 ### Advanced Use & Privacy Considerations
-**Security Level** - When spending zBND, a user is prompted to enter a *Security Level* choosing from 1-100. In an indirect way, the Security Level parameter allows the user to choose how many coins to obfuscate their transaction with.
+**Security Level** - When spending zGOC, a user is prompted to enter a *Security Level* choosing from 1-100. In an indirect way, the Security Level parameter allows the user to choose how many coins to obfuscate their transaction with.
 
 A Security Level of 1 for example would take all of the minted coins in the blockchain before your mint was added to the blockchain, and would then add any coins that were minted within the next 10 blocks as well. A Security Level of 2 would do the same thing, except add the next 20 blocks worth of mints. A **Security Level of 100 will add the maximum amount of mints** up to the current end of the blockchain.
 
 The higher the Security Level, the more computation and time it will take to spend. Although it takes longer, a level of 100 is recommended for transactions that need maximum anonymity.
 
 
-**Minting Change** - The Gocoin implementation of the zerocoin protocol also allows the spender to choose how to receive their leftover change from a Spend transaction. For maximum anonymity it is recommended that the spender choose to receive the change in zBND, which prevents situations where change from a zBND spend that is redeemed in GOC is accidentally mixed with the rest of the users GOC, thus linking transactions back to a Gocoin address.
+**Minting Change** - The Gocoin implementation of the zerocoin protocol also allows the spender to choose how to receive their leftover change from a Spend transaction. For maximum anonymity it is recommended that the spender choose to receive the change in zGOC, which prevents situations where change from a zGOC spend that is redeemed in GOC is accidentally mixed with the rest of the users GOC, thus linking transactions back to a Gocoin address.
 
-Since the lowest denomination of zBND is 1, and a fee is required to mint zBND, in most situations a high fee will be paid to mint change. The fee is the remainder of the change that cannot be converted back to zBND. For example this would mean a spending a denomination of 10 that yields change of 6.75 in change, would issue zBND denominations of 5 and 1 back to the sender with the remaining 0.75 that is unmintable being contributed as a fee.
+Since the lowest denomination of zGOC is 1, and a fee is required to mint zGOC, in most situations a high fee will be paid to mint change. The fee is the remainder of the change that cannot be converted back to zGOC. For example this would mean a spending a denomination of 10 that yields change of 6.75 in change, would issue zGOC denominations of 5 and 1 back to the sender with the remaining 0.75 that is unmintable being contributed as a fee.
 
-**zBND Control**
-Similar to the concept of Coin Control in the QT wallet, zBND Control allows users to select exactly which zBND mints they would like to spend. This gives a flexibility to choose which denominations can be picked for a spend that wouldn't otherwise be available.
+**zGOC Control**
+Similar to the concept of Coin Control in the QT wallet, zGOC Control allows users to select exactly which zGOC mints they would like to spend. This gives a flexibility to choose which denominations can be picked for a spend that wouldn't otherwise be available.
 
 
 Tor Service Integration Improvements
@@ -110,7 +110,7 @@ the code changes and accompanying discussion, both the pull request and
 git merge commit are mentioned.
 
 ### Broad Features
-- #264 `15e84e5` zBND is here! (Fuzzbawls Mrs-X Presstab Spock Gocoin)
+- #264 `15e84e5` zGOC is here! (Fuzzbawls Mrs-X Presstab Spock Gocoin)
 
 ### P2P Protocol and Network Code
 - #242 `0ecd77f` [P2P] Improve TOR service connectivity (Fuzzbawls)

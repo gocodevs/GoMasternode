@@ -176,8 +176,8 @@
         <translation>确认钱包加密</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取BNDs。</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取GOCs。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -1515,7 +1515,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     </context>
 <context>
     <name>gocoin-core</name>

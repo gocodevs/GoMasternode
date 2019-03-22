@@ -80,7 +80,7 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += blocknoded
+  bin_PROGRAMS += gocoind
 endif
 
 if BUILD_BITCOIN_UTILS
@@ -196,7 +196,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between blocknoded and gocoin-qt
+# server: shared between gocoind and gocoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -242,7 +242,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between blocknoded and gocoin-qt, but only linked
+# wallet: shared between gocoind and gocoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -337,7 +337,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between blocknoded, and gocoin-qt and non-server tools
+# common: shared between gocoind, and gocoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -409,16 +409,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# blocknoded binary #
-blocknoded_SOURCES = blocknoded.cpp
-blocknoded_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-blocknoded_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-blocknoded_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# gocoind binary #
+gocoind_SOURCES = gocoind.cpp
+gocoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+gocoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+gocoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-blocknoded_SOURCES += blocknoded-res.rc
+gocoind_SOURCES += gocoind-res.rc
 endif
-blocknoded_LDADD = \
+gocoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -431,38 +431,38 @@ blocknoded_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-blocknoded_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+gocoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # gocoin-cli binary #
-blocknode_cli_SOURCES = gocoin-cli.cpp
-blocknode_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-blocknode_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-blocknode_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+gocoin_cli_SOURCES = gocoin-cli.cpp
+gocoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+gocoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+gocoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-blocknode_cli_SOURCES += gocoin-cli-res.rc
+gocoin_cli_SOURCES += gocoin-cli-res.rc
 endif
 
-blocknode_cli_LDADD = \
+gocoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-blocknode_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+gocoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # gocoin-tx binary #
-blocknode_tx_SOURCES = gocoin-tx.cpp
-blocknode_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-blocknode_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-blocknode_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+gocoin_tx_SOURCES = gocoin-tx.cpp
+gocoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+gocoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+gocoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-blocknode_tx_SOURCES += gocoin-tx-res.rc
+gocoin_tx_SOURCES += gocoin-tx-res.rc
 endif
 
-blocknode_tx_LDADD = \
+gocoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -470,7 +470,7 @@ blocknode_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-blocknode_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+gocoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

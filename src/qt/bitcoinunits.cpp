@@ -21,8 +21,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(GOC);
-    unitlist.append(mBND);
-    unitlist.append(uBND);
+    unitlist.append(mGOC);
+    unitlist.append(uGOC);
     return unitlist;
 }
 
@@ -30,8 +30,8 @@ bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
     case GOC:
-    case mBND:
-    case uBND:
+    case mGOC:
+    case uGOC:
         return true;
     default:
         return false;
@@ -43,10 +43,10 @@ QString BitcoinUnits::id(int unit)
     switch (unit) {
     case GOC:
         return QString("gocoin");
-    case mBND:
-        return QString("mblocknode");
-    case uBND:
-        return QString::fromUtf8("ublocknode");
+    case mGOC:
+        return QString("mgocoin");
+    case uGOC:
+        return QString::fromUtf8("ugocoin");
     default:
         return QString("???");
     }
@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
         switch (unit) {
         case GOC:
             return QString("GOC");
-        case mBND:
-            return QString("mBND");
-        case uBND:
+        case mGOC:
+            return QString("mGOC");
+        case uGOC:
             return QString::fromUtf8("μGOC");
         default:
             return QString("???");
@@ -68,11 +68,11 @@ QString BitcoinUnits::name(int unit)
     } else {
         switch (unit) {
         case GOC:
-            return QString("tBND");
-        case mBND:
-            return QString("mtBND");
-        case uBND:
-            return QString::fromUtf8("μtBND");
+            return QString("tGOC");
+        case mGOC:
+            return QString("mtGOC");
+        case uGOC:
+            return QString::fromUtf8("μtGOC");
         default:
             return QString("???");
         }
@@ -85,9 +85,9 @@ QString BitcoinUnits::description(int unit)
         switch (unit) {
         case GOC:
             return QString("GOC");
-        case mBND:
+        case mGOC:
             return QString("Milli-GOC (1 / 1" THIN_SP_UTF8 "000)");
-        case uBND:
+        case uGOC:
             return QString("Micro-GOC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -95,11 +95,11 @@ QString BitcoinUnits::description(int unit)
     } else {
         switch (unit) {
         case GOC:
-            return QString("TestBNDs");
-        case mBND:
-            return QString("Milli-TestBND (1 / 1" THIN_SP_UTF8 "000)");
-        case uBND:
-            return QString("Micro-TestBND (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("TestGOCs");
+        case mGOC:
+            return QString("Milli-TestGOC (1 / 1" THIN_SP_UTF8 "000)");
+        case uGOC:
+            return QString("Micro-TestGOC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -111,9 +111,9 @@ qint64 BitcoinUnits::factor(int unit)
     switch (unit) {
     case GOC:
         return COIN;
-    case mBND:
+    case mGOC:
         return COIN / 1000;
-    case uBND:
+    case uGOC:
         return COIN / 1000000;
     default:
         return COIN;
@@ -125,9 +125,9 @@ int BitcoinUnits::decimals(int unit)
     switch (unit) {
     case GOC:
         return 6;
-    case mBND:
+    case mGOC:
         return 3;
-    case uBND:
+    case uGOC:
         return 0;
     default:
         return 0;

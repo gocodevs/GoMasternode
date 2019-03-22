@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -546,7 +546,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Privacy Actions for zBND</source>
+        <source>Privacy Actions for zGOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2419,12 +2419,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</source>
     </message>
     <message>
         <location line="-133"/>
-        <source>Percentage of incoming GOC which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming GOC which get automatically converted to zGOC via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted zBND</source>
+        <source>Percentage of autominted zGOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2435,7 +2435,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</source>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint zBND Denomination</source>
+        <source>Preferred Automint zGOC Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2711,12 +2711,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</source>
     </message>
     <message>
         <location line="+35"/>
-        <source>zBND:</source>
+        <source>zGOC:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Current percentage of zBND.
+        <source>Current percentage of zGOC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2729,7 +2729,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="-46"/>
         <location line="+13"/>
-        <source>Locked GOC or Masternode collaterals. These are excluded from zBND minting.</source>
+        <source>Locked GOC or Masternode collaterals. These are excluded from zGOC minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2749,7 +2749,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="+7"/>
         <location line="+10"/>
-        <source>Unlocked BNDs. These can be used for zBND minting.</source>
+        <source>Unlocked GOCs. These can be used for zGOC minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2766,7 +2766,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+14"/>
         <location line="+104"/>
         <source>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zBND are spendable.</source>
+These zGOC are spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2777,7 +2777,7 @@ These zBND are spendable.</source>
     <message>
         <location line="+23"/>
         <location line="+35"/>
-        <source>All available zBND, unconfirmed and immature zBND included.</source>
+        <source>All available zGOC, unconfirmed and immature zGOC included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2807,7 +2807,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <location line="+93"/>
-        <source>Current percentage of zBND.
+        <source>Current percentage of zGOC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
         <translation type="unfinished"></translation>
@@ -2978,7 +2978,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+6"/>
-        <source>Zerocoin GOC (zBND)</source>
+        <source>Zerocoin GOC (zGOC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2994,7 +2994,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="+52"/>
         <location line="+46"/>
-        <source>Enter an amount of Goc to convert to zBnd</source>
+        <source>Enter an amount of Goc to convert to zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3014,7 +3014,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="-349"/>
         <location line="+629"/>
-        <source>zBND</source>
+        <source>zGOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3074,12 +3074,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+45"/>
-        <source>zBnd Control</source>
+        <source>zGoc Control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>zBnd Selected:</source>
+        <source>zGoc Selected:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3104,7 +3104,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+7"/>
-        <source>Available (mature and spendable) zBND for spending</source>
+        <source>Available (mature and spendable) zGOC for spending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3114,15 +3114,15 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+16"/>
-        <source>Available (mature and spendable) zBND for spending
+        <source>Available (mature and spendable) zGOC for spending
 
-zBND are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+zGOC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+417"/>
-        <source>0 zBND</source>
+        <source>0 zGOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3213,7 +3213,7 @@ zBND are mature when they have more than 20 confirmations AND more than 2 mints 
     <message>
         <location line="+62"/>
         <location line="+38"/>
-        <source>Total Balance including unconfirmed and immature zBND</source>
+        <source>Total Balance including unconfirmed and immature zGOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3424,13 +3424,13 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
     <message>
         <location line="+45"/>
         <location line="+3"/>
-        <source>zBND is currently disabled due to maintenance.</source>
+        <source>zGOC is currently disabled due to maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+50"/>
         <location line="+113"/>
-        <source>zBND is currently undergoing maintenance.</source>
+        <source>zGOC is currently undergoing maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3455,7 +3455,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
     </message>
     <message>
         <location line="+0"/>
-        <source> zBND in </source>
+        <source> zGOC in </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3567,7 +3567,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+15"/>
-        <source>zBnd Spend #: </source>
+        <source>zGoc Spend #: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3597,7 +3597,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+3"/>
-        <source>zBnd Mint</source>
+        <source>zGoc Mint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4521,12 +4521,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+772"/>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uBNDs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGOCs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uBNDs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGOCs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5538,27 +5538,27 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted Goc to zBnd</source>
+        <source>Converted Goc to zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Spent zBnd</source>
+        <source>Spent zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Received Goc from zBnd</source>
+        <source>Received Goc from zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Minted Change as zBnd from zBnd Spend</source>
+        <source>Minted Change as zGoc from zGoc Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted zBnd to Goc</source>
+        <source>Converted zGoc to Goc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5568,7 +5568,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+22"/>
-        <source>zBnd Accumulator</source>
+        <source>zGoc Accumulator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5707,7 +5707,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Received Goc from zBnd</source>
+        <source>Received Goc from zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5722,7 +5722,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Zerocoin Spend, Change in zBnd</source>
+        <source>Zerocoin Spend, Change in zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5932,10 +5932,10 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
-        <location filename="../forms/zbndcontroldialog.ui" line="+20"/>
-        <source>Select zBnd to Spend</source>
+        <location filename="../forms/zgoccontroldialog.ui" line="+20"/>
+        <source>Select zGoc to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5951,7 +5951,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-7"/>
-        <source>zBnd</source>
+        <source>zGoc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5968,7 +5968,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
 <context>
     <name>gocoin-core</name>
     <message>
-        <location filename="../blocknodestrings.cpp" line="+15"/>
+        <location filename="../gocoinstrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -6199,10 +6199,10 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+4"/>
-        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -6846,7 +6846,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Gocoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+2"/>
-        <source>Enable automatic wallet backups triggered after each zBnd minting (0-1, default: %u)</source>
+        <source>Enable automatic wallet backups triggered after each zGoc minting (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

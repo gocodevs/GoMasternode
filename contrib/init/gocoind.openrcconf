@@ -1,25 +1,25 @@
-# /etc/conf.d/blocknoded: config file for /etc/init.d/blocknoded
+# /etc/conf.d/gocoind: config file for /etc/init.d/gocoind
 
 # Config file location
 #BITCOIND_CONFIGFILE="/etc/gocoin/gocoin.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/blocknoded"
+#BITCOIND_PIDDIR="/var/run/gocoind"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/blocknoded.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/gocoind.pid"
 
-# Where to write blocknoded data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/blocknoded"
+# Where to write gocoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/gocoind"
 
-# User and group to own blocknoded process
+# User and group to own gocoind process
 #BITCOIND_USER="gocoin"
 #BITCOIND_GROUP="gocoin"
 
-# Path to blocknoded executable
-#BITCOIND_BIN="/usr/bin/blocknoded"
+# Path to gocoind executable
+#BITCOIND_BIN="/usr/bin/gocoind"
 
-# Nice value to run blocknoded under
+# Nice value to run gocoind under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

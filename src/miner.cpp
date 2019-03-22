@@ -34,7 +34,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// BlocknodeMiner
+// GocoinMiner
 //
 
 //
@@ -217,8 +217,8 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                     nTotalIn = tx.GetZerocoinSpent();
 
                     //Give a high priority to zerocoinspends to get into the next block
-                    //Priority = (age^6+100000)*amount - gives higher priority to zbnds that have been in mempool long
-                    //and higher priority to zbnds that are large in value
+                    //Priority = (age^6+100000)*amount - gives higher priority to zgocs that have been in mempool long
+                    //and higher priority to zgocs that are large in value
                     int64_t nTimeSeen = GetAdjustedTime();
                     double nConfs = 100000;
 
@@ -232,7 +232,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
                     double nTimePriority = std::pow(GetAdjustedTime() - nTimeSeen, 6);
 
-                    // zBND spends can have very large priority, use non-overflowing safe functions
+                    // zGOC spends can have very large priority, use non-overflowing safe functions
                     dPriority = double_safe_addition(dPriority, (nTimePriority * nConfs));
                     dPriority = double_safe_multiplication(dPriority, nTotalIn);
 
@@ -280,7 +280,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
                 int nConf = nHeight - coins->nHeight;
 
-                // zBND spends can have very large priority, use non-overflowing safe functions
+                // zGOC spends can have very large priority, use non-overflowing safe functions
                 dPriority = double_safe_addition(dPriority, ((double)nValueIn * nConf));
 
             }
@@ -353,7 +353,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             if (!view.HaveInputs(tx))
                 continue;
 
-            // double check that there are no double spent zBnd spends in this block or tx
+            // double check that there are no double spent zGoc spends in this block or tx
             if (tx.IsZerocoinSpend()) {
                 int nHeightTx = 0;
                 if (IsTransactionInChain(tx.GetHash(), nHeightTx))
@@ -374,7 +374,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                         vTxSerials.emplace_back(spend.getCoinSerialNumber());
                     }
                 }
-                //This zBnd serial has already been included in the block, do not add this tx.
+                //This zGoc serial has already been included in the block, do not add this tx.
                 if (fDoubleSerial)
                     continue;
             }
@@ -519,7 +519,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("BlocknodeMiner : generated block is stale");
+            return error("GocoinMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -537,7 +537,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     // Process this block the same as if we had received it from another node
     CValidationState state;
     if (!ProcessNewBlock(state, NULL, pblock))
-        return error("BlocknodeMiner : ProcessNewBlock, block not accepted");
+        return error("GocoinMiner : ProcessNewBlock, block not accepted");
 
     for (CNode* node : vNodes) {
         node->PushInventory(CInv(MSG_BLOCK, pblock->GetHash()));
@@ -554,7 +554,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
     bool fTUDebug = false;
     if (fTUDebug) printf("fProofOfStake = %d\n", fProofOfStake);
-    LogPrintf("BlocknodeMiner started with fProofOfStake=%d\n", fProofOfStake);
+    LogPrintf("GocoinMiner started with fProofOfStake=%d\n", fProofOfStake);
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("gocoin-miner");
 
@@ -649,7 +649,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             continue;
         }
 
-        LogPrintf("Running BlocknodeMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running GocoinMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
             ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //

@@ -59,8 +59,8 @@ public:
      */
     enum Unit {
         GOC,
-        mBND,
-        uBND
+        mGOC,
+        uGOC
     };
 
     enum SeparatorStyle {

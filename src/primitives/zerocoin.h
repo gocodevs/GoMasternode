@@ -2,8 +2,8 @@
 // Copyright (c) 2018 The Gocoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BLOCKNODE_ZEROCOIN_H
-#define BLOCKNODE_ZEROCOIN_H
+#ifndef GOCOIN_ZEROCOIN_H
+#define GOCOIN_ZEROCOIN_H
 
 #include <amount.h>
 #include <limits.h>
@@ -190,4 +190,4 @@ public:
     int GetNeededSpends();
 };
 
-#endif //BLOCKNODE_ZEROCOIN_H
+#endif //GOCOIN_ZEROCOIN_H

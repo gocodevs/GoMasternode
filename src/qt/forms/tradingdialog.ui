@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BNDSupply">
+    <widget class="QLabel" name="GOCSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="BNDDemand">
+    <widget class="QLabel" name="GOCDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyBND">
+    <widget class="QPushButton" name="BuyGOC">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1707,7 +1707,7 @@
       <string>GOC</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputBND">
+    <widget class="QLineEdit" name="UnitsInputGOC">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellBNDBTN">
+    <widget class="QPushButton" name="SellGOCBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1782,7 +1782,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="BNDAvailableLabel">
+       <widget class="QLabel" name="GOCAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelBND">
+       <widget class="QLabel" name="labelGOC">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BNDBalanceLabel">
+    <widget class="QLabel" name="GOCBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BNDAvailableLabel_2">
+    <widget class="QLabel" name="GOCAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2835,7 +2835,7 @@
       <string>GOC Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BNDPendingLabel">
+    <widget class="QLabel" name="GOCPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -3155,7 +3155,7 @@
        <string notr="true">border: 1px solid #61696c;margin-left:4px;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnConvertBlocknode">
+     <widget class="QPushButton" name="btnConvertGocoin">
       <property name="geometry">
        <rect>
         <x>260</x>

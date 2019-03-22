@@ -172,8 +172,8 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella BNDien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella GOCien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -181,7 +181,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki BNDisi&lt;/b&gt;</translation>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki GOCisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -2534,7 +2534,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>

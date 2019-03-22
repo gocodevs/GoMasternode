@@ -7,13 +7,13 @@ User=gocoin
 Group=gocoin
 
 Type=forking
-PIDFile=/var/lib/blocknoded/blocknoded.pid
+PIDFile=/var/lib/gocoind/gocoind.pid
 
-ExecStart=/usr/bin/blocknoded -daemon -pid=/var/lib/blocknoded/blocknoded.pid \
-          -conf=/etc/gocoin/gocoin.conf -datadir=/var/lib/blocknoded
+ExecStart=/usr/bin/gocoind -daemon -pid=/var/lib/gocoind/gocoind.pid \
+          -conf=/etc/gocoin/gocoin.conf -datadir=/var/lib/gocoind
 
 ExecStop=-/usr/bin/gocoin-cli -conf=/etc/gocoin/gocoin.conf \
-         -datadir=/var/lib/blocknoded stop
+         -datadir=/var/lib/gocoind stop
 
 Restart=always
 PrivateTmp=true

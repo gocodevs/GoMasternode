@@ -1723,7 +1723,7 @@ Optional Packages:
                           specify protoc bin path
   --with-utils            build gocoin-cli gocoin-tx (default=yes)
   --with-libs             build libraries (default=yes)
-  --with-daemon           build blocknoded daemon (default=yes)
+  --with-daemon           build gocoind daemon (default=yes)
   --with-incompatible-bdb allow using a bdb version other than 4.8
   --with-gui[=no|qt4|qt5|auto]
                           build gocoin-qt GUI (default=auto, qt5 tried
@@ -2981,7 +2981,7 @@ ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
 
-BITCOIN_DAEMON_NAME=blocknoded
+BITCOIN_DAEMON_NAME=gocoind
 BITCOIN_GUI_NAME=gocoin-qt
 BITCOIN_CLI_NAME=gocoin-cli
 BITCOIN_TX_NAME=gocoin-tx
@@ -29890,8 +29890,8 @@ $as_echo "$as_me: WARNING: PROTOC not found; gocoin-qt frontend will not be buil
 
 
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build blocknoded" >&5
-$as_echo_n "checking whether to build blocknoded... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build gocoind" >&5
+$as_echo_n "checking whether to build gocoind... " >&6; }
  if test x$build_bitcoind = xyes; then
   BUILD_BITCOIND_TRUE=
   BUILD_BITCOIND_FALSE='#'
@@ -30087,8 +30087,8 @@ $as_echo "no" >&6; }
 $as_echo "$as_me: WARNING: \"xgettext is required to update qt translations\"" >&2;}
   fi
 
-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_blocknode-qt" >&5
-$as_echo_n "checking whether to build test_blocknode-qt... " >&6; }
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_gocoin-qt" >&5
+$as_echo_n "checking whether to build test_gocoin-qt... " >&6; }
   if test x$use_tests$bitcoin_enable_qt_test = xyesyes; then
     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
@@ -30108,8 +30108,8 @@ else
 fi
 
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_blocknode" >&5
-$as_echo_n "checking whether to build test_blocknode... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_gocoin" >&5
+$as_echo_n "checking whether to build test_gocoin... " >&6; }
 if test x$use_tests = xyes; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }

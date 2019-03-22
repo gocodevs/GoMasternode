@@ -66,17 +66,17 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "  \"testnet\": true|false,      (boolean) if the server is using testnet or not\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
 
-            "  \"zBNDsupply\" :\n"
+            "  \"zGOCsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zBND denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zBND denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zBND denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zBND denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zBND denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zBND denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zBND denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zBND denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zBND denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zGOC denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zGOC denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zGOC denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zGOC denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zGOC denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zGOC denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zGOC denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zGOC denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zGOC denominations\n"
             "  }\n"
 
             "  \"keypoololdest\": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
@@ -124,12 +124,12 @@ UniValue getinfo(const UniValue& params, bool fHelp)
 
     obj.push_back(Pair("moneysupply",ValueFromAmount(chainActive.Tip()->nMoneySupply)));
 
-    UniValue zbndObj(UniValue::VOBJ);
+    UniValue zgocObj(UniValue::VOBJ);
     for (auto denom : libzerocoin::zerocoinDenomList) {
-        zbndObj.push_back(Pair(to_string(denom), ValueFromAmount(chainActive.Tip()->mapZerocoinSupply.at(denom) * (denom*COIN))));
+        zgocObj.push_back(Pair(to_string(denom), ValueFromAmount(chainActive.Tip()->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
-    zbndObj.push_back(Pair("total", ValueFromAmount(chainActive.Tip()->GetZerocoinSupply())));
-    obj.push_back(Pair("zBNDsupply", zbndObj));
+    zgocObj.push_back(Pair("total", ValueFromAmount(chainActive.Tip()->GetZerocoinSupply())));
+    obj.push_back(Pair("zGOCsupply", zgocObj));
 
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
@@ -315,14 +315,14 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress \"blocknodeaddress\"\n"
+            "validateaddress \"gocoinaddress\"\n"
             "\nReturn information about the given gocoin address.\n"
             "\nArguments:\n"
-            "1. \"blocknodeaddress\"     (string, required) The gocoin address to validate\n"
+            "1. \"gocoinaddress\"     (string, required) The gocoin address to validate\n"
             "\nResult:\n"
             "{\n"
             "  \"isvalid\" : true|false,         (boolean) If the address is valid or not. If not, this is the only property returned.\n"
-            "  \"address\" : \"blocknodeaddress\", (string) The gocoin address validated\n"
+            "  \"address\" : \"gocoinaddress\", (string) The gocoin address validated\n"
             "  \"ismine\" : true|false,          (boolean) If the address is yours or not\n"
             "  \"isscript\" : true|false,        (boolean) If the key is a script\n"
             "  \"pubkey\" : \"publickeyhex\",    (string) The hex value of the raw public key\n"
@@ -466,10 +466,10 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage \"blocknodeaddress\" \"signature\" \"message\"\n"
+            "verifymessage \"gocoinaddress\" \"signature\" \"message\"\n"
             "\nVerify a signed message\n"
             "\nArguments:\n"
-            "1. \"blocknodeaddress\"  (string, required) The gocoin address to use for the signature.\n"
+            "1. \"gocoinaddress\"  (string, required) The gocoin address to use for the signature.\n"
             "2. \"signature\"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage).\n"
             "3. \"message\"         (string, required) The message that was signed.\n"
             "\nResult:\n"

@@ -1435,7 +1435,7 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
         // should have some additional amount for them
         nLowestDenom += OBFUSCATION_COLLATERAL * 4;
 
-    CAmount nBalanceNeedsAnonymized = nAnonymizeBlocknodeAmount * COIN - pwalletMain->GetAnonymizedBalance();
+    CAmount nBalanceNeedsAnonymized = nAnonymizeGocoinAmount * COIN - pwalletMain->GetAnonymizedBalance();
 
     // if balanceNeedsAnonymized is more than pool max, take the pool max
     if (nBalanceNeedsAnonymized > OBFUSCATION_POOL_MAX) nBalanceNeedsAnonymized = OBFUSCATION_POOL_MAX;
@@ -1918,10 +1918,10 @@ void CObfuscationPool::GetDenominationsToString(int nDenom, std::string& strDeno
 {
     // Function returns as follows:
     //
-    // bit 0 - 100BND+1 ( bit on if present )
-    // bit 1 - 10BND+1
-    // bit 2 - 1BND+1
-    // bit 3 - .1BND+1
+    // bit 0 - 100GOC+1 ( bit on if present )
+    // bit 1 - 10GOC+1
+    // bit 2 - 1GOC+1
+    // bit 3 - .1GOC+1
     // bit 3 - non-denom
 
 
@@ -1991,10 +1991,10 @@ int CObfuscationPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSi
 
     // Function returns as follows:
     //
-    // bit 0 - 100BND+1 ( bit on if present )
-    // bit 1 - 10BND+1
-    // bit 2 - 1BND+1
-    // bit 3 - .1BND+1
+    // bit 0 - 100GOC+1 ( bit on if present )
+    // bit 1 - 10GOC+1
+    // bit 2 - 1GOC+1
+    // bit 3 - .1GOC+1
 
     return denom;
 }

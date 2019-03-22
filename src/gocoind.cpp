@@ -82,7 +82,7 @@ bool AppInit(int argc, char* argv[])
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  blocknoded [options]                     " + _("Start Gocoin Core Daemon") + "\n";
+                        "  gocoind [options]                     " + _("Start Gocoin Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -122,7 +122,7 @@ bool AppInit(int argc, char* argv[])
                 fCommandLine = true;
 
         if (fCommandLine) {
-            fprintf(stderr, "Error: There is no RPC client functionality in blocknoded anymore. Use the gocoin-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in gocoind anymore. Use the gocoin-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
@@ -173,7 +173,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect blocknoded signal handlers
+    // Connect gocoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

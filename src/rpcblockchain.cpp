@@ -118,12 +118,12 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
     result.push_back(Pair("moneysupply",ValueFromAmount(blockindex->nMoneySupply)));
 
 /*
-    UniValue zbndObj(UniValue::VOBJ);
+    UniValue zgocObj(UniValue::VOBJ);
     for (auto denom : libzerocoin::zerocoinDenomList) {
-        zbndObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
+        zgocObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
-    zbndObj.push_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
-    result.push_back(Pair("zBNDsupply", zbndObj));
+    zgocObj.push_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
+    result.push_back(Pair("zGOCsupply", zgocObj));
 */
     return result;
 }
@@ -308,17 +308,17 @@ UniValue getblock(const UniValue& params, bool fHelp)
             "  \"previousblockhash\" : \"hash\",  (string) The hash of the previous block\n"
             "  \"nextblockhash\" : \"hash\"       (string) The hash of the next block\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zBNDsupply\" :\n"
+            "  \"zGOCsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zBND denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zBND denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zBND denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zBND denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zBND denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zBND denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zBND denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zBND denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zBND denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zGOC denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zGOC denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zGOC denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zGOC denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zGOC denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zGOC denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zGOC denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zGOC denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zGOC denominations\n"
             "  }\n"
             "}\n"
             "\nResult (for verbose=false):\n"
@@ -459,7 +459,7 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
             "     \"addresses\" : [          (array of string) array of gocoin addresses\n"
-            "     \"blocknodeaddress\"   	 	(string) gocoin address\n"
+            "     \"gocoinaddress\"   	 	(string) gocoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"

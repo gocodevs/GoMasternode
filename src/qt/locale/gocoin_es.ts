@@ -176,8 +176,8 @@
         <translation>Confirme el cifrado del monedero</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus BNDs no sean robados mediante malware de su ordenador.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus GOCs no sean robados mediante malware de su ordenador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -618,8 +618,8 @@
         <translation>&amp;Privacidad</translation>
     </message>
     <message>
-        <source>Privacy Action for zBND and Obfuscation</source>
-        <translation>Privacidad con zBND y Ofuscación</translation>
+        <source>Privacy Action for zGOC and Obfuscation</source>
+        <translation>Privacidad con zGOC y Ofuscación</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1696,12 +1696,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Mapear un puerto utilizando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming GOC which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</source>
-        <translation>Porcentaje de BNDs entrantes que serán automáticamente convertidos a zBND a través del Protocolo Zerocoin (mín: 10%)</translation>
+        <source>Percentage of incoming GOC which get automatically converted to zGOC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Porcentaje de GOCs entrantes que serán automáticamente convertidos a zGOC a través del Protocolo Zerocoin (mín: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zBND</source>
-        <translation>Porcentaje de zBND autogenerados</translation>
+        <source>Percentage of autominted zGOC</source>
+        <translation>Porcentaje de zGOC autogenerados</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough GOC for this denomination is available</source>
@@ -2785,12 +2785,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Tiempo de confirmación:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uBNDs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uBNDs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uBNDs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uGOCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uGOCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uGOCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uBNDs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uBNDs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uBNDs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uGOCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uGOCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uGOCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -3809,7 +3809,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -4006,10 +4006,10 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Este producto incluye software desarrollado por el Proyecto OpenSSL para uso en OpenSSL Toolkit &lt;https://www.openssl.org/&gt; y software de cifrado escrito por Eric Young y software de UPnP escrito por Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4017,7 +4017,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Gocoin Alert" admin@foo.com
 </source>
-        <translation>Para usar blocknoded, o la opción -server de gocoin-qt, debes definir un rpcpassword en el archivo de configuración:
+        <translation>Para usar gocoind, o la opción -server de gocoin-qt, debes definir un rpcpassword en el archivo de configuración:
 %s
 Es recomendado que uses la siguiente contraseña aleatoria:
 rpcuser=gocoin

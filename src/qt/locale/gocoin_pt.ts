@@ -176,8 +176,8 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas BNDs contra roubo por malware infectando seu computador.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas GOCs contra roubo por malware infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -903,7 +903,7 @@
     </message>
     </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     </context>
 <context>
     <name>gocoin-core</name>

@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 #
-# Use the raw transactions API to spend BNDs received on particular addresses,
+# Use the raw transactions API to spend GOCs received on particular addresses,
 # and send any change back to that same address.
 #
 # Example usage:
 #  spendfrom.py  # Lists available funds
 #  spendfrom.py --from=ADDRESS --to=ADDRESS --amount=11.00
 #
-# Assumes it will talk to a blocknoded or gocoin-Qt running
+# Assumes it will talk to a gocoind or gocoin-Qt running
 # on localhost.
 #
 # Depends on jsonrpc
@@ -72,7 +72,7 @@ def connect_JSON(config):
     try:
         result = ServiceProxy(connect)
         # ServiceProxy is lazy-connect, so send an RPC command mostly to catch connection errors,
-        # but also make sure the blocknoded we're talking to is/isn't testnet:
+        # but also make sure the gocoind we're talking to is/isn't testnet:
         if result.getmininginfo()['testnet'] != testnet:
             sys.stderr.write("RPC server at "+connect+" testnet setting mismatch\n")
             sys.exit(1)
@@ -81,32 +81,32 @@ def connect_JSON(config):
         sys.stderr.write("Error connecting to RPC server at "+connect+"\n")
         sys.exit(1)
 
-def unlock_wallet(blocknoded):
-    info = blocknoded.getinfo()
+def unlock_wallet(gocoind):
+    info = gocoind.getinfo()
     if 'unlocked_until' not in info:
         return True # wallet is not encrypted
     t = int(info['unlocked_until'])
     if t <= time.time():
         try:
             passphrase = getpass.getpass("Wallet is locked; enter passphrase: ")
-            blocknoded.walletpassphrase(passphrase, 5)
+            gocoind.walletpassphrase(passphrase, 5)
         except:
             sys.stderr.write("Wrong passphrase\n")
 
-    info = blocknoded.getinfo()
+    info = gocoind.getinfo()
     return int(info['unlocked_until']) > time.time()
 
-def list_available(blocknoded):
+def list_available(gocoind):
     address_summary = dict()
 
     address_to_account = dict()
-    for info in blocknoded.listreceivedbyaddress(0):
+    for info in gocoind.listreceivedbyaddress(0):
         address_to_account[info["address"]] = info["account"]
 
-    unspent = blocknoded.listunspent(0)
+    unspent = gocoind.listunspent(0)
     for output in unspent:
         # listunspent doesn't give addresses, so:
-        rawtx = blocknoded.getrawtransaction(output['txid'], 1)
+        rawtx = gocoind.getrawtransaction(output['txid'], 1)
         vout = rawtx["vout"][output['vout']]
         pk = vout["scriptPubKey"]
 
@@ -139,8 +139,8 @@ def select_coins(needed, inputs):
         n += 1
     return (outputs, have-needed)
 
-def create_tx(blocknoded, fromaddresses, toaddress, amount, fee):
-    all_coins = list_available(blocknoded)
+def create_tx(gocoind, fromaddresses, toaddress, amount, fee):
+    all_coins = list_available(gocoind)
 
     total_available = Decimal("0.0")
     needed = amount+fee
@@ -159,7 +159,7 @@ def create_tx(blocknoded, fromaddresses, toaddress, amount, fee):
     # Note:
     # Python's json/jsonrpc modules have inconsistent support for Decimal numbers.
     # Instead of wrestling with getting json.dumps() (used by jsonrpc) to encode
-    # Decimals, I'm casting amounts to float before sending them to blocknoded.
+    # Decimals, I'm casting amounts to float before sending them to gocoind.
     #
     outputs = { toaddress : float(amount) }
     (inputs, change_amount) = select_coins(needed, potential_inputs)
@@ -170,8 +170,8 @@ def create_tx(blocknoded, fromaddresses, toaddress, amount, fee):
         else:
             outputs[change_address] = float(change_amount)
 
-    rawtx = blocknoded.createrawtransaction(inputs, outputs)
-    signed_rawtx = blocknoded.signrawtransaction(rawtx)
+    rawtx = gocoind.createrawtransaction(inputs, outputs)
+    signed_rawtx = gocoind.signrawtransaction(rawtx)
     if not signed_rawtx["complete"]:
         sys.stderr.write("signrawtransaction failed\n")
         sys.exit(1)
@@ -179,10 +179,10 @@ def create_tx(blocknoded, fromaddresses, toaddress, amount, fee):
 
     return txdata
 
-def compute_amount_in(blocknoded, txinfo):
+def compute_amount_in(gocoind, txinfo):
     result = Decimal("0.0")
     for vin in txinfo['vin']:
-        in_info = blocknoded.getrawtransaction(vin['txid'], 1)
+        in_info = gocoind.getrawtransaction(vin['txid'], 1)
         vout = in_info['vout'][vin['vout']]
         result = result + vout['value']
     return result
@@ -193,12 +193,12 @@ def compute_amount_out(txinfo):
         result = result + vout['value']
     return result
 
-def sanity_test_fee(blocknoded, txdata_hex, max_fee):
+def sanity_test_fee(gocoind, txdata_hex, max_fee):
     class FeeError(RuntimeError):
         pass
     try:
-        txinfo = blocknoded.decoderawtransaction(txdata_hex)
-        total_in = compute_amount_in(blocknoded, txinfo)
+        txinfo = gocoind.decoderawtransaction(txdata_hex)
+        total_in = compute_amount_in(gocoind, txinfo)
         total_out = compute_amount_out(txinfo)
         if total_in-total_out > max_fee:
             raise FeeError("Rejecting transaction, unreasonable fee of "+str(total_in-total_out))
@@ -221,9 +221,9 @@ def main():
 
     parser = optparse.OptionParser(usage="%prog [options]")
     parser.add_option("--from", dest="fromaddresses", default=None,
-                      help="addresses to get BNDs from")
+                      help="addresses to get GOCs from")
     parser.add_option("--to", dest="to", default=None,
-                      help="address to get send BNDs to")
+                      help="address to get send GOCs to")
     parser.add_option("--amount", dest="amount", default=None,
                       help="amount to send")
     parser.add_option("--fee", dest="fee", default="0.0",
@@ -240,10 +240,10 @@ def main():
     check_json_precision()
     config = read_bitcoin_config(options.datadir)
     if options.testnet: config['testnet'] = True
-    blocknoded = connect_JSON(config)
+    gocoind = connect_JSON(config)
 
     if options.amount is None:
-        address_summary = list_available(blocknoded)
+        address_summary = list_available(gocoind)
         for address,info in address_summary.iteritems():
             n_transactions = len(info['outputs'])
             if n_transactions > 1:
@@ -253,14 +253,14 @@ def main():
     else:
         fee = Decimal(options.fee)
         amount = Decimal(options.amount)
-        while unlock_wallet(blocknoded) == False:
+        while unlock_wallet(gocoind) == False:
             pass # Keep asking for passphrase until they get it right
-        txdata = create_tx(blocknoded, options.fromaddresses.split(","), options.to, amount, fee)
-        sanity_test_fee(blocknoded, txdata, amount*Decimal("0.01"))
+        txdata = create_tx(gocoind, options.fromaddresses.split(","), options.to, amount, fee)
+        sanity_test_fee(gocoind, txdata, amount*Decimal("0.01"))
         if options.dry_run:
             print(txdata)
         else:
-            txid = blocknoded.sendrawtransaction(txdata)
+            txid = gocoind.sendrawtransaction(txdata)
             print(txid)
 
 if __name__ == '__main__':

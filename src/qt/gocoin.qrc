@@ -40,12 +40,12 @@
         <file alias="tx_input">res/icons/tx_input.png</file>
         <file alias="tx_output">res/icons/tx_output.png</file>
         <file alias="tx_inout">res/icons/tx_inout.png</file>
-        <file alias="unit_blocknode">res/icons/unit_blocknode.png</file>
-        <file alias="unit_mblocknode">res/icons/unit_mblocknode.png</file>
-        <file alias="unit_ublocknode">res/icons/unit_ublocknode.png</file>
-        <file alias="unit_tblocknode">res/icons/unit_tblocknode.png</file>
-        <file alias="unit_tmblocknode">res/icons/unit_tmblocknode.png</file>
-        <file alias="unit_tublocknode">res/icons/unit_tublocknode.png</file>
+        <file alias="unit_gocoin">res/icons/unit_gocoin.png</file>
+        <file alias="unit_mgocoin">res/icons/unit_mgocoin.png</file>
+        <file alias="unit_ugocoin">res/icons/unit_ugocoin.png</file>
+        <file alias="unit_tgocoin">res/icons/unit_tgocoin.png</file>
+        <file alias="unit_tmgocoin">res/icons/unit_tmgocoin.png</file>
+        <file alias="unit_tugocoin">res/icons/unit_tugocoin.png</file>
         <file alias="lock_closed">res/icons/lock_closed.png</file>
         <file alias="lock_open">res/icons/lock_open.png</file>
         <file alias="key">res/icons/key.png</file>
@@ -65,7 +65,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="blocknode_logo_horizontal">res/images/blocknode_logo_horizontal.png</file>
+        <file alias="gocoin_logo_horizontal">res/images/gocoin_logo_horizontal.png</file>
         <file alias="downArrow">res/images/downArrow_dark.png</file>
         <file alias="downArrow_small">res/images/downArrow_small_dark.png</file>
         <file alias="downArrow_small_white">res/images/downArrow_small.png</file>

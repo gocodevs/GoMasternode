@@ -477,7 +477,7 @@ SOURCES += src/activemasternode.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/obfuscationconfig.cpp \
            src/qt/gocoin.cpp \
-           src/qt/blocknodestrings.cpp \
+           src/qt/gocoinstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -555,7 +555,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_blocknode.cpp \
+           src/test/test_gocoin.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -646,21 +646,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/gocoin.qrc src/qt/blocknode_locale.qrc
+RESOURCES += src/qt/gocoin.qrc src/qt/gocoin_locale.qrc
 
-TRANSLATIONS += src/qt/locale/blocknode_bg.ts \
-                src/qt/locale/blocknode_de.ts \
-                src/qt/locale/blocknode_en.ts \
-                src/qt/locale/blocknode_es.ts \
-                src/qt/locale/blocknode_fi.ts \
-                src/qt/locale/blocknode_fr.ts \
-                src/qt/locale/blocknode_it.ts \
-                src/qt/locale/blocknode_ja.ts \
-                src/qt/locale/blocknode_pl.ts \
-                src/qt/locale/blocknode_pt.ts \
-                src/qt/locale/blocknode_ru.ts \
-                src/qt/locale/blocknode_sk.ts \
-                src/qt/locale/blocknode_sv.ts \
-                src/qt/locale/blocknode_vi.ts \
-                src/qt/locale/blocknode_zh_CN.ts \
-                src/qt/locale/blocknode_zh_TW.ts
+TRANSLATIONS += src/qt/locale/gocoin_bg.ts \
+                src/qt/locale/gocoin_de.ts \
+                src/qt/locale/gocoin_en.ts \
+                src/qt/locale/gocoin_es.ts \
+                src/qt/locale/gocoin_fi.ts \
+                src/qt/locale/gocoin_fr.ts \
+                src/qt/locale/gocoin_it.ts \
+                src/qt/locale/gocoin_ja.ts \
+                src/qt/locale/gocoin_pl.ts \
+                src/qt/locale/gocoin_pt.ts \
+                src/qt/locale/gocoin_ru.ts \
+                src/qt/locale/gocoin_sk.ts \
+                src/qt/locale/gocoin_sv.ts \
+                src/qt/locale/gocoin_vi.ts \
+                src/qt/locale/gocoin_zh_CN.ts \
+                src/qt/locale/gocoin_zh_TW.ts

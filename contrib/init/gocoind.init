@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  blocknoded The Gocoin core server.
+#  gocoind The Gocoin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: blocknoded
-# processname: blocknoded
+# description: gocoind
+# processname: gocoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/blocknoded, see below
-if [ -f /etc/sysconfig/blocknoded ]; then
-        . /etc/sysconfig/blocknoded
+# you can override defaults in /etc/sysconfig/gocoind, see below
+if [ -f /etc/sysconfig/gocoind ]; then
+        . /etc/sysconfig/gocoind
 fi
 
 RETVAL=0
 
-prog=blocknoded
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/blocknoded
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/blocknoded}
+prog=gocoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/gocoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/gocoind}
 
-# blocknoded defaults to /usr/bin/blocknoded, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/blocknoded}
+# gocoind defaults to /usr/bin/gocoind, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/gocoind}
 
-# blocknoded opts default to -disablewallet, override with BITCOIND_OPTS
+# gocoind opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {

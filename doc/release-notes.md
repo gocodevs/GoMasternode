@@ -18,7 +18,7 @@ Mandatory Update
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Gocoin-Qt (on Mac) or blocknoded/gocoin-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Gocoin-Qt (on Mac) or gocoind/gocoin-qt (on Linux).
 
 Compatibility
 ==============
@@ -50,7 +50,7 @@ overridden with the option `-rpccookiefile`.
 This is similar to Tor's CookieAuthentication: see
 https://www.torproject.org/docs/tor-manual.html.en
 
-This allows running blocknoded without having to do any manual configuration.
+This allows running gocoind without having to do any manual configuration.
 
 
 Autocombine changes

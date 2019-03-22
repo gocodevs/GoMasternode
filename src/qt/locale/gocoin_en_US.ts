@@ -176,8 +176,8 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -2840,12 +2840,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Confirmation time:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -4086,10 +4086,10 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4097,10 +4097,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Gocoin Alert" admin@foo.com
 </source>
-        <translation>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <translation>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

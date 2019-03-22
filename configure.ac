@@ -12,7 +12,7 @@ AC_CONFIG_HEADERS([src/config/gocoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=blocknoded
+BITCOIN_DAEMON_NAME=gocoind
 BITCOIN_GUI_NAME=gocoin-qt
 BITCOIN_CLI_NAME=gocoin-cli
 BITCOIN_TX_NAME=gocoin-tx
@@ -25,9 +25,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BND_CONFIG_H])
-AH_TOP([#define BND_CONFIG_H])
-AH_BOTTOM([#endif //BND_CONFIG_H])
+AH_TOP([#ifndef GOC_CONFIG_H])
+AH_TOP([#define GOC_CONFIG_H])
+AH_BOTTOM([#endif //GOC_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -254,7 +254,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build blocknoded daemon (default=yes)])],
+  [build gocoind daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
@@ -961,7 +961,7 @@ LIBS="$LIBS_TEMP"
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build blocknoded])
+AC_MSG_CHECKING([whether to build gocoind])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
@@ -1065,7 +1065,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_blocknode-qt])
+  AC_MSG_CHECKING([whether to build test_gocoin-qt])
   if test x$use_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="test"
@@ -1076,7 +1076,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_blocknode])
+AC_MSG_CHECKING([whether to build test_gocoin])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="test"

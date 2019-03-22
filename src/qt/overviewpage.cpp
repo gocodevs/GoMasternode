@@ -165,7 +165,7 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sBNDPercentage, QString& szBNDPercentage)
+void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sGOCPercentage, QString& szGOCPercentage)
 {
     int nPrecision = 2;
     double dzPercentage = 0.0;
@@ -184,8 +184,8 @@ void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBala
 
     double dPercentage = 100.0 - dzPercentage;
     
-    szBNDPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
-    sBNDPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
+    szGOCPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
+    sGOCPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
     
 }
 
@@ -211,21 +211,21 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     }
     // GOC Balance
     CAmount nTotalBalance = balance + unconfirmedBalance;
-    CAmount bndAvailableBalance = balance - immatureBalance - nLockedBalance;
+    CAmount gocAvailableBalance = balance - immatureBalance - nLockedBalance;
     CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance + watchImmatureBalance;    
     CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
-    // zBND Balance
+    // zGOC Balance
     CAmount matureZerocoinBalance = zerocoinBalance - immatureZerocoinBalance;
     // Percentages
     QString szPercentage = "";
     QString sPercentage = "";
     getPercentage(nUnlockedBalance, zerocoinBalance, sPercentage, szPercentage);
     // Combined balances
-    CAmount availableTotalBalance = bndAvailableBalance + matureZerocoinBalance;
+    CAmount availableTotalBalance = gocAvailableBalance + matureZerocoinBalance;
     CAmount sumTotalBalance = nTotalBalance + zerocoinBalance;
 
     // GOC labels
-    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, bndAvailableBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, gocAvailableBalance, false, BitcoinUnits::separatorAlways));
     ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
     ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelLockedBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nLockedBalance, false, BitcoinUnits::separatorAlways));
@@ -239,7 +239,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalWatchBalance, false, BitcoinUnits::separatorAlways));
 
 /*
-    // zBND labels
+    // zGOC labels
     ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
     ui->labelzBalanceUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedZerocoinBalance, false, BitcoinUnits::separatorAlways));
     ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
@@ -250,11 +250,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelTotalz->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, sumTotalBalance, false, BitcoinUnits::separatorAlways));
 
     // Percentage labels
-    ui->labelBNDPercent->setText(sPercentage);
-    ui->labelzBNDPercent->setText(szPercentage);
+    ui->labelGOCPercent->setText(sPercentage);
+    ui->labelzGOCPercent->setText(szPercentage);
 
     // Adjust bubble-help according to AutoMint settings
-    QString automintHelp = tr("Current percentage of zBND.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
+    QString automintHelp = tr("Current percentage of zGOC.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
     bool fEnableZeromint = GetBoolArg("-enablezeromint", true);
     int nZeromintPercentage = GetArg("-zeromintpercentage", 10);
     if (fEnableZeromint) {
@@ -272,40 +272,40 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     bool showSumAvailable = settingShowAllBalances || sumTotalBalance != availableTotalBalance;
     // ui->labelBalanceTextz->setVisible(showSumAvailable);
     // ui->labelBalancez->setVisible(showSumAvailable);
-    bool showBNDAvailable = settingShowAllBalances || bndAvailableBalance != nTotalBalance;
-    bool showWatchOnlyBNDAvailable = watchOnlyBalance != nTotalWatchBalance;
-    bool showBNDPending = settingShowAllBalances || unconfirmedBalance != 0;
-    bool showWatchOnlyBNDPending = watchUnconfBalance != 0;
-    bool showBNDLocked = settingShowAllBalances || nLockedBalance != 0;
-    bool showWatchOnlyBNDLocked = nWatchOnlyLockedBalance != 0;
+    bool showGOCAvailable = settingShowAllBalances || gocAvailableBalance != nTotalBalance;
+    bool showWatchOnlyGOCAvailable = watchOnlyBalance != nTotalWatchBalance;
+    bool showGOCPending = settingShowAllBalances || unconfirmedBalance != 0;
+    bool showWatchOnlyGOCPending = watchUnconfBalance != 0;
+    bool showGOCLocked = settingShowAllBalances || nLockedBalance != 0;
+    bool showWatchOnlyGOCLocked = nWatchOnlyLockedBalance != 0;
     bool showImmature = settingShowAllBalances || immatureBalance != 0;
     bool showWatchOnlyImmature = watchImmatureBalance != 0;
     bool showWatchOnly = nTotalWatchBalance != 0;
-    ui->labelBalance->setVisible(showBNDAvailable || showWatchOnlyBNDAvailable);
-    ui->labelBalanceText->setVisible(showBNDAvailable || showWatchOnlyBNDAvailable);
-    ui->labelWatchAvailable->setVisible(showBNDAvailable && showWatchOnly);
-    ui->labelUnconfirmed->setVisible(showBNDPending || showWatchOnlyBNDPending);
-    ui->labelPendingText->setVisible(showBNDPending || showWatchOnlyBNDPending);
-    ui->labelWatchPending->setVisible(showBNDPending && showWatchOnly);
-    ui->labelLockedBalance->setVisible(showBNDLocked || showWatchOnlyBNDLocked);
-    ui->labelLockedBalanceText->setVisible(showBNDLocked || showWatchOnlyBNDLocked);
-    ui->labelWatchLocked->setVisible(showBNDLocked && showWatchOnly);
+    ui->labelBalance->setVisible(showGOCAvailable || showWatchOnlyGOCAvailable);
+    ui->labelBalanceText->setVisible(showGOCAvailable || showWatchOnlyGOCAvailable);
+    ui->labelWatchAvailable->setVisible(showGOCAvailable && showWatchOnly);
+    ui->labelUnconfirmed->setVisible(showGOCPending || showWatchOnlyGOCPending);
+    ui->labelPendingText->setVisible(showGOCPending || showWatchOnlyGOCPending);
+    ui->labelWatchPending->setVisible(showGOCPending && showWatchOnly);
+    ui->labelLockedBalance->setVisible(showGOCLocked || showWatchOnlyGOCLocked);
+    ui->labelLockedBalanceText->setVisible(showGOCLocked || showWatchOnlyGOCLocked);
+    ui->labelWatchLocked->setVisible(showGOCLocked && showWatchOnly);
     ui->labelImmature->setVisible(showImmature || showWatchOnlyImmature); // for symmetry reasons also show immature label when the watch-only one is shown
     ui->labelImmatureText->setVisible(showImmature || showWatchOnlyImmature);
     ui->labelWatchImmature->setVisible(showImmature && showWatchOnly); // show watch-only immature balance
-    bool showzBNDAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
-    bool showzBNDUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
-    bool showzBNDImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
+    bool showzGOCAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
+    bool showzGOCUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
+    bool showzGOCImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
     /*
-    ui->labelzBalanceMature->setVisible(showzBNDAvailable);
-    ui->labelzBalanceMatureText->setVisible(showzBNDAvailable);
-    ui->labelzBalanceUnconfirmed->setVisible(showzBNDUnconfirmed);
-    ui->labelzBalanceUnconfirmedText->setVisible(showzBNDUnconfirmed);
-    ui->labelzBalanceImmature->setVisible(showzBNDImmature);
-    ui->labelzBalanceImmatureText->setVisible(showzBNDImmature);
+    ui->labelzBalanceMature->setVisible(showzGOCAvailable);
+    ui->labelzBalanceMatureText->setVisible(showzGOCAvailable);
+    ui->labelzBalanceUnconfirmed->setVisible(showzGOCUnconfirmed);
+    ui->labelzBalanceUnconfirmedText->setVisible(showzGOCUnconfirmed);
+    ui->labelzBalanceImmature->setVisible(showzGOCImmature);
+    ui->labelzBalanceImmatureText->setVisible(showzGOCImmature);
     bool showPercentages = ! (zerocoinBalance == 0 && nTotalBalance == 0);
-    ui->labelBNDPercent->setVisible(showPercentages);
-    ui->labelzBNDPercent->setVisible(showPercentages);
+    ui->labelGOCPercent->setVisible(showPercentages);
+    ui->labelzGOCPercent->setVisible(showPercentages);
 */
     static int cachedTxLocks = 0;
 

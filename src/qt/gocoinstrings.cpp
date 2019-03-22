@@ -8,7 +8,7 @@
 #else
 #define UNUSED
 #endif
-static const char UNUSED *blocknode_strings[] = {
+static const char UNUSED *gocoin_strings[] = {
 QT_TRANSLATE_NOOP("gocoin-core", " mints deleted\n"),
 QT_TRANSLATE_NOOP("gocoin-core", " mints updated, "),
 QT_TRANSLATE_NOOP("gocoin-core", " unconfirmed transactions removed\n"),
@@ -58,7 +58,7 @@ QT_TRANSLATE_NOOP("gocoin-core", ""
 QT_TRANSLATE_NOOP("gocoin-core", ""
 "Enable SwiftTX, show confirmations for locked transactions (bool, default: %s)"),
 QT_TRANSLATE_NOOP("gocoin-core", ""
-"Enable automatic wallet backups triggered after each zBnd minting (0-1, "
+"Enable automatic wallet backups triggered after each zGoc minting (0-1, "
 "default: %u)"),
 QT_TRANSLATE_NOOP("gocoin-core", ""
 "Enable spork administration functionality with the appropriate private key."),
@@ -169,11 +169,11 @@ QT_TRANSLATE_NOOP("gocoin-core", ""
 "the OpenSSL Toolkit <https://www.openssl.org/> and cryptographic software "
 "written by Eric Young and UPnP software written by Thomas Bernard."),
 QT_TRANSLATE_NOOP("gocoin-core", ""
-"To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword "
+"To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword "
 "in the configuration file:\n"
 "%s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=blocknoderpc\n"
+"rpcuser=gocoinrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "The username and password MUST NOT be the same.\n"

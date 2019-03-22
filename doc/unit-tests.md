@@ -6,9 +6,9 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with 'make check'.
 
-To run the blocknoded tests manually, launch src/test/test_blocknode .
+To run the gocoind tests manually, launch src/test/test_gocoin .
 
-To add more blocknoded tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more gocoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the test/ directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 

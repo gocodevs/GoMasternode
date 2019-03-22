@@ -176,7 +176,7 @@
         <translation>Bekræft, og tegnebogen krypteres.</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
         <translation>Gocoin vil lukke ned for at færdiggøre kryptograferingsprocesserne. Husk at kryptering alene ikke sikrer mod tyveri af mønterne fra malware eller virus på computeren.</translation>
     </message>
     <message>
@@ -2745,12 +2745,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Bekræftelsestid</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uBNDs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uBND i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uBNDs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGOCs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGOC i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uGOCs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uBNDs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uBND i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uBNDs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGOCs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGOC i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uGOCs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -3726,7 +3726,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
     </message>
     <message>
         <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GOC.</source>
-        <translation>SwiftTX understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1BND.</translation>
+        <translation>SwiftTX understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1GOC.</translation>
     </message>
 </context>
 <context>
@@ -3769,7 +3769,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -3967,10 +3967,10 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Dette produkt anvender software udviklet i OpenSSL projektet til brug i OpenSSL værktøjssættet &lt;https://www.openssl.org/&gt; og kryptosoftware skrevet afEric Young og UPnP software skrevet af Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3978,10 +3978,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Gocoin Alert" admin@foo.com
 </source>
-        <translation>For at bruge blocknoded eller -server muligheden sammen med gocoin-qt skal der angives et rpc kodeord i konfigurationsfilen:
+        <translation>For at bruge gocoind eller -server muligheden sammen med gocoin-qt skal der angives et rpc kodeord i konfigurationsfilen:
 %s
 De anbefales at benytte følgende tilfældige kodeord
-Rpcuser=blocknoderpc
+Rpcuser=gocoinrpc
 rpcpasswrd=%s
 (Det er ikke nødvendigt at huske dette kodeord)
 Brugernavn og kodeord MÅ IKKE VÆRE ENS!

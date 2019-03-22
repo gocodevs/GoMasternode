@@ -176,8 +176,8 @@
         <translation>지갑 암호화 확인</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 BNDs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 GOCs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -2750,12 +2750,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>승인 시간:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uBNDs로 설정되고,&lt;br /&gt;1000 uBNDs 안에는 최소 "킬로바이트당" 250 uBNDs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGOCs로 설정되고,&lt;br /&gt;1000 uGOCs 안에는 최소 "킬로바이트당" 250 uGOCs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uBNDs로 설정되고,&lt;br /&gt;1000 uBNDs 안에는 전체에서 최소 "킬로바이트당" 250 uBNDs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGOCs로 설정되고,&lt;br /&gt;1000 uGOCs 안에는 전체에서 최소 "킬로바이트당" 250 uGOCs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -3779,7 +3779,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -3976,10 +3976,10 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>이 제품은 OpenSSL이 개발한 Open SSL 툴킷 &lt;https://www.openssl.org/&gt; 에서 사용하기 위한 프로젝트 소프트웨어, Eric Young이 개발한 암호화 소프트웨어, Thomas Bernard가 개발한 UPnP 소프트웨어가 포함되어 있습니다.</translation>
     </message>
     <message>
-        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use gocoind, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blocknoderpc
+rpcuser=gocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3987,10 +3987,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Gocoin Alert" admin@foo.com
 </source>
-        <translation>Blocknoded 또는 Gocoin-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
+        <translation>Gocoind 또는 Gocoin-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
 %s
 다음 무작위 암호를 사용하는 것을 추천합니다:
-rpcuser=Blocknodepc
+rpcuser=Gocoinpc
 rpcpassword=%s
 (이 비밀번호는 기억할 필요가 없습니다)
 유저 이름과 비밀번호는 반드시 달라야 합니다.

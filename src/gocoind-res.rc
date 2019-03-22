@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Gocoin"
-            VALUE "FileDescription",    "blocknoded (OSS daemon/client for Gocoin)"
+            VALUE "FileDescription",    "gocoind (OSS daemon/client for Gocoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "blocknoded"
+            VALUE "InternalName",       "gocoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "blocknoded.exe"
-            VALUE "ProductName",        "blocknoded"
+            VALUE "OriginalFilename",   "gocoind.exe"
+            VALUE "ProductName",        "gocoind"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

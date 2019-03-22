@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: blocknoded.service
-Upstart: blocknoded.conf
-OpenRC:  blocknoded.openrc
-         blocknoded.openrcconf
-CentOS:  blocknoded.init
+SystemD: gocoind.service
+Upstart: gocoind.conf
+OpenRC:  gocoind.openrc
+         gocoind.openrcconf
+CentOS:  gocoind.init
 
 have been made available to assist packagers in creating node packages here.
 

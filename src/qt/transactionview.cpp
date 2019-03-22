@@ -100,10 +100,10 @@ TransactionView::TransactionView(QWidget* parent) : QWidget(parent), model(0), t
     typeWidget->addItem(tr("Mined"), TransactionFilterProxy::TYPE(TransactionRecord::Generated));
     typeWidget->addItem(tr("Minted"), TransactionFilterProxy::TYPE(TransactionRecord::StakeMint));
     typeWidget->addItem(tr("Masternode Reward"), TransactionFilterProxy::TYPE(TransactionRecord::MNReward));
-    typeWidget->addItem(tr("Received Goc from zBnd"), TransactionFilterProxy::TYPE(TransactionRecord::RecvFromZerocoinSpend));
+    typeWidget->addItem(tr("Received Goc from zGoc"), TransactionFilterProxy::TYPE(TransactionRecord::RecvFromZerocoinSpend));
     typeWidget->addItem(tr("Zerocoin Mint"), TransactionFilterProxy::TYPE(TransactionRecord::ZerocoinMint));
     typeWidget->addItem(tr("Zerocoin Spend"), TransactionFilterProxy::TYPE(TransactionRecord::ZerocoinSpend));
-    typeWidget->addItem(tr("Zerocoin Spend, Change in zBnd"), TransactionFilterProxy::TYPE(TransactionRecord::ZerocoinSpend_Change_zBnd));
+    typeWidget->addItem(tr("Zerocoin Spend, Change in zGoc"), TransactionFilterProxy::TYPE(TransactionRecord::ZerocoinSpend_Change_zGoc));
     typeWidget->addItem(tr("Zerocoin Spend to Self"), TransactionFilterProxy::TYPE(TransactionRecord::ZerocoinSpend_FromMe));
     typeWidget->addItem(tr("Other"), TransactionFilterProxy::TYPE(TransactionRecord::Other));
     typeWidget->setCurrentIndex(settings.value("transactionType").toInt());

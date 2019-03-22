@@ -1,8 +1,8 @@
 
 Debian
 ====================
-This directory contains files used to package blocknoded/gocoin-qt
-for Debian-based Linux systems. If you compile blocknoded/gocoin-qt yourself, there are some useful files here.
+This directory contains files used to package gocoind/gocoin-qt
+for Debian-based Linux systems. If you compile gocoind/gocoin-qt yourself, there are some useful files here.
 
 ## gocoin: URI support ##
 
@@ -14,8 +14,8 @@ To install:
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your blocknodeqt binary to `/usr/bin`
-and the `../../share/pixmaps/blocknode128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your gocoinqt binary to `/usr/bin`
+and the `../../share/pixmaps/gocoin128.png` to `/usr/share/pixmaps`
 
 gocoin-qt.protocol (KDE)
 

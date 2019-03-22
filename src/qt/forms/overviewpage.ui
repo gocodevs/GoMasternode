@@ -440,7 +440,7 @@
                         </widget>
                        </item>
                        <!-- <item>
-                        <widget class="QLabel" name="labelBNDPercent">
+                        <widget class="QLabel" name="labelGOCPercent">
                          <property name="text">
                           <string notr="true">0 %</string>
                          </property>
@@ -679,7 +679,7 @@
                        <item row="4" column="0">
                         <widget class="QLabel" name="labelLockedBalanceText">
                          <property name="toolTip">
-                          <string>Locked GOC or Masternode collaterals. These are excluded from zBND minting.</string>
+                          <string>Locked GOC or Masternode collaterals. These are excluded from zGOC minting.</string>
                          </property>
                          <property name="text">
                           <string>Locked:</string>
@@ -698,7 +698,7 @@
                           <cursorShape>IBeamCursor</cursorShape>
                          </property>
                          <property name="toolTip">
-                          <string>Locked GOC or Masternode collaterals. These are excluded from zBND minting.</string>
+                          <string>Locked GOC or Masternode collaterals. These are excluded from zGOC minting.</string>
                          </property>
                          <property name="text">
                           <string notr="true">0.000 000 00 GOC</string>
@@ -855,12 +855,12 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string>zBND Balance</string>
+                          <string>zGOC Balance</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="labelzBNDPercent">
+                        <widget class="QLabel" name="labelzGOCPercent">
                          <property name="text">
                           <string notr="true">0 %</string>
                          </property>
@@ -909,7 +909,7 @@
                         <widget class="QLabel" name="labelzBalanceMatureText">
                          <property name="toolTip">
                           <string>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zBND are spendable.</string>
+These zGOC are spendable.</string>
                          </property>
                          <property name="text">
                           <string>Available:</string>
@@ -926,7 +926,7 @@ These zBND are spendable.</string>
                          </property>
                          <property name="toolTip">
                           <string>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zBND are spendable.</string>
+These zGOC are spendable.</string>
                          </property>
                          <property name="text">
                           <string notr="true">0.000 000 00 GOC</string>
@@ -1001,7 +1001,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                        <item row="4" column="0">
                         <widget class="QLabel" name="labelzBalanceText">
                          <property name="toolTip">
-                          <string>Your current zBND balance, unconfirmed and immature zBND included.</string>
+                          <string>Your current zGOC balance, unconfirmed and immature zGOC included.</string>
                          </property>
                          <property name="text">
                           <string>Total:</string>
@@ -1020,7 +1020,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                           <cursorShape>IBeamCursor</cursorShape>
                          </property>
                          <property name="toolTip">
-                          <string>Your current zBND balance, unconfirmed and immature zBND included.</string>
+                          <string>Your current zGOC balance, unconfirmed and immature zGOC included.</string>
                          </property>
                          <property name="text">
                           <string notr="true">0.000 000 00 GOC</string>

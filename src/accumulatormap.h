@@ -2,8 +2,8 @@
 // Copyright (c) 2018 The Gocoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BLOCKNODE_ACCUMULATORMAP_H
-#define BLOCKNODE_ACCUMULATORMAP_H
+#ifndef GOCOIN_ACCUMULATORMAP_H
+#define GOCOIN_ACCUMULATORMAP_H
 
 #include "libzerocoin/Accumulator.h"
 #include "libzerocoin/Coin.h"
@@ -21,4 +21,4 @@ public:
     uint256 GetCheckpoint();
     void Reset();
 };
-#endif //BLOCKNODE_ACCUMULATORMAP_H
+#endif //GOCOIN_ACCUMULATORMAP_H

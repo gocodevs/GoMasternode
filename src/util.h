@@ -39,7 +39,7 @@ extern int nSwiftTXDepth;
 extern int nZeromintPercentage;
 extern const int64_t AUTOMINT_DELAY;
 extern int nPreferredDenom;
-extern int nAnonymizeBlocknodeAmount;
+extern int nAnonymizeGocoinAmount;
 extern int nLiquidityProvider;
 extern bool fEnableZeromint;
 extern int64_t enforceMasternodePaymentsTime;

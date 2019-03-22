@@ -3,20 +3,20 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "zbndcontroldialog.h"
-#include "ui_zbndcontroldialog.h"
+#include "zgoccontroldialog.h"
+#include "ui_zgoccontroldialog.h"
 
 #include "main.h"
 #include "walletmodel.h"
 
 using namespace std;
 
-std::list<std::string> ZBndControlDialog::listSelectedMints;
-std::list<CZerocoinMint> ZBndControlDialog::listMints;
+std::list<std::string> ZGocControlDialog::listSelectedMints;
+std::list<CZerocoinMint> ZGocControlDialog::listMints;
 
-ZBndControlDialog::ZBndControlDialog(QWidget *parent) :
+ZGocControlDialog::ZGocControlDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ZBndControlDialog),
+    ui(new Ui::ZGocControlDialog),
     model(0)
 {
     ui->setupUi(this);
@@ -30,19 +30,19 @@ ZBndControlDialog::ZBndControlDialog(QWidget *parent) :
     connect(ui->pushButtonAll, SIGNAL(clicked()), this, SLOT(ButtonAllClicked()));
 }
 
-ZBndControlDialog::~ZBndControlDialog()
+ZGocControlDialog::~ZGocControlDialog()
 {
     delete ui;
 }
 
-void ZBndControlDialog::setModel(WalletModel *model)
+void ZGocControlDialog::setModel(WalletModel *model)
 {
     this->model = model;
     updateList();
 }
 
 //Update the tree widget
-void ZBndControlDialog::updateList()
+void ZGocControlDialog::updateList()
 {
     // need to prevent the slot from being called each time something is changed
     ui->treeWidget->blockSignals(true);
@@ -134,7 +134,7 @@ void ZBndControlDialog::updateList()
 }
 
 // Update the list when a checkbox is clicked
-void ZBndControlDialog::updateSelection(QTreeWidgetItem* item, int column)
+void ZGocControlDialog::updateSelection(QTreeWidgetItem* item, int column)
 {
     // only want updates from non top level items that are available to spend
     if (item->parent() && column == COLUMN_CHECKBOX && !item->isDisabled()){
@@ -157,7 +157,7 @@ void ZBndControlDialog::updateSelection(QTreeWidgetItem* item, int column)
 }
 
 // Update the Quantity and Amount display
-void ZBndControlDialog::updateLabels()
+void ZGocControlDialog::updateLabels()
 {
     int64_t nAmount = 0;
     for (const CZerocoinMint mint : listMints) {
@@ -167,14 +167,14 @@ void ZBndControlDialog::updateLabels()
     }
 
     //update this dialog's labels
-    ui->labelZBnd_int->setText(QString::number(nAmount));
+    ui->labelZGoc_int->setText(QString::number(nAmount));
     ui->labelQuantity_int->setText(QString::number(listSelectedMints.size()));
 
     //update PrivacyDialog labels
-    privacyDialog->setZBndControlLabels(nAmount, listSelectedMints.size());
+    privacyDialog->setZGocControlLabels(nAmount, listSelectedMints.size());
 }
 
-std::vector<CZerocoinMint> ZBndControlDialog::GetSelectedMints()
+std::vector<CZerocoinMint> ZGocControlDialog::GetSelectedMints()
 {
     std::vector<CZerocoinMint> listReturn;
     for (const CZerocoinMint mint : listMints) {
@@ -187,7 +187,7 @@ std::vector<CZerocoinMint> ZBndControlDialog::GetSelectedMints()
 }
 
 // select or deselect all of the mints
-void ZBndControlDialog::ButtonAllClicked()
+void ZGocControlDialog::ButtonAllClicked()
 {
     ui->treeWidget->blockSignals(true);
     Qt::CheckState state = Qt::Checked;

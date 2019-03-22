@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BLOCKNODE_CSPORKDB_H
-#define BLOCKNODE_CSPORKDB_H
+#ifndef GOCOIN_CSPORKDB_H
+#define GOCOIN_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //BLOCKNODE_CSPORKDB_H
+#endif //GOCOIN_CSPORKDB_H

@@ -2027,7 +2027,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations </translati
     </message>
     </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>

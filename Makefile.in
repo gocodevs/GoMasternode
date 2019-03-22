@@ -559,9 +559,9 @@ OSX_PACKAGING = $(OSX_DEPLOY_SCRIPT) $(OSX_FANCY_PLIST) $(OSX_INSTALLER_ICONS) \
   $(top_srcdir)/contrib/macdeploy/detached-sig-create.sh
 
 COVERAGE_INFO = baseline_filtered_combined.info baseline.info block_test.info \
-  leveldb_baseline.info test_blocknode_filtered.info total_coverage.info \
+  leveldb_baseline.info test_gocoin_filtered.info total_coverage.info \
   baseline_filtered.info block_test_filtered.info \
-  leveldb_baseline_filtered.info test_blocknode_coverage.info test_blocknode.info
+  leveldb_baseline_filtered.info test_gocoin_coverage.info test_gocoin.info
 
 OSX_APP_BUILT = $(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
   $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
@@ -1205,16 +1205,16 @@ $(BITCOIN_CLI_BIN): FORCE
 @USE_LCOV_TRUE@baseline_filtered_combined.info: leveldb_baseline_filtered.info baseline_filtered.info
 @USE_LCOV_TRUE@	$(LCOV) -a leveldb_baseline_filtered.info -a baseline_filtered.info -o $@
 
-@USE_LCOV_TRUE@test_blocknode.info: baseline_filtered_combined.info
+@USE_LCOV_TRUE@test_gocoin.info: baseline_filtered_combined.info
 @USE_LCOV_TRUE@	$(MAKE) -C src/ check
-@USE_LCOV_TRUE@	$(LCOV) -c -d $(abs_builddir)/src -t test_blocknode -o $@
+@USE_LCOV_TRUE@	$(LCOV) -c -d $(abs_builddir)/src -t test_gocoin -o $@
 @USE_LCOV_TRUE@	$(LCOV) -z -d $(abs_builddir)/src
 @USE_LCOV_TRUE@	$(LCOV) -z -d $(abs_builddir)/src/leveldb
 
-@USE_LCOV_TRUE@test_blocknode_filtered.info: test_blocknode.info
+@USE_LCOV_TRUE@test_gocoin_filtered.info: test_gocoin.info
 @USE_LCOV_TRUE@	$(LCOV) -r $< "/usr/include/*" -o $@
 
-@USE_LCOV_TRUE@block_test.info: test_blocknode_filtered.info
+@USE_LCOV_TRUE@block_test.info: test_gocoin_filtered.info
 @USE_LCOV_TRUE@	$(MKDIR_P) qa/tmp
 @USE_LCOV_TRUE@	-@TIMEOUT=15 qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool 0
 @USE_LCOV_TRUE@	$(LCOV) -c -d $(abs_builddir)/src --t BitcoinJBlockTest -o $@
@@ -1224,13 +1224,13 @@ $(BITCOIN_CLI_BIN): FORCE
 @USE_LCOV_TRUE@block_test_filtered.info: block_test.info
 @USE_LCOV_TRUE@	$(LCOV) -r $< "/usr/include/*" -o $@
 
-@USE_LCOV_TRUE@test_blocknode_coverage.info: baseline_filtered_combined.info test_blocknode_filtered.info
-@USE_LCOV_TRUE@	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_blocknode_filtered.info -o $@
+@USE_LCOV_TRUE@test_gocoin_coverage.info: baseline_filtered_combined.info test_gocoin_filtered.info
+@USE_LCOV_TRUE@	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_gocoin_filtered.info -o $@
 
-@USE_LCOV_TRUE@total_coverage.info:  baseline_filtered_combined.info test_blocknode_filtered.info block_test_filtered.info
-@USE_LCOV_TRUE@	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_blocknode_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
+@USE_LCOV_TRUE@total_coverage.info:  baseline_filtered_combined.info test_gocoin_filtered.info block_test_filtered.info
+@USE_LCOV_TRUE@	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_gocoin_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-@USE_LCOV_TRUE@test_blocknode.coverage/.dirstamp:  test_blocknode_coverage.info
+@USE_LCOV_TRUE@test_gocoin.coverage/.dirstamp:  test_gocoin_coverage.info
 @USE_LCOV_TRUE@	$(GENHTML) -s $< -o $(@D)
 @USE_LCOV_TRUE@	@touch $@
 
@@ -1238,12 +1238,12 @@ $(BITCOIN_CLI_BIN): FORCE
 @USE_LCOV_TRUE@	$(GENHTML) -s $< -o $(@D)
 @USE_LCOV_TRUE@	@touch $@
 
-@USE_LCOV_TRUE@cov: test_blocknode.coverage/.dirstamp total.coverage/.dirstamp
+@USE_LCOV_TRUE@cov: test_gocoin.coverage/.dirstamp total.coverage/.dirstamp
 
 .INTERMEDIATE: $(COVERAGE_INFO)
 
 clean-local:
-	rm -rf test_blocknode.coverage/ total.coverage/ $(OSX_APP)
+	rm -rf test_gocoin.coverage/ total.coverage/ $(OSX_APP)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -1,14 +1,14 @@
-Sample init scripts and service configuration for blocknoded
+Sample init scripts and service configuration for gocoind
 ==========================================================
 
 Sample scripts and configuration files for systemd, Upstart and OpenRC
 can be found in the contrib/init folder.
 
-    contrib/init/blocknoded.service:    systemd service unit configuration
-    contrib/init/blocknoded.openrc:     OpenRC compatible SysV style init script
-    contrib/init/blocknoded.openrcconf: OpenRC conf.d file
-    contrib/init/blocknoded.conf:       Upstart service configuration file
-    contrib/init/blocknoded.init:       CentOS compatible SysV style init script
+    contrib/init/gocoind.service:    systemd service unit configuration
+    contrib/init/gocoind.openrc:     OpenRC compatible SysV style init script
+    contrib/init/gocoind.openrcconf: OpenRC conf.d file
+    contrib/init/gocoind.conf:       Upstart service configuration file
+    contrib/init/gocoind.init:       CentOS compatible SysV style init script
 
 1. Service User
 ---------------------------------
@@ -19,17 +19,17 @@ and group.  They must be created before attempting to use these scripts.
 2. Configuration
 ---------------------------------
 
-At a bare minimum, blocknoded requires that the rpcpassword setting be set
+At a bare minimum, gocoind requires that the rpcpassword setting be set
 when running as a daemon.  If the configuration file does not exist or this
-setting is not set, blocknoded will shutdown promptly after startup.
+setting is not set, gocoind will shutdown promptly after startup.
 
 This password does not have to be remembered or typed as it is mostly used
-as a fixed token that blocknoded and client programs read from the configuration
+as a fixed token that gocoind and client programs read from the configuration
 file, however it is recommended that a strong and secure password be used
 as this password is security critical to securing the wallet should the
 wallet be enabled.
 
-If blocknoded is run with "-daemon" flag, and no rpcpassword is set, it will
+If gocoind is run with "-daemon" flag, and no rpcpassword is set, it will
 print a randomly generated suitable password to stderr.  You can also
 generate one from the shell yourself like this:
 
@@ -45,16 +45,16 @@ see contrib/debian/examples/gocoin.conf.
 
 All three configurations assume several paths that might need to be adjusted.
 
-Binary:              /usr/bin/blocknoded
+Binary:              /usr/bin/gocoind
 Configuration file:  /etc/gocoin/gocoin.conf
-Data directory:      /var/lib/blocknoded
-PID file:            /var/run/blocknoded/blocknoded.pid (OpenRC and Upstart)
-                     /var/lib/blocknoded/blocknoded.pid (systemd)
+Data directory:      /var/lib/gocoind
+PID file:            /var/run/gocoind/gocoind.pid (OpenRC and Upstart)
+                     /var/lib/gocoind/gocoind.pid (systemd)
 
 The configuration file, PID directory (if applicable) and data directory
 should all be owned by the gocoin user and group.  It is advised for security
 reasons to make the configuration file and data directory only readable by the
-gocoin user and group.  Access to gocoin-cli and other blocknoded rpc clients
+gocoin user and group.  Access to gocoin-cli and other gocoind rpc clients
 can then be controlled by group membership.
 
 4. Installing Service Configuration
@@ -66,19 +66,19 @@ Installing this .service file consists on just copying it to
 /usr/lib/systemd/system directory, followed by the command
 "systemctl daemon-reload" in order to update running systemd configuration.
 
-To test, run "systemctl start blocknoded" and to enable for system startup run
-"systemctl enable blocknoded"
+To test, run "systemctl start gocoind" and to enable for system startup run
+"systemctl enable gocoind"
 
 4b) OpenRC
 
-Rename blocknoded.openrc to blocknoded and drop it in /etc/init.d.  Double
+Rename gocoind.openrc to gocoind and drop it in /etc/init.d.  Double
 check ownership and permissions and make it executable.  Test it with
-"/etc/init.d/blocknoded start" and configure it to run on startup with
-"rc-update add blocknoded"
+"/etc/init.d/gocoind start" and configure it to run on startup with
+"rc-update add gocoind"
 
 4c) Upstart (for Debian/Ubuntu based distributions)
 
-Drop blocknoded.conf in /etc/init.  Test by running "service blocknoded start"
+Drop gocoind.conf in /etc/init.  Test by running "service gocoind start"
 it will automatically start on reboot.
 
 NOTE: This script is incompatible with CentOS 5 and Amazon Linux 2014 as they
@@ -86,11 +86,11 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 
 4d) CentOS
 
-Copy blocknoded.init to /etc/init.d/blocknoded. Test by running "service blocknoded start".
+Copy gocoind.init to /etc/init.d/gocoind. Test by running "service gocoind start".
 
-Using this script, you can adjust the path and flags to the blocknoded program by
-setting the BlocknodeD and FLAGS environment variables in the file
-/etc/sysconfig/blocknoded. You can also use the DAEMONOPTS environment variable here.
+Using this script, you can adjust the path and flags to the gocoind program by
+setting the GocoinD and FLAGS environment variables in the file
+/etc/sysconfig/gocoind. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn
 -----------------------------------

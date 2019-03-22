@@ -183,7 +183,7 @@
     </message>
     </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     </context>
 <context>
     <name>gocoin-core</name>

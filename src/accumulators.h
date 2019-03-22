@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BLOCKNODE_ACCUMULATORS_H
-#define BLOCKNODE_ACCUMULATORS_H
+#ifndef GOCOIN_ACCUMULATORS_H
+#define GOCOIN_ACCUMULATORS_H
 
 #include "libzerocoin/Accumulator.h"
 #include "libzerocoin/Coin.h"
@@ -27,4 +27,4 @@ uint32_t GetChecksum(const CBigNum &bnValue);
 bool InvalidCheckpointRange(int nHeight);
 bool ValidateAccumulatorCheckpoint(const CBlock& block, CBlockIndex* pindex, AccumulatorMap& mapAccumulators);
 
-#endif //BLOCKNODE_ACCUMULATORS_H
+#endif //GOCOIN_ACCUMULATORS_H

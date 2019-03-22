@@ -369,11 +369,11 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-maxorphantx=<n>", strprintf(_("Keep at most <n> unconnectable transactions in memory (default: %u)"), DEFAULT_MAX_ORPHAN_TRANSACTIONS));
     strUsage += HelpMessageOpt("-par=<n>", strprintf(_("Set the number of script verification threads (%u to %d, 0 = auto, <0 = leave that many cores free, default: %d)"), -(int)boost::thread::hardware_concurrency(), MAX_SCRIPTCHECK_THREADS, DEFAULT_SCRIPTCHECK_THREADS));
 #ifndef WIN32
-    strUsage += HelpMessageOpt("-pid=<file>", strprintf(_("Specify pid file (default: %s)"), "blocknoded.pid"));
+    strUsage += HelpMessageOpt("-pid=<file>", strprintf(_("Specify pid file (default: %s)"), "gocoind.pid"));
 #endif
     strUsage += HelpMessageOpt("-reindex", _("Rebuild block chain index from current blk000??.dat files") + " " + _("on startup"));
     strUsage += HelpMessageOpt("-reindexaccumulators", _("Reindex the accumulator database") + " " + _("on startup"));
-    strUsage += HelpMessageOpt("-reindexmoneysupply", _("Reindex the GOC and zBND money supply statistics") + " " + _("on startup"));
+    strUsage += HelpMessageOpt("-reindexmoneysupply", _("Reindex the GOC and zGOC money supply statistics") + " " + _("on startup"));
     strUsage += HelpMessageOpt("-resync", _("Delete blockchain folders and resync from scratch") + " " + _("on startup"));
 #if !defined(WIN32)
     strUsage += HelpMessageOpt("-sysperms", _("Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)"));
@@ -525,9 +525,9 @@ std::string HelpMessage(HelpMessageMode mode)
     // strUsage += HelpMessageOpt("-enablezeromint=<n>", strprintf(_("Enable automatic Zerocoin minting (0-1, default: %u)"), 0));
     // strUsage += HelpMessageOpt("-zeromintpercentage=<n>", strprintf(_("Percentage of automatically minted Zerocoin  (1-100, default: %u)"), 0));
     // strUsage += HelpMessageOpt("-preferredDenom=<n>", strprintf(_("Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)"), 0));
-    // strUsage += HelpMessageOpt("-backupzbnd=<n>", strprintf(_("Enable automatic wallet backups triggered after each zBnd minting (0-1, default: %u)"), 1));
+    // strUsage += HelpMessageOpt("-backupzgoc=<n>", strprintf(_("Enable automatic wallet backups triggered after each zGoc minting (0-1, default: %u)"), 1));
 
-//    strUsage += "  -anonymizeblocknodeamount=<n>     " + strprintf(_("Keep N GOC anonymized (default: %u)"), 0) + "\n";
+//    strUsage += "  -anonymizegocoinamount=<n>     " + strprintf(_("Keep N GOC anonymized (default: %u)"), 0) + "\n";
 //    strUsage += "  -liquidityprovider=<n>       " + strprintf(_("Provide liquidity to Obfuscation by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)"), 0) + "\n";
 
     strUsage += HelpMessageGroup(_("SwiftTX options:"));
@@ -1422,10 +1422,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 // Recalculate money supply for blocks that are impacted by accounting issue after zerocoin activation
                 if (GetBoolArg("-reindexmoneysupply", false)) {
                     if (chainActive.Height() > Params().Zerocoin_StartHeight()) {
-                        RecalculateZBNDMinted();
-                        RecalculateZBNDSpent();
+                        RecalculateZGOCMinted();
+                        RecalculateZGOCSpent();
                     }
-                    RecalculateBNDSupply(1);
+                    RecalculateGOCSupply(1);
                 }
 
                 // Force recalculation of accumulators.
@@ -1627,8 +1627,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         }
         fVerifyingBlocks = false;
 
-        bool fEnableZBndBackups = GetBoolArg("-backupzbnd", true);
-        pwalletMain->setZBndAutoBackups(fEnableZBndBackups);
+        bool fEnableZGocBackups = GetBoolArg("-backupzgoc", true);
+        pwalletMain->setZGocAutoBackups(fEnableZGocBackups);
     }  // (!fDisableWallet)
 #else  // ENABLE_WALLET
     LogPrintf("No wallet compiled in!\n");
@@ -1778,7 +1778,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     }
 
 // XX42 Remove/refactor code below. Until then provide safe defaults
-    nAnonymizeBlocknodeAmount = 2;
+    nAnonymizeGocoinAmount = 2;
 
 //    nLiquidityProvider = GetArg("-liquidityprovider", 0); //0-100
 //    if (nLiquidityProvider != 0) {
@@ -1787,9 +1787,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 //        nZeromintPercentage = 99999;
 //    }
 //
-//    nAnonymizeBlocknodeAmount = GetArg("-anonymizeblocknodeamount", 0);
-//    if (nAnonymizeBlocknodeAmount > 999999) nAnonymizeBlocknodeAmount = 999999;
-//    if (nAnonymizeBlocknodeAmount < 2) nAnonymizeBlocknodeAmount = 2;
+//    nAnonymizeGocoinAmount = GetArg("-anonymizegocoinamount", 0);
+//    if (nAnonymizeGocoinAmount > 999999) nAnonymizeGocoinAmount = 999999;
+//    if (nAnonymizeGocoinAmount < 2) nAnonymizeGocoinAmount = 2;
 
     fEnableSwiftTX = GetBoolArg("-enableswifttx", fEnableSwiftTX);
     nSwiftTXDepth = GetArg("-swifttxdepth", nSwiftTXDepth);
@@ -1803,7 +1803,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nSwiftTXDepth %d\n", nSwiftTXDepth);
-    LogPrintf("Anonymize Gocoin Amount %d\n", nAnonymizeBlocknodeAmount);
+    LogPrintf("Anonymize Gocoin Amount %d\n", nAnonymizeGocoinAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations
@@ -1812,8 +1812,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
        is convertable to another.
 
        For example:
-       1BND+1000 == (.1BND+100)*10
-       10BND+10000 == (1BND+1000)*10
+       1GOC+1000 == (.1GOC+100)*10
+       10GOC+10000 == (1GOC+1000)*10
     */
     obfuScationDenominations.push_back((10000 * COIN) + 10000000);
     obfuScationDenominations.push_back((1000 * COIN) + 1000000);

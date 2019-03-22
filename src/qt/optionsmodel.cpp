@@ -92,10 +92,10 @@ void OptionsModel::Init()
         settings.setValue("nPreferredDenom", 0);
     nPreferredDenom = settings.value("nPreferredDenom", "0").toLongLong();
 
-    if (!settings.contains("nAnonymizeBlocknodeAmount"))
-        settings.setValue("nAnonymizeBlocknodeAmount", 1000);
+    if (!settings.contains("nAnonymizeGocoinAmount"))
+        settings.setValue("nAnonymizeGocoinAmount", 1000);
 
-    nAnonymizeBlocknodeAmount = settings.value("nAnonymizeBlocknodeAmount").toLongLong();
+    nAnonymizeGocoinAmount = settings.value("nAnonymizeGocoinAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -169,8 +169,8 @@ void OptionsModel::Init()
         SoftSetArg("-zeromintpercentage", settings.value("nZeromintPercentage").toString().toStdString());
     if (settings.contains("nPreferredDenom"))
         SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
-    if (settings.contains("nAnonymizeBlocknodeAmount"))
-        SoftSetArg("-anonymizeblocknodeamount", settings.value("nAnonymizeBlocknodeAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeGocoinAmount"))
+        SoftSetArg("-anonymizegocoinamount", settings.value("nAnonymizeGocoinAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -261,8 +261,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return QVariant(nZeromintPercentage);
         case ZeromintPrefDenom:
             return QVariant(nPreferredDenom);
-        case AnonymizeBlocknodeAmount:
-            return QVariant(nAnonymizeBlocknodeAmount);
+        case AnonymizeGocoinAmount:
+            return QVariant(nAnonymizeGocoinAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -391,10 +391,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             emit hideZeroBalancesChanged(fHideZeroBalances);
             break;
 
-        case AnonymizeBlocknodeAmount:
-            nAnonymizeBlocknodeAmount = value.toInt();
-            settings.setValue("nAnonymizeBlocknodeAmount", nAnonymizeBlocknodeAmount);
-            emit anonymizeBlocknodeAmountChanged(nAnonymizeBlocknodeAmount);
+        case AnonymizeGocoinAmount:
+            nAnonymizeGocoinAmount = value.toInt();
+            settings.setValue("nAnonymizeGocoinAmount", nAnonymizeGocoinAmount);
+            emit anonymizeGocoinAmountChanged(nAnonymizeGocoinAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

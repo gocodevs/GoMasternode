@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Blocknodeadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <translation>Dit zijn uw Gocoinadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
         <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Blocknodeadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <translation>Dit zijn uw Gocoinadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw BNDs stelen.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw GOCs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -1500,16 +1500,16 @@ MultiSend: %1</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>Enter an amount of Goc to convert to zBnd</source>
-        <translation>Vul de hoeveleheid in om Goc te converteren naar zBnd</translation>
+        <source>Enter an amount of Goc to convert to zGoc</source>
+        <translation>Vul de hoeveleheid in om Goc te converteren naar zGoc</translation>
     </message>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <source>zBND</source>
-        <translation>zBND</translation>
+        <source>zGOC</source>
+        <translation>zGOC</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -2741,10 +2741,10 @@ MultiSend: %1</translation>
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
-        <source>Select zBnd to Spend</source>
-        <translation>Selecteer zBnd om te spenderen</translation>
+        <source>Select zGoc to Spend</source>
+        <translation>Selecteer zGoc om te spenderen</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -2755,8 +2755,8 @@ MultiSend: %1</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zBnd</source>
-        <translation>zBnd</translation>
+        <source>zGoc</source>
+        <translation>zGoc</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>

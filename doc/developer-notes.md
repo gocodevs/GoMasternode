@@ -118,7 +118,7 @@ to see it.
 
 **testnet mode**
 
-Run with the -testnet option to run with "play BNDs (tBND)" on the test network, if you
+Run with the -testnet option to run with "play GOCs (tGOC)" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 **DEBUG_LOCKORDER**

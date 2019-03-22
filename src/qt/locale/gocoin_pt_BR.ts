@@ -172,8 +172,8 @@
         <translation>Confirmar criptografia de carteira</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Gocoin vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas BNDs de serem roubadas por malwares infectando seu computador.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas GOCs de serem roubadas por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -2467,8 +2467,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Tempo de confirmação:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se a taxa padrão estiver definida para 1000 uBNDs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uBNDs em taxa,&lt;br /&gt; pagará pelo menos 1000 uBNDs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Se a taxa padrão estiver definida para 1000 uGOCs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uGOCs em taxa,&lt;br /&gt; pagará pelo menos 1000 uGOCs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -3407,7 +3407,7 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>

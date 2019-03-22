@@ -7,6 +7,6 @@ Comment[tr]=Gocoin, eşten eşe kriptografik sanal para birimi
 Exec=gocoin-qt %u
 Terminal=false
 Type=Application
-Icon=blocknode128
+Icon=gocoin128
 MimeType=x-scheme-handler/gocoin;
 Categories=Office;Finance;

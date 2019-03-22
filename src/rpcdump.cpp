@@ -83,10 +83,10 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw runtime_error(
-            "importprivkey \"blocknodeprivkey\" ( \"label\" rescan )\n"
+            "importprivkey \"gocoinprivkey\" ( \"label\" rescan )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n"
             "\nArguments:\n"
-            "1. \"blocknodeprivkey\"   (string, required) The private key (see dumpprivkey)\n"
+            "1. \"gocoinprivkey\"   (string, required) The private key (see dumpprivkey)\n"
             "2. \"label\"            (string, optional, default=\"\") An optional label\n"
             "3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions\n"
             "\nNote: This call can take minutes to complete if rescan is true.\n"
@@ -314,11 +314,11 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey \"blocknodeaddress\"\n"
-            "\nReveals the private key corresponding to 'blocknodeaddress'.\n"
+            "dumpprivkey \"gocoinaddress\"\n"
+            "\nReveals the private key corresponding to 'gocoinaddress'.\n"
             "Then the importprivkey can be used with this output\n"
             "\nArguments:\n"
-            "1. \"blocknodeaddress\"   (string, required) The gocoin address for the private key\n"
+            "1. \"gocoinaddress\"   (string, required) The gocoin address for the private key\n"
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
             "\nExamples:\n" +
@@ -406,10 +406,10 @@ UniValue bip38encrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38encrypt \"blocknodeaddress\"\n"
-            "\nEncrypts a private key corresponding to 'blocknodeaddress'.\n"
+            "bip38encrypt \"gocoinaddress\"\n"
+            "\nEncrypts a private key corresponding to 'gocoinaddress'.\n"
             "\nArguments:\n"
-            "1. \"blocknodeaddress\"   (string, required) The gocoin address for the private key (you must hold the key already)\n"
+            "1. \"gocoinaddress\"   (string, required) The gocoin address for the private key (you must hold the key already)\n"
             "2. \"passphrase\"   (string, required) The passphrase you want the private key to be encrypted with - Valid special chars: !#$%&'()*+,-./:;<=>?`{|}~ \n"
             "\nResult:\n"
             "\"key\"                (string) The encrypted private key\n"
@@ -446,7 +446,7 @@ UniValue bip38decrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38decrypt \"blocknodeaddress\"\n"
+            "bip38decrypt \"gocoinaddress\"\n"
             "\nDecrypts and then imports password protected private key.\n"
             "\nArguments:\n"
             "1. \"encryptedkey\"   (string, required) The encrypted private key\n"

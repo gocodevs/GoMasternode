@@ -86,7 +86,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in ubnd) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in ugoc) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -1291,7 +1291,7 @@ bool ContextualCheckCoinSpend(const CoinSpend& spend, CBlockIndex* pindex, const
     int nHeightTxSpend = 0;
     if (IsSerialInBlockchain(spend.getCoinSerialNumber(), nHeightTxSpend)) {
         if(!fVerifyingBlocks || (fVerifyingBlocks && pindex->nHeight > nHeightTxSpend))
-            return error("%s : zBnd with serial %s is already in the block %d\n", __func__,
+            return error("%s : zGoc with serial %s is already in the block %d\n", __func__,
                          spend.getCoinSerialNumber().GetHex(), nHeightTxSpend);
     }
 
@@ -1611,7 +1611,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
             //Check that txid is not already in the chain
             int nHeightTx = 0;
             if (IsTransactionInChain(tx.GetHash(), nHeightTx))
-                return state.Invalid(error("AcceptToMemoryPool : zBnd spend tx %s already in block %d", tx.GetHash().GetHex(), nHeightTx),
+                return state.Invalid(error("AcceptToMemoryPool : zGoc spend tx %s already in block %d", tx.GetHash().GetHex(), nHeightTx),
                                      REJECT_DUPLICATE, "bad-txns-inputs-spent");
 
             //Check for double spending of serial #'s
@@ -1620,7 +1620,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     continue;
                 CoinSpend spend = TxInToZerocoinSpend(txIn);
                 if (!ContextualCheckCoinSpend(spend, chainActive.Tip(), txid))
-                    return state.Invalid(error("%s: zBND spend in tx %s failed to pass context checks", __func__, txid.GetHex()));
+                    return state.Invalid(error("%s: zGOC spend in tx %s failed to pass context checks", __func__, txid.GetHex()));
             }
         } else {
             LOCK(pool.cs);
@@ -2761,7 +2761,7 @@ void ThreadScriptCheck()
     scriptcheckqueue.Thread();
 }
 
-void RecalculateZBNDMinted()
+void RecalculateZGOCMinted()
 {
     CBlockIndex *pindex = chainActive[Params().Zerocoin_StartHeight()];
     int nHeightEnd = chainActive.Height();
@@ -2788,14 +2788,14 @@ void RecalculateZBNDMinted()
     }
 }
 
-void RecalculateZBNDSpent()
+void RecalculateZGOCSpent()
 {
     CBlockIndex* pindex = chainActive[Params().Zerocoin_StartHeight()];
     while (true) {
         if (pindex->nHeight % 1000 == 0)
             LogPrintf("%s : block %d...\n", __func__, pindex->nHeight);
 
-        //Rewrite zBND supply
+        //Rewrite zGOC supply
         CBlock block;
         assert(ReadBlockFromDisk(block, pindex));
 
@@ -2804,13 +2804,13 @@ void RecalculateZBNDSpent()
         //Reset the supply to previous block
         pindex->mapZerocoinSupply = pindex->pprev->mapZerocoinSupply;
 
-        //Add mints to zBND supply
+        //Add mints to zGOC supply
         for (auto denom : libzerocoin::zerocoinDenomList) {
             long nDenomAdded = count(pindex->vMintDenominationsInBlock.begin(), pindex->vMintDenominationsInBlock.end(), denom);
             pindex->mapZerocoinSupply.at(denom) += nDenomAdded;
         }
 
-        //Remove spends from zBND supply
+        //Remove spends from zGOC supply
         for (auto denom : listDenomsSpent)
             pindex->mapZerocoinSupply.at(denom)--;
 
@@ -2824,7 +2824,7 @@ void RecalculateZBNDSpent()
     }
 }
 
-bool RecalculateBNDSupply(int nHeightStart)
+bool RecalculateGOCSupply(int nHeightStart)
 {
     if (nHeightStart > chainActive.Height())
         return false;
@@ -2950,7 +2950,7 @@ bool ReindexAccumulators(list<uint256>& listMissingCheckpoints, string& strError
     return true;
 }
 
-bool UpdateZBNDSupply(const CBlock& block, CBlockIndex* pindex)
+bool UpdateZGOCSupply(const CBlock& block, CBlockIndex* pindex)
 {
     std::list<CZerocoinMint> listMints;
     bool fFilterInvalid = pindex->nHeight >= Params().Zerocoin_Block_RecalculateAccumulators();
@@ -3150,14 +3150,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     //A one-time event where money supply counts were off and recalculated on a certain block.
     if (Params().Zerocoin_Block_RecalculateAccumulators() >= 0 && pindex->nHeight == Params().Zerocoin_Block_RecalculateAccumulators() + 1) {
-        RecalculateZBNDMinted();
-        RecalculateZBNDSpent();
-        RecalculateBNDSupply(Params().Zerocoin_StartHeight());
+        RecalculateZGOCMinted();
+        RecalculateZGOCSpent();
+        RecalculateGOCSupply(Params().Zerocoin_StartHeight());
     }
 
-    //Track zBND money supply in the block index
-    if (!UpdateZBNDSupply(block, pindex))
-        return state.DoS(100, error("%s: Failed to calculate new zBND supply for block=%s height=%d", __func__,
+    //Track zGOC money supply in the block index
+    if (!UpdateZGOCSupply(block, pindex))
+        return state.DoS(100, error("%s: Failed to calculate new zGOC supply for block=%s height=%d", __func__,
                                     block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
 
     // track money supply and mint amount info
@@ -3165,7 +3165,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     pindex->nMoneySupply = nMoneySupplyPrev + nValueOut - nValueIn;
     pindex->nMint = pindex->nMoneySupply - nMoneySupplyPrev + nFees;
 
-//    LogPrintf("XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zBndSpent: %s\n",
+//    LogPrintf("XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zGocSpent: %s\n",
 //              FormatMoney(nValueOut), FormatMoney(nValueIn),
 //              FormatMoney(nFees), FormatMoney(pindex->nMint), FormatMoney(nAmountZerocoinSpent));
 
@@ -3218,7 +3218,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         setDirtyBlockIndex.insert(pindex);
     }
 
-    //Record zBND serials
+    //Record zGOC serials
     for (pair<CoinSpend, uint256> pSpend : vSpends) {
         //record spend to database
         if (!zerocoinDB->WriteCoinSpend(pSpend.first.getCoinSerialNumber(), pSpend.second))
@@ -3338,7 +3338,7 @@ void static UpdateTip(CBlockIndex* pindexNew)
 {
     chainActive.SetTip(pindexNew);
 
-    // If turned on AutoZeromint will automatically convert GOC to zBND
+    // If turned on AutoZeromint will automatically convert GOC to zGOC
     if (pwalletMain->isZeromintEnabled ())
         pwalletMain->AutoZeromint ();
 
@@ -4204,13 +4204,13 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
         if (fCheckPOW && !CheckTransaction(tx, fZerocoinActive, chainActive.Height() + 1 >= Params().Zerocoin_Block_EnforceSerialRange(), state))
             return error("CheckBlock() : CheckTransaction failed");
 
-        // double check that there are no double spent zBnd spends in this block
+        // double check that there are no double spent zGoc spends in this block
         if (tx.IsZerocoinSpend()) {
             for (const CTxIn txIn : tx.vin) {
                 if (txIn.scriptSig.IsZerocoinSpend()) {
                     libzerocoin::CoinSpend spend = TxInToZerocoinSpend(txIn);
                     if (count(vBlockSerials.begin(), vBlockSerials.end(), spend.getCoinSerialNumber()))
-                        return state.DoS(100, error("%s : Double spending of zBnd serial %s in block\n Block: %s",
+                        return state.DoS(100, error("%s : Double spending of zGoc serial %s in block\n Block: %s",
                                                     __func__, spend.getCoinSerialNumber().GetHex(), block.ToString()));
                     vBlockSerials.emplace_back(spend.getCoinSerialNumber());
                 }
@@ -4573,7 +4573,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
         }
     }
     if (nMints || nSpends)
-        LogPrintf("%s : block contains %d zBnd mints and %d zBnd spends\n", __func__, nMints, nSpends);
+        LogPrintf("%s : block contains %d zGoc mints and %d zGoc spends\n", __func__, nMints, nSpends);
 
     // ppcoin: check proof-of-stake
     // Limited duplicity on stake: prevents block flood attack

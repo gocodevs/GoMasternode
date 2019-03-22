@@ -59,8 +59,8 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "obfuscation <blocknodeaddress> <amount>\n"
-            "blocknodeaddress, reset, or auto (AutoDenominate)"
+            "obfuscation <gocoinaddress> <amount>\n"
+            "gocoinaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 
@@ -81,8 +81,8 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 
     if (params.size() != 2)
         throw runtime_error(
-            "obfuscation <blocknodeaddress> <amount>\n"
-            "blocknodeaddress, denominate, or auto (AutoDenominate)"
+            "obfuscation <gocoinaddress> <amount>\n"
+            "gocoinaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 

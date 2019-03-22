@@ -176,8 +176,8 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer BNDs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GOCs from being stolen by malware infecting your computer.</source>
+        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer GOCs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre BNDs verlieren&lt;/b&gt;!</translation>
+        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre GOCs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -618,8 +618,8 @@
         <translation>&amp;Privatsphäre</translation>
     </message>
     <message>
-        <source>Privacy Action for zBND and Obfuscation</source>
-        <translation>Privatsphäre Aktion für zBND und Verschleierung</translation>
+        <source>Privacy Action for zGOC and Obfuscation</source>
+        <translation>Privatsphäre Aktion für zGOC und Verschleierung</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1572,15 +1572,15 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
     </message>
     <message>
         <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf normal gesetzt (%1 und 2 Runden). Sie können dies jederzeit in den Blocknodes Konfigurationen ändern.</translation>
+        <translation>Verschleierung erfolgreich auf normal gesetzt (%1 und 2 Runden). Sie können dies jederzeit in den Gocoins Konfigurationen ändern.</translation>
     </message>
     <message>
         <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf hohen gesetzt (%1 und 8 Runden). Sie können dies jederzeit in den Blocknodes Konfigurationen ändern.</translation>
+        <translation>Verschleierung erfolgreich auf hohen gesetzt (%1 und 8 Runden). Sie können dies jederzeit in den Gocoins Konfigurationen ändern.</translation>
     </message>
     <message>
         <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf maximal gesetzt (%1 und 16 Runden). Sie können dies jederzeit in den Blocknodes Konfigurationen ändern.</translation>
+        <translation>Verschleierung erfolgreich auf maximal gesetzt (%1 und 16 Runden). Sie können dies jederzeit in den Gocoins Konfigurationen ändern.</translation>
     </message>
 </context>
 <context>
@@ -1707,20 +1707,20 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Port mit &amp;UPnP mappen</translation>
     </message>
     <message>
-        <source>Percentage of incoming GOC which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</source>
-        <translation>Anteil des einkommenden GOC, welcher automatisch zu zBND via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
+        <source>Percentage of incoming GOC which get automatically converted to zGOC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Anteil des einkommenden GOC, welcher automatisch zu zGOC via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zBND</source>
-        <translation>Prozentsatz der automatisierten zBND</translation>
+        <source>Percentage of autominted zGOC</source>
+        <translation>Prozentsatz der automatisierten zGOC</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough GOC for this denomination is available</source>
         <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend GOC für diese Stückelung verfügbar ist</translation>
     </message>
     <message>
-        <source>Preferred Automint zBND Denomination</source>
-        <translation>Bevorzugte automatisierte zBND Stückelung </translation>
+        <source>Preferred Automint zGOC Denomination</source>
+        <translation>Bevorzugte automatisierte zGOC Stückelung </translation>
     </message>
     <message>
         <source>Connect to the Gocoin network through a SOCKS5 proxy.</source>
@@ -1926,8 +1926,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>GOC:</translation>
     </message>
     <message>
-        <source>zBND:</source>
-        <translation>zBND:</translation>
+        <source>zGOC:</source>
+        <translation>zGOC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2059,8 +2059,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>GOC, die über das Zerocin-Protokoll anonymisiert wurden</translation>
     </message>
     <message>
-        <source>Zerocoin GOC (zBND)</source>
-        <translation>Zerocoin GOC (zBND)</translation>
+        <source>Zerocoin GOC (zGOC)</source>
+        <translation>Zerocoin GOC (zGOC)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2071,8 +2071,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Die angezeigte Information ist möglicherweise nicht mehr aktuell. Ihre Wallet synchronisiert sich automatisch mit dem Gocoin-Netzwerk, nachdem eine Verbindung hergestellt wurde. Aber dieser Vorgang ist noch nicht abgeschlossen.</translation>
     </message>
     <message>
-        <source>Enter an amount of Goc to convert to zBnd</source>
-        <translation>Eingabe des Goc-Betrags, um in zBnd umzuwandeln</translation>
+        <source>Enter an amount of Goc to convert to zGoc</source>
+        <translation>Eingabe des Goc-Betrags, um in zGoc umzuwandeln</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2083,8 +2083,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>0</translation>
     </message>
     <message>
-        <source>zBND</source>
-        <translation>zBND</translation>
+        <source>zGOC</source>
+        <translation>zGOC</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
@@ -2127,12 +2127,12 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Status und/oder Mitteilungen aus der letzten Präge-Action</translation>
     </message>
     <message>
-        <source>zBnd Control</source>
-        <translation>zBnd Kontrolle</translation>
+        <source>zGoc Control</source>
+        <translation>zGoc Kontrolle</translation>
     </message>
     <message>
-        <source>zBnd Selected:</source>
-        <translation>zBnd Ausgewählt:</translation>
+        <source>zGoc Selected:</source>
+        <translation>zGoc Ausgewählt:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2151,8 +2151,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Verfügbare Bilanz:</translation>
     </message>
     <message>
-        <source>0 zBND</source>
-        <translation>0 zBND</translation>
+        <source>0 zGOC</source>
+        <translation>0 zGOC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2387,8 +2387,8 @@ https://www.transifex.com/gocoin-project/gocoin-project-translations</translatio
         <translation>Erfolgreich geprägt</translation>
     </message>
     <message>
-        <source> zBND in </source>
-        <translation> zBND in </translation>
+        <source> zGOC in </source>
+        <translation> zGOC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2481,8 +2481,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Ausgeben Zerocoin fehlgeschlagen mit Status =</translation>
     </message>
     <message>
-        <source>zBnd Spend #: </source>
-        <translation>zBND Ausgeben #:</translation>
+        <source>zGoc Spend #: </source>
+        <translation>zGOC Ausgeben #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -2505,8 +2505,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>zBnd Mint</source>
-        <translation>zBnd Prägen</translation>
+        <source>zGoc Mint</source>
+        <translation>zGoc Prägen</translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -3063,7 +3063,7 @@ Bitte haben Sie Geduld...</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>BNDs überweisen</translation>
+        <translation>GOCs überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3186,12 +3186,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Coins automatisch ausgewählt</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uBNDs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uBNDs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uBNDs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uGOCs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uGOCs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uGOCs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uBNDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBNDs in fee,&lt;br /&gt;while "total at least" pays 1000 uBNDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uBNDs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uBNDs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uBNDs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGOCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGOCs in fee,&lt;br /&gt;while "total at least" pays 1000 uGOCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uGOCs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uGOCs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uGOCs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
@@ -3821,7 +3821,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte BNDs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine BNDs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte GOCs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine GOCs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3966,32 +3966,32 @@ Bitte haben Sie Geduld...</translation>
         <translation>Verschleiert</translation>
     </message>
     <message>
-        <source>Converted Goc to zBnd</source>
-        <translation>Umgewandeltes GOC zu zBND</translation>
+        <source>Converted Goc to zGoc</source>
+        <translation>Umgewandeltes GOC zu zGOC</translation>
     </message>
     <message>
-        <source>Spent zBnd</source>
-        <translation>Ausgeben zBND</translation>
+        <source>Spent zGoc</source>
+        <translation>Ausgeben zGOC</translation>
     </message>
     <message>
-        <source>Received Goc from zBnd</source>
-        <translation>Empfangene GOC von zBND</translation>
+        <source>Received Goc from zGoc</source>
+        <translation>Empfangene GOC von zGOC</translation>
     </message>
     <message>
-        <source>Minted Change as zBnd from zBnd Spend</source>
-        <translation>Geprägtes Wechselgeld als zBND von zBND Ausgabe</translation>
+        <source>Minted Change as zGoc from zGoc Spend</source>
+        <translation>Geprägtes Wechselgeld als zGOC von zGOC Ausgabe</translation>
     </message>
     <message>
-        <source>Converted zBnd to Goc</source>
-        <translation>Umgewandeltes zBND zu GOC</translation>
+        <source>Converted zGoc to Goc</source>
+        <translation>Umgewandeltes zGOC zu GOC</translation>
     </message>
     <message>
         <source>watch-only</source>
         <translation>nur beobachtet</translation>
     </message>
     <message>
-        <source>zBnd Accumulator</source>
-        <translation>zBND Speicher</translation>
+        <source>zGoc Accumulator</source>
+        <translation>zGOC Speicher</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4101,8 +4101,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Masternode Vergütung</translation>
     </message>
     <message>
-        <source>Received Goc from zBnd</source>
-        <translation>Empfangen GOC von zBND</translation>
+        <source>Received Goc from zGoc</source>
+        <translation>Empfangen GOC von zGOC</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4113,8 +4113,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Zerocoin Ausgabe</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zBnd</source>
-        <translation>Zerocoin Ausgabe, Wechselgeld in zBND</translation>
+        <source>Zerocoin Spend, Change in zGoc</source>
+        <translation>Zerocoin Ausgabe, Wechselgeld in zGOC</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4235,7 +4235,7 @@ Bitte haben Sie Geduld...</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>BNDs überweisen</translation>
+        <translation>GOCs überweisen</translation>
     </message>
     <message>
         <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GOC.</source>
@@ -4282,10 +4282,10 @@ Bitte haben Sie Geduld...</translation>
     </message>
 </context>
 <context>
-    <name>ZBndControlDialog</name>
+    <name>ZGocControlDialog</name>
     <message>
-        <source>Select zBnd to Spend</source>
-        <translation>Auswahl zBND als Ausgabe</translation>
+        <source>Select zGoc to Spend</source>
+        <translation>Auswahl zGOC als Ausgabe</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4296,8 +4296,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zBnd</source>
-        <translation>zBND</translation>
+        <source>zGoc</source>
+        <translation>zGOC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
