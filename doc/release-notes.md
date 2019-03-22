@@ -1,15 +1,15 @@
 (note: this is a temporary file, to be added-to by anybody, and moved to release-notes at release time)
 
-Blocknode Core version *version* is now available from:
+Gocoin Core version *version* is now available from:
 
-  <https://github.com/blocknode-project/blocknode/releases>
+  <https://github.com/gocoin-project/gocoin/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/blocknode-project/blocknode/issues>
+  <https://github.com/gocoin-project/gocoin/issues>
 
 Mandatory Update
 ==============
@@ -18,12 +18,12 @@ Mandatory Update
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Blocknode-Qt (on Mac) or blocknoded/blocknode-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Gocoin-Qt (on Mac) or blocknoded/gocoin-qt (on Linux).
 
 Compatibility
 ==============
 
-Blocknode Core is extensively tested on multiple operating systems using
+Gocoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -31,7 +31,7 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
-Blocknode Core should also work on most other Unix-like systems but is not
+Gocoin Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable Changes
@@ -91,4 +91,4 @@ Credits
 Thanks to everyone who directly contributed to this release:
 
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/blocknode-project-translations/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/gocoin-project-translations/).

@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start Blocknode after logging in to the system.</string>
+          <string>Automatically start Gocoin after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Blocknode on system login</string>
+          <string>&amp;Start Gocoin on system login</string>
          </property>
         </widget>
        </item>
@@ -134,7 +134,7 @@
        <item>
         <widget class="QCheckBox" name="checkBoxZeromintEnable">
          <property name="toolTip">
-          <string>Enable automatic minting of BND units to zBND</string>
+          <string>Enable automatic minting of GOC units to zBND</string>
          </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
@@ -149,7 +149,7 @@
          <item>
           <widget class="QLabel" name="percentage_label">
            <property name="toolTip">
-            <string>Percentage of incoming BND which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</string>
+            <string>Percentage of incoming GOC which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</string>
            </property>
            <property name="text">
             <string>Percentage of autominted zBND</string>
@@ -182,7 +182,7 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough BND for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough GOC for this denomination is available</string>
            </property>
            <property name="text">
             <string>Preferred Automint zBND Denomination</string>
@@ -198,7 +198,7 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough BND for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough GOC for this denomination is available</string>
            </property>
            <property name="maxVisibleItems">
             <number>9</number>
@@ -301,7 +301,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Blocknode client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Gocoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -321,7 +321,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Blocknode network through a SOCKS5 proxy.</string>
+          <string>Connect to the Gocoin network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -487,7 +487,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting Blocknode.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Gocoin.</string>
            </property>
           </widget>
          </item>
@@ -509,7 +509,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/blocknode-project/blocknode-project-translations</string>
+https://www.transifex.com/gocoin-project/gocoin-project-translations</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>

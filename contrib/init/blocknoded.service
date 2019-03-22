@@ -1,18 +1,18 @@
 [Unit]
-Description=Blocknode's distributed currency daemon
+Description=Gocoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=blocknode
-Group=blocknode
+User=gocoin
+Group=gocoin
 
 Type=forking
 PIDFile=/var/lib/blocknoded/blocknoded.pid
 
 ExecStart=/usr/bin/blocknoded -daemon -pid=/var/lib/blocknoded/blocknoded.pid \
-          -conf=/etc/blocknode/blocknode.conf -datadir=/var/lib/blocknoded
+          -conf=/etc/gocoin/gocoin.conf -datadir=/var/lib/blocknoded
 
-ExecStop=-/usr/bin/blocknode-cli -conf=/etc/blocknode/blocknode.conf \
+ExecStop=-/usr/bin/gocoin-cli -conf=/etc/gocoin/gocoin.conf \
          -datadir=/var/lib/blocknoded stop
 
 Restart=always

@@ -168,7 +168,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../blocknode.qrc"/>
+  <include location="../gocoin.qrc"/>
  </resources>
  <connections/>
 </ui>

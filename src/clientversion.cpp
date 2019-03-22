@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both blocknoded and blocknode-qt, to make it harder for attackers to
+ * for both blocknoded and gocoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Blocknode Core");
+const std::string CLIENT_NAME("Gocoin Core");
 
 /**
  * Client version number

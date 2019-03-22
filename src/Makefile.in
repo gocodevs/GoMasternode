@@ -107,11 +107,11 @@ bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 noinst_PROGRAMS =
 TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
 @BUILD_BITCOIND_TRUE@am__append_4 = blocknoded
-@BUILD_BITCOIN_UTILS_TRUE@am__append_5 = blocknode-cli blocknode-tx
+@BUILD_BITCOIN_UTILS_TRUE@am__append_5 = gocoin-cli gocoin-tx
 @GLIBC_BACK_COMPAT_TRUE@am__append_6 = compat/glibc_compat.cpp
 @TARGET_WINDOWS_TRUE@am__append_7 = blocknoded-res.rc
-@TARGET_WINDOWS_TRUE@am__append_8 = blocknode-cli-res.rc
-@TARGET_WINDOWS_TRUE@am__append_9 = blocknode-tx-res.rc
+@TARGET_WINDOWS_TRUE@am__append_8 = gocoin-cli-res.rc
+@TARGET_WINDOWS_TRUE@am__append_9 = gocoin-tx-res.rc
 @BUILD_BITCOIN_LIBS_TRUE@@GLIBC_BACK_COMPAT_TRUE@am__append_10 = compat/glibc_compat.cpp
 @BUILD_BITCOIN_LIBS_TRUE@@USE_LIBSECP256K1_TRUE@am__append_11 = secp256k1/libsecp256k1.la
 
@@ -141,7 +141,7 @@ TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__append_16 = $(LIBBITCOIN_WALLET)
 @ENABLE_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__append_17 = $(ZMQ_LIBS)
 @ENABLE_TESTS_TRUE@am__append_18 = $(CLEAN_BITCOIN_TEST)
-@ENABLE_QT_TRUE@am__append_19 = qt/blocknode-qt
+@ENABLE_QT_TRUE@am__append_19 = qt/gocoin-qt
 @ENABLE_QT_TRUE@am__append_20 = qt/libbitcoinqt.a
 @ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__append_21 = qt/winshutdownmonitor.cpp
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@am__append_22 = \
@@ -229,7 +229,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 DIST_COMMON = $(srcdir)/Makefile.am $(am__include_HEADERS_DIST) \
 	$(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/blocknode-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/gocoin-config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_AR = $(am__v_AR_@AM_V@)
@@ -497,7 +497,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/forms/rpcconsole.ui qt/forms/sendcoinsdialog.ui \
 	qt/forms/sendcoinsentry.ui qt/forms/signverifymessagedialog.ui \
 	qt/forms/transactiondescdialog.ui \
-	qt/forms/zbndcontroldialog.ui qt/blocknode.qrc \
+	qt/forms/zbndcontroldialog.ui qt/gocoin.qrc \
 	qt/blocknode_locale.qrc qt/locale/blocknode_bg.ts \
 	qt/locale/blocknode_ca.ts qt/locale/blocknode_cs.ts \
 	qt/locale/blocknode_da.ts qt/locale/blocknode_de.ts \
@@ -762,17 +762,17 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 @BUILD_BITCOIN_LIBS_TRUE@am_libbitcoinconsensus_la_rpath = -rpath \
 @BUILD_BITCOIN_LIBS_TRUE@	$(libdir)
 @BUILD_BITCOIND_TRUE@am__EXEEXT_1 = blocknoded$(EXEEXT)
-@BUILD_BITCOIN_UTILS_TRUE@am__EXEEXT_2 = blocknode-cli$(EXEEXT) \
-@BUILD_BITCOIN_UTILS_TRUE@	blocknode-tx$(EXEEXT)
+@BUILD_BITCOIN_UTILS_TRUE@am__EXEEXT_2 = gocoin-cli$(EXEEXT) \
+@BUILD_BITCOIN_UTILS_TRUE@	gocoin-tx$(EXEEXT)
 @ENABLE_TESTS_TRUE@am__EXEEXT_3 = test/test_blocknode$(EXEEXT)
-@ENABLE_QT_TRUE@am__EXEEXT_4 = qt/blocknode-qt$(EXEEXT)
+@ENABLE_QT_TRUE@am__EXEEXT_4 = qt/gocoin-qt$(EXEEXT)
 @ENABLE_QT_TESTS_TRUE@am__EXEEXT_5 =  \
 @ENABLE_QT_TESTS_TRUE@	qt/test/test_blocknode-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am__blocknode_cli_SOURCES_DIST = blocknode-cli.cpp \
-	blocknode-cli-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_11 = blocknode-cli-res.$(OBJEXT)
-am_blocknode_cli_OBJECTS = blocknode_cli-blocknode-cli.$(OBJEXT) \
+am__blocknode_cli_SOURCES_DIST = gocoin-cli.cpp \
+	gocoin-cli-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_11 = gocoin-cli-res.$(OBJEXT)
+am_blocknode_cli_OBJECTS = blocknode_cli-gocoin-cli.$(OBJEXT) \
 	$(am__objects_11)
 blocknode_cli_OBJECTS = $(am_blocknode_cli_OBJECTS)
 @EMBEDDED_UNIVALUE_FALSE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
@@ -785,9 +785,9 @@ blocknode_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(blocknode_cli_CXXFLAGS) $(CXXFLAGS) $(blocknode_cli_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am__blocknode_tx_SOURCES_DIST = blocknode-tx.cpp blocknode-tx-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_12 = blocknode-tx-res.$(OBJEXT)
-am_blocknode_tx_OBJECTS = blocknode_tx-blocknode-tx.$(OBJEXT) \
+am__blocknode_tx_SOURCES_DIST = gocoin-tx.cpp gocoin-tx-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_12 = gocoin-tx-res.$(OBJEXT)
+am_blocknode_tx_OBJECTS = blocknode_tx-gocoin-tx.$(OBJEXT) \
 	$(am__objects_12)
 blocknode_tx_OBJECTS = $(am_blocknode_tx_OBJECTS)
 blocknode_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
@@ -815,18 +815,18 @@ blocknoded_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 blocknoded_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(blocknoded_CXXFLAGS) \
 	$(CXXFLAGS) $(blocknoded_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_blocknode_qt_SOURCES_DIST = qt/blocknode.cpp \
+am__qt_blocknode_qt_SOURCES_DIST = qt/gocoin.cpp \
 	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
-	qt/res/blocknode-qt-res.rc
+	qt/res/gocoin-qt-res.rc
 @ENABLE_QT_TRUE@am__objects_14 = qt/qt_blocknode_qt-macdockiconhandler.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_blocknode_qt-macnotificationhandler.$(OBJEXT)
 @ENABLE_QT_TRUE@@TARGET_DARWIN_TRUE@am__objects_15 =  \
 @ENABLE_QT_TRUE@@TARGET_DARWIN_TRUE@	$(am__objects_14)
-@ENABLE_QT_TRUE@am__objects_16 = qt/res/blocknode-qt-res.$(OBJEXT)
+@ENABLE_QT_TRUE@am__objects_16 = qt/res/gocoin-qt-res.$(OBJEXT)
 @ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__objects_17 =  \
 @ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@	$(am__objects_16)
 @ENABLE_QT_TRUE@am_qt_blocknode_qt_OBJECTS =  \
-@ENABLE_QT_TRUE@	qt/qt_blocknode_qt-blocknode.$(OBJEXT) \
+@ENABLE_QT_TRUE@	qt/qt_blocknode_qt-gocoin.$(OBJEXT) \
 @ENABLE_QT_TRUE@	$(am__objects_15) $(am__objects_17)
 qt_blocknode_qt_OBJECTS = $(am_qt_blocknode_qt_OBJECTS)
 @ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_5 =  \
@@ -1624,7 +1624,7 @@ LIBSECP256K1 = secp256k1/libsecp256k1.la
 @BUILD_BITCOIN_LIBS_TRUE@LIBBITCOINCONSENSUS = libbitcoinconsensus.la
 @ENABLE_WALLET_TRUE@LIBBITCOIN_WALLET = libbitcoin_wallet.a
 lib_LTLIBRARIES = $(LIBBITCOINCONSENSUS)
-# blocknode core #
+# gocoin core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   accumulators.h \
@@ -1727,7 +1727,7 @@ BITCOIN_CORE_H = \
   zmq/zmqpublishnotifier.h
 
 
-# server: shared between blocknoded and blocknode-qt
+# server: shared between blocknoded and gocoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -1772,7 +1772,7 @@ libbitcoin_server_a_SOURCES = \
 @ENABLE_ZMQ_TRUE@  zmq/zmqpublishnotifier.cpp
 
 
-# wallet: shared between blocknoded and blocknode-qt, but only linked
+# wallet: shared between blocknoded and gocoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -1870,7 +1870,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
 
-# common: shared between blocknoded, and blocknode-qt and non-server tools
+# common: shared between blocknoded, and gocoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -1919,7 +1919,7 @@ libbitcoin_util_a_SOURCES = allocators.cpp compat/strnlen.cpp \
 	utilstrencodings.cpp utilmoneystr.cpp utiltime.cpp \
 	$(BITCOIN_CORE_H) $(am__append_6)
 
-# cli: shared between blocknode-cli and blocknode-qt
+# cli: shared between gocoin-cli and gocoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -1941,8 +1941,8 @@ blocknoded_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# blocknode-cli binary #
-blocknode_cli_SOURCES = blocknode-cli.cpp $(am__append_8)
+# gocoin-cli binary #
+blocknode_cli_SOURCES = gocoin-cli.cpp $(am__append_8)
 blocknode_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 blocknode_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 blocknode_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
@@ -1951,8 +1951,8 @@ blocknode_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
 	$(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# blocknode-tx binary #
-blocknode_tx_SOURCES = blocknode-tx.cpp $(am__append_9)
+# gocoin-tx binary #
+blocknode_tx_SOURCES = gocoin-tx.cpp $(am__append_9)
 blocknode_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 blocknode_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 blocknode_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
@@ -2062,7 +2062,7 @@ EXTRA_DIST = leveldb $(am__append_14)
 @ENABLE_TESTS_TRUE@nodist_test_test_blocknode_SOURCES = $(GENERATED_TEST_FILES)
 @ENABLE_TESTS_TRUE@CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
-# blocknode qt core #
+# gocoin qt core #
 @ENABLE_QT_TRUE@QT_TS = \
 @ENABLE_QT_TRUE@  qt/locale/blocknode_bg.ts \
 @ENABLE_QT_TRUE@  qt/locale/blocknode_ca.ts \
@@ -2175,14 +2175,14 @@ EXTRA_DIST = leveldb $(am__append_14)
 @ENABLE_QT_TRUE@  qt/macnotificationhandler.mm
 
 @ENABLE_QT_TRUE@QT_MOC = \
-@ENABLE_QT_TRUE@  qt/blocknode.moc \
+@ENABLE_QT_TRUE@  qt/gocoin.moc \
 @ENABLE_QT_TRUE@  qt/bitcoinamountfield.moc \
 @ENABLE_QT_TRUE@  qt/intro.moc \
 @ENABLE_QT_TRUE@  qt/overviewpage.moc \
 @ENABLE_QT_TRUE@  qt/rpcconsole.moc
 
 @ENABLE_QT_TRUE@QT_QRC_CPP = qt/qrc_blocknode.cpp
-@ENABLE_QT_TRUE@QT_QRC = qt/blocknode.qrc
+@ENABLE_QT_TRUE@QT_QRC = qt/gocoin.qrc
 @ENABLE_QT_TRUE@QT_QRC_LOCALE_CPP = qt/qrc_blocknode_locale.cpp
 @ENABLE_QT_TRUE@QT_QRC_LOCALE = qt/blocknode_locale.qrc
 @ENABLE_QT_TRUE@PROTOBUF_CC = qt/paymentrequest.pb.cc
@@ -2349,7 +2349,7 @@ EXTRA_DIST = leveldb $(am__append_14)
 @ENABLE_QT_TRUE@  qt/res/css/default.css
 
 @ENABLE_QT_TRUE@RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
-@ENABLE_QT_TRUE@BITCOIN_RC = qt/res/blocknode-qt-res.rc
+@ENABLE_QT_TRUE@BITCOIN_RC = qt/res/gocoin-qt-res.rc
 @ENABLE_QT_TRUE@BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
 @ENABLE_QT_TRUE@  -I$(builddir)/qt/forms
 
@@ -2368,13 +2368,13 @@ EXTRA_DIST = leveldb $(am__append_14)
 # forms/foo.h -> forms/ui_foo.h
 @ENABLE_QT_TRUE@QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
-# blocknode-qt binary #
+# gocoin-qt binary #
 @ENABLE_QT_TRUE@qt_blocknode_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
 @ENABLE_QT_TRUE@  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
 @ENABLE_QT_TRUE@qt_blocknode_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 @ENABLE_QT_TRUE@qt_bitcoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-@ENABLE_QT_TRUE@qt_blocknode_qt_SOURCES = qt/blocknode.cpp \
+@ENABLE_QT_TRUE@qt_blocknode_qt_SOURCES = qt/gocoin.cpp \
 @ENABLE_QT_TRUE@	$(am__append_23) $(am__append_24)
 @ENABLE_QT_TRUE@qt_blocknode_qt_LDADD = qt/libbitcoinqt.a \
 @ENABLE_QT_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_25) \
@@ -2980,18 +2980,18 @@ clean-noinstPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-blocknode-cli$(EXEEXT): $(blocknode_cli_OBJECTS) $(blocknode_cli_DEPENDENCIES) $(EXTRA_blocknode_cli_DEPENDENCIES) 
-	@rm -f blocknode-cli$(EXEEXT)
+gocoin-cli$(EXEEXT): $(blocknode_cli_OBJECTS) $(blocknode_cli_DEPENDENCIES) $(EXTRA_blocknode_cli_DEPENDENCIES) 
+	@rm -f gocoin-cli$(EXEEXT)
 	$(AM_V_CXXLD)$(blocknode_cli_LINK) $(blocknode_cli_OBJECTS) $(blocknode_cli_LDADD) $(LIBS)
 
-blocknode-tx$(EXEEXT): $(blocknode_tx_OBJECTS) $(blocknode_tx_DEPENDENCIES) $(EXTRA_blocknode_tx_DEPENDENCIES) 
-	@rm -f blocknode-tx$(EXEEXT)
+gocoin-tx$(EXEEXT): $(blocknode_tx_OBJECTS) $(blocknode_tx_DEPENDENCIES) $(EXTRA_blocknode_tx_DEPENDENCIES) 
+	@rm -f gocoin-tx$(EXEEXT)
 	$(AM_V_CXXLD)$(blocknode_tx_LINK) $(blocknode_tx_OBJECTS) $(blocknode_tx_LDADD) $(LIBS)
 
 blocknoded$(EXEEXT): $(blocknoded_OBJECTS) $(blocknoded_DEPENDENCIES) $(EXTRA_blocknoded_DEPENDENCIES) 
 	@rm -f blocknoded$(EXEEXT)
 	$(AM_V_CXXLD)$(blocknoded_LINK) $(blocknoded_OBJECTS) $(blocknoded_LDADD) $(LIBS)
-qt/qt_blocknode_qt-blocknode.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_blocknode_qt-gocoin.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_blocknode_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
@@ -3003,11 +3003,11 @@ qt/res/$(am__dirstamp):
 qt/res/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/res/$(DEPDIR)
 	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/blocknode-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+qt/res/gocoin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/blocknode-qt$(EXEEXT): $(qt_blocknode_qt_OBJECTS) $(qt_blocknode_qt_DEPENDENCIES) $(EXTRA_qt_blocknode_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/blocknode-qt$(EXEEXT)
+qt/gocoin-qt$(EXEEXT): $(qt_blocknode_qt_OBJECTS) $(qt_blocknode_qt_DEPENDENCIES) $(EXTRA_qt_blocknode_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/gocoin-qt$(EXEEXT)
 	$(AM_V_OBJCXXLD)$(qt_blocknode_qt_LINK) $(qt_blocknode_qt_OBJECTS) $(qt_blocknode_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
@@ -3152,8 +3152,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/blocknode_cli-blocknode-cli.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/blocknode_tx-blocknode-tx.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/blocknode_cli-gocoin-cli.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/blocknode_tx-gocoin-tx.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/blocknoded-blocknoded.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoin_cli_a-rpcclient.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoin_common_a-accumulatormap.Po@am__quote@
@@ -3289,7 +3289,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoin_common_a-zerocoin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoin_wallet_a-zerocoin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoinconsensus_la-transaction.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_blocknode_qt-macdockiconhandler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_blocknode_qt-macnotificationhandler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-addressbookpage.Po@am__quote@
@@ -6861,33 +6861,33 @@ compat/libbitcoinconsensus_la-glibc_compat.lo: compat/glibc_compat.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibc_compat.lo `test -f 'compat/glibc_compat.cpp' || echo '$(srcdir)/'`compat/glibc_compat.cpp
 
-blocknode_cli-blocknode-cli.o: blocknode-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -MT blocknode_cli-blocknode-cli.o -MD -MP -MF $(DEPDIR)/blocknode_cli-blocknode-cli.Tpo -c -o blocknode_cli-blocknode-cli.o `test -f 'blocknode-cli.cpp' || echo '$(srcdir)/'`blocknode-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_cli-blocknode-cli.Tpo $(DEPDIR)/blocknode_cli-blocknode-cli.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='blocknode-cli.cpp' object='blocknode_cli-blocknode-cli.o' libtool=no @AMDEPBACKSLASH@
+blocknode_cli-gocoin-cli.o: gocoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -MT blocknode_cli-gocoin-cli.o -MD -MP -MF $(DEPDIR)/blocknode_cli-gocoin-cli.Tpo -c -o blocknode_cli-gocoin-cli.o `test -f 'gocoin-cli.cpp' || echo '$(srcdir)/'`gocoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_cli-gocoin-cli.Tpo $(DEPDIR)/blocknode_cli-gocoin-cli.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gocoin-cli.cpp' object='blocknode_cli-gocoin-cli.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_cli-blocknode-cli.o `test -f 'blocknode-cli.cpp' || echo '$(srcdir)/'`blocknode-cli.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_cli-gocoin-cli.o `test -f 'gocoin-cli.cpp' || echo '$(srcdir)/'`gocoin-cli.cpp
 
-blocknode_cli-blocknode-cli.obj: blocknode-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -MT blocknode_cli-blocknode-cli.obj -MD -MP -MF $(DEPDIR)/blocknode_cli-blocknode-cli.Tpo -c -o blocknode_cli-blocknode-cli.obj `if test -f 'blocknode-cli.cpp'; then $(CYGPATH_W) 'blocknode-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/blocknode-cli.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_cli-blocknode-cli.Tpo $(DEPDIR)/blocknode_cli-blocknode-cli.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='blocknode-cli.cpp' object='blocknode_cli-blocknode-cli.obj' libtool=no @AMDEPBACKSLASH@
+blocknode_cli-gocoin-cli.obj: gocoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -MT blocknode_cli-gocoin-cli.obj -MD -MP -MF $(DEPDIR)/blocknode_cli-gocoin-cli.Tpo -c -o blocknode_cli-gocoin-cli.obj `if test -f 'gocoin-cli.cpp'; then $(CYGPATH_W) 'gocoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/gocoin-cli.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_cli-gocoin-cli.Tpo $(DEPDIR)/blocknode_cli-gocoin-cli.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gocoin-cli.cpp' object='blocknode_cli-gocoin-cli.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_cli-blocknode-cli.obj `if test -f 'blocknode-cli.cpp'; then $(CYGPATH_W) 'blocknode-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/blocknode-cli.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_cli_CPPFLAGS) $(CPPFLAGS) $(blocknode_cli_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_cli-gocoin-cli.obj `if test -f 'gocoin-cli.cpp'; then $(CYGPATH_W) 'gocoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/gocoin-cli.cpp'; fi`
 
-blocknode_tx-blocknode-tx.o: blocknode-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -MT blocknode_tx-blocknode-tx.o -MD -MP -MF $(DEPDIR)/blocknode_tx-blocknode-tx.Tpo -c -o blocknode_tx-blocknode-tx.o `test -f 'blocknode-tx.cpp' || echo '$(srcdir)/'`blocknode-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_tx-blocknode-tx.Tpo $(DEPDIR)/blocknode_tx-blocknode-tx.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='blocknode-tx.cpp' object='blocknode_tx-blocknode-tx.o' libtool=no @AMDEPBACKSLASH@
+blocknode_tx-gocoin-tx.o: gocoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -MT blocknode_tx-gocoin-tx.o -MD -MP -MF $(DEPDIR)/blocknode_tx-gocoin-tx.Tpo -c -o blocknode_tx-gocoin-tx.o `test -f 'gocoin-tx.cpp' || echo '$(srcdir)/'`gocoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_tx-gocoin-tx.Tpo $(DEPDIR)/blocknode_tx-gocoin-tx.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gocoin-tx.cpp' object='blocknode_tx-gocoin-tx.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_tx-blocknode-tx.o `test -f 'blocknode-tx.cpp' || echo '$(srcdir)/'`blocknode-tx.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_tx-gocoin-tx.o `test -f 'gocoin-tx.cpp' || echo '$(srcdir)/'`gocoin-tx.cpp
 
-blocknode_tx-blocknode-tx.obj: blocknode-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -MT blocknode_tx-blocknode-tx.obj -MD -MP -MF $(DEPDIR)/blocknode_tx-blocknode-tx.Tpo -c -o blocknode_tx-blocknode-tx.obj `if test -f 'blocknode-tx.cpp'; then $(CYGPATH_W) 'blocknode-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/blocknode-tx.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_tx-blocknode-tx.Tpo $(DEPDIR)/blocknode_tx-blocknode-tx.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='blocknode-tx.cpp' object='blocknode_tx-blocknode-tx.obj' libtool=no @AMDEPBACKSLASH@
+blocknode_tx-gocoin-tx.obj: gocoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -MT blocknode_tx-gocoin-tx.obj -MD -MP -MF $(DEPDIR)/blocknode_tx-gocoin-tx.Tpo -c -o blocknode_tx-gocoin-tx.obj `if test -f 'gocoin-tx.cpp'; then $(CYGPATH_W) 'gocoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/gocoin-tx.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/blocknode_tx-gocoin-tx.Tpo $(DEPDIR)/blocknode_tx-gocoin-tx.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gocoin-tx.cpp' object='blocknode_tx-gocoin-tx.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_tx-blocknode-tx.obj `if test -f 'blocknode-tx.cpp'; then $(CYGPATH_W) 'blocknode-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/blocknode-tx.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknode_tx_CPPFLAGS) $(CPPFLAGS) $(blocknode_tx_CXXFLAGS) $(CXXFLAGS) -c -o blocknode_tx-gocoin-tx.obj `if test -f 'gocoin-tx.cpp'; then $(CYGPATH_W) 'gocoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/gocoin-tx.cpp'; fi`
 
 blocknoded-blocknoded.o: blocknoded.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknoded_CPPFLAGS) $(CPPFLAGS) $(blocknoded_CXXFLAGS) $(CXXFLAGS) -MT blocknoded-blocknoded.o -MD -MP -MF $(DEPDIR)/blocknoded-blocknoded.Tpo -c -o blocknoded-blocknoded.o `test -f 'blocknoded.cpp' || echo '$(srcdir)/'`blocknoded.cpp
@@ -6903,19 +6903,19 @@ blocknoded-blocknoded.obj: blocknoded.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(blocknoded_CPPFLAGS) $(CPPFLAGS) $(blocknoded_CXXFLAGS) $(CXXFLAGS) -c -o blocknoded-blocknoded.obj `if test -f 'blocknoded.cpp'; then $(CYGPATH_W) 'blocknoded.cpp'; else $(CYGPATH_W) '$(srcdir)/blocknoded.cpp'; fi`
 
-qt/qt_blocknode_qt-blocknode.o: qt/blocknode.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_blocknode_qt-blocknode.o -MD -MP -MF qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Tpo -c -o qt/qt_blocknode_qt-blocknode.o `test -f 'qt/blocknode.cpp' || echo '$(srcdir)/'`qt/blocknode.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Tpo qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/blocknode.cpp' object='qt/qt_blocknode_qt-blocknode.o' libtool=no @AMDEPBACKSLASH@
+qt/qt_blocknode_qt-gocoin.o: qt/gocoin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_blocknode_qt-gocoin.o -MD -MP -MF qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Tpo -c -o qt/qt_blocknode_qt-gocoin.o `test -f 'qt/gocoin.cpp' || echo '$(srcdir)/'`qt/gocoin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Tpo qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/gocoin.cpp' object='qt/qt_blocknode_qt-gocoin.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_blocknode_qt-blocknode.o `test -f 'qt/blocknode.cpp' || echo '$(srcdir)/'`qt/blocknode.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_blocknode_qt-gocoin.o `test -f 'qt/gocoin.cpp' || echo '$(srcdir)/'`qt/gocoin.cpp
 
-qt/qt_blocknode_qt-blocknode.obj: qt/blocknode.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_blocknode_qt-blocknode.obj -MD -MP -MF qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Tpo -c -o qt/qt_blocknode_qt-blocknode.obj `if test -f 'qt/blocknode.cpp'; then $(CYGPATH_W) 'qt/blocknode.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/blocknode.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Tpo qt/$(DEPDIR)/qt_blocknode_qt-blocknode.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/blocknode.cpp' object='qt/qt_blocknode_qt-blocknode.obj' libtool=no @AMDEPBACKSLASH@
+qt/qt_blocknode_qt-gocoin.obj: qt/gocoin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_blocknode_qt-gocoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Tpo -c -o qt/qt_blocknode_qt-gocoin.obj `if test -f 'qt/gocoin.cpp'; then $(CYGPATH_W) 'qt/gocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/gocoin.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Tpo qt/$(DEPDIR)/qt_blocknode_qt-gocoin.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/gocoin.cpp' object='qt/qt_blocknode_qt-gocoin.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_blocknode_qt-blocknode.obj `if test -f 'qt/blocknode.cpp'; then $(CYGPATH_W) 'qt/blocknode.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/blocknode.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_blocknode_qt-gocoin.obj `if test -f 'qt/gocoin.cpp'; then $(CYGPATH_W) 'qt/gocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/gocoin.cpp'; fi`
 
 qt/test/qt_test_test_blocknode_qt-test_main.o: qt/test/test_main.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_blocknode_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_blocknode_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_blocknode_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_blocknode_qt-test_main.Tpo -c -o qt/test/qt_test_test_blocknode_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
@@ -8330,13 +8330,13 @@ clean-local:
 
 @ENABLE_QT_TRUE@$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 @ENABLE_QT_TRUE@	@test -f $(RCC)
-@ENABLE_QT_TRUE@	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name blocknode $< | \
+@ENABLE_QT_TRUE@	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name gocoin $< | \
 @ENABLE_QT_TRUE@	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 @ENABLE_QT_TRUE@blocknode_qt_clean: FORCE
-@ENABLE_QT_TRUE@	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_blocknode_qt_OBJECTS) qt/blocknode-qt$(EXEEXT) $(LIBBITCOINQT)
+@ENABLE_QT_TRUE@	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_blocknode_qt_OBJECTS) qt/gocoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
-@ENABLE_QT_TRUE@blocknode_qt : qt/blocknode-qt$(EXEEXT)
+@ENABLE_QT_TRUE@blocknode_qt : qt/gocoin-qt$(EXEEXT)
 
 @ENABLE_QT_TRUE@ui_%.h: %.ui
 @ENABLE_QT_TRUE@	@test -f $(UIC)

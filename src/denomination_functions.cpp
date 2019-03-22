@@ -4,11 +4,11 @@
  * @brief      Denomination functions for the Zerocoin library.
  *
  * @copyright  Copyright 2017 PIVX Developers
- * @copyright  Copyright 2018 Blocknode Developers
+ * @copyright  Copyright 2018 Gocoin Developers
  * @license    This project is released under the MIT license.
  **/
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Blocknode developers
+// Copyright (c) 2018 The Gocoin developers
 
 #include "denomination_functions.h"
 

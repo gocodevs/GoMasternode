@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Blocknode"
-            VALUE "FileDescription",    "blocknoded (OSS daemon/client for Blocknode)"
+            VALUE "CompanyName",        "Gocoin"
+            VALUE "FileDescription",    "blocknoded (OSS daemon/client for Gocoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "blocknoded"
             VALUE "LegalCopyright",     COPYRIGHT_STR

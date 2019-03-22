@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi Blocknode per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi Gocoin per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi Blocknode per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi Gocoin per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi BND dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi GOC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Confermi di voler crittografare il portafoglio?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
-        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI BND&lt;7b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
+        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI GOC&lt;7b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo Blocknode che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo Gocoin che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>L'indirizzo Blocknode per firmare il messaggio con</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>L'indirizzo Gocoin per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Blocknode</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Gocoin</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>L'indirizzo Blocknode con cui è stato firmato il messaggio</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>L'indirizzo Gocoin con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Blocknode specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Gocoin specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,16 +590,16 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>Invia monete all' indirizzo Blocknode</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>Invia monete all' indirizzo Gocoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e blocknode: URIs)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e gocoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -610,24 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>&amp;Informazioni Blocknode Core</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>&amp;Informazioni Gocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>Visualizza informazioni su Blocknode Core</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>Visualizza informazioni su Gocoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>Modifica le opzioni di configurazione per Blocknode</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>Modifica le opzioni di configurazione per Gocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi Blocknode per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi Gocoin per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Blocknode specifici</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Gocoin specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -638,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a Blocknode: URI or payment request</source>
-        <translation>Apri un Blocknode: URI o richiesta di pagamento</translation>
+        <source>Open a Gocoin: URI or payment request</source>
+        <translation>Apri un Gocoin: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the Blocknode Core help message to get a list with possible Blocknode command-line options</source>
-        <translation>Mostra il messaggio di aiuto Blocknode Core per ottenere un elenco con le possibili opzioni di riga di comando Blocknode</translation>
+        <source>Show the Gocoin Core help message to get a list with possible Gocoin command-line options</source>
+        <translation>Mostra il messaggio di aiuto Gocoin Core per ottenere un elenco con le possibili opzioni di riga di comando Gocoin</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -753,8 +753,8 @@ MultiSend: %1</translation>
         <translation>Cerca</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (blocknode.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (blocknode.conf)</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (gocoin.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (gocoin.conf)</translation>
     </message>
 </context>
 <context>
@@ -888,8 +888,8 @@ MultiSend: %1</translation>
         <translation>versione</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -915,8 +915,8 @@ MultiSend: %1</translation>
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1144,8 +1144,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>L'indirizzo Blocknode per firmare il messaggio con</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>L'indirizzo Gocoin per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1168,16 +1168,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Blocknode</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Gocoin</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>L'indirizzo Blocknode con cui è stato firmato il messaggio</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>L'indirizzo Gocoin con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Blocknode specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Gocoin specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1215,8 +1215,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     </context>
 <context>
@@ -1314,7 +1314,7 @@ MultiSend: %1</translation>
     <name>ZBndControlDialog</name>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>

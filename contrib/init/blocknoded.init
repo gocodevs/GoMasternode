@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  blocknoded The Blocknode core server.
+#  blocknoded The Gocoin core server.
 #
 #
 # chkconfig: 345 80 20

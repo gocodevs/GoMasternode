@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Blocknode developers
+// Copyright (c) 2018 The Gocoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -264,11 +264,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Blocknode server.");
+            "\nStop Gocoin server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "Blocknode server stopping";
+    return "Gocoin server stopping";
 }
 
 
@@ -352,36 +352,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Blocknode features */
-        {"blocknode", "masternode", &masternode, true, true, false},
-        {"blocknode", "listmasternodes", &listmasternodes, true, true, false},
-        {"blocknode", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"blocknode", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"blocknode", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"blocknode", "masternodedebug", &masternodedebug, true, true, false},
-        {"blocknode", "startmasternode", &startmasternode, true, true, false},
-        {"blocknode", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"blocknode", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"blocknode", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"blocknode", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"blocknode", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"blocknode", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"blocknode", "mnbudget", &mnbudget, true, true, false},
-        {"blocknode", "preparebudget", &preparebudget, true, true, false},
-        {"blocknode", "submitbudget", &submitbudget, true, true, false},
-        {"blocknode", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"blocknode", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"blocknode", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"blocknode", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"blocknode", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"blocknode", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"blocknode", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"blocknode", "checkbudgets", &checkbudgets, true, true, false},
-        {"blocknode", "mnsync", &mnsync, true, true, false},
-        {"blocknode", "spork", &spork, true, true, false},
-        {"blocknode", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* Gocoin features */
+        {"gocoin", "masternode", &masternode, true, true, false},
+        {"gocoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"gocoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"gocoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"gocoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"gocoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"gocoin", "startmasternode", &startmasternode, true, true, false},
+        {"gocoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"gocoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"gocoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"gocoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"gocoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"gocoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"gocoin", "mnbudget", &mnbudget, true, true, false},
+        {"gocoin", "preparebudget", &preparebudget, true, true, false},
+        {"gocoin", "submitbudget", &submitbudget, true, true, false},
+        {"gocoin", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"gocoin", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"gocoin", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"gocoin", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"gocoin", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"gocoin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"gocoin", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"gocoin", "checkbudgets", &checkbudgets, true, true, false},
+        {"gocoin", "mnsync", &mnsync, true, true, false},
+        {"gocoin", "spork", &spork, true, true, false},
+        {"gocoin", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"blocknode", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"gocoin", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -608,14 +608,14 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> blocknode-cli " + methodname + " " + args + "\n";
+    return "> gocoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:37002/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:27002/\n";
 }
 
 void RPCRegisterTimerInterface(RPCTimerInterface *iface)

@@ -1,4 +1,4 @@
-# bash programmable completion for blocknoded(1) and blocknode-cli(1)
+# bash programmable completion for blocknoded(1) and gocoin-cli(1)
 # Copyright (c) 2012,2014 Christian von Roques <roques@mti.ag>
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -19,7 +19,7 @@ _blocknode_rpc() {
     $blocknoded "${rpcargs[@]}" "$@"
 }
 
-# Add blocknode accounts to COMPREPLY
+# Add gocoin accounts to COMPREPLY
 _blocknode_accounts() {
     local accounts
     accounts=$(_blocknode_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
@@ -133,7 +133,7 @@ _blocknoded() {
     esac
 }
 
-complete -F _blocknoded blocknoded blocknode-cli
+complete -F _blocknoded blocknoded gocoin-cli
 }
 
 # Local variables:

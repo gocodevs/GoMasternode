@@ -1,7 +1,7 @@
 # /etc/conf.d/blocknoded: config file for /etc/init.d/blocknoded
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/blocknode/blocknode.conf"
+#BITCOIND_CONFIGFILE="/etc/gocoin/gocoin.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
 #BITCOIND_PIDDIR="/var/run/blocknoded"
@@ -13,8 +13,8 @@
 #BITCOIND_DATADIR="/var/lib/blocknoded"
 
 # User and group to own blocknoded process
-#BITCOIND_USER="blocknode"
-#BITCOIND_GROUP="blocknode"
+#BITCOIND_USER="gocoin"
+#BITCOIND_GROUP="gocoin"
 
 # Path to blocknoded executable
 #BITCOIND_BIN="/usr/bin/blocknoded"

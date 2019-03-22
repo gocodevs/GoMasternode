@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Blocknode developers
+// Copyright (c) 2018 The Gocoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -104,13 +104,13 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0xb1;
-        pchMessageStart[1] = 0x1c;
-        pchMessageStart[2] = 0x70;
-        pchMessageStart[3] = 0xd3;
-        vAlertPubKey = ParseHex("04510c2a5bc867015651eb85e13a236f74fcba22600c4b67fda7a9293bba4e6729f4ed32a3851b7998a09d22cb2d50d0ac12308b80558408d9570f31413447109e");
-        nDefaultPort = 37001;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // Blocknode starting difficulty is 1 / 2^12
+        pchMessageStart[0] = 0xa1;
+        pchMessageStart[1] = 0xf2;
+        pchMessageStart[2] = 0x71;
+        pchMessageStart[3] = 0xd5;
+        vAlertPubKey = ParseHex("047ff78a093ca911fbe3c7cd9b8b81976696d92e6ad3d987b00a4cc4841fe9689ed6902be9c6942ef77492d0531bf68cf2e53dc0ac683359f938a7a52a988ced8c");
+        nDefaultPort = 27001;
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // Gocoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 64800;   // HALVING EVERY: 64800 BLOCKS
         nSubsidyBudgetPercentage = 5;      // Must be less than 100
         nMaxReorganizationDepth = 100;
@@ -118,18 +118,18 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 60 * 60; // Blocknode: 1 hr
-        nTargetSpacing = 120;  // Blocknode: 2 min
-        nMaturity = 30;
-        nMasternodeCollateral = 100000; // 100000
+        nTargetTimespan = 60 * 60; // Gocoin: 1 hr
+        nTargetSpacing = 120;  // Gocoin: 2 min
+        nMaturity = 10;
+        nMasternodeCollateral = 10000; // 10000
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut =  600000000LL * COIN; 
+        nMaxMoneyOut =  600000000LL * COIN;
         nSwiftTxMinFee = 0.01 * COIN;             // 1 CENT or 10000 satoshis
         nMinTxFeePerK = 0.0001 * COIN;            // .01 CENT or 100 satoshis
         nMinRelayTxFeePerK = 0.0001 * COIN;       // .01 CENT or 100 satoshis
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 500;
+        nLastPOWBlock = 200;
         nModifierUpdateBlock = 0;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = -1; //Trigger a recalculation of accumulators
@@ -144,7 +144,7 @@ public:
               -t 1525032500 -v 0 \
               -p 04dd017f0deb12b60abcb78030ffac6b351e2180dc57c881118013a94775a988d3c9390e71404395011409556d0963d9241ce7db4cb8266bf1c18fac3ff3fe9069
             ```
-            
+
             04ffff001d010431532e20416672696361206c6f6f6b7320746f20616363656c6572617465206c616e64207265646973747269627574696f6e
             algorithm: quark-hash
             merkle hash: 5343845516659ffdf8d65682c3241bedffdcb4f85a51b780f6ebfffe619a31a3
@@ -157,13 +157,13 @@ public:
             nonce: 308971
             genesis hash: 00000c392c066ec40b4138a3642ac7c7c3a0b157be45553ea1adcce4196c968d
         */
-        const char* pszTimestamp = "S. Africa looks to accelerate land redistribution";
+        const char* pszTimestamp = "New coin is born to change how cloud storage works";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04dd017f0deb12b60abcb78030ffac6b351e2180dc57c881118013a94775a988d3c9390e71404395011409556d0963d9241ce7db4cb8266bf1c18fac3ff3fe9069") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("047ff78a093ca911fbe3c7cd9b8b81976696d92e6ad3d987b00a4cc4841fe9689ed6902be9c6942ef77492d0531bf68cf2e53dc0ac683359f938a7a52a988ced8c") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -172,34 +172,59 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 308971;
 
+        if(genesis.GetHash() != uint256("0x"))
+                {
+                    printf("Searching for genesis block...\n");
+                    uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                    while(uint256(genesis.GetHash()) > hashTarget)
+                    {
+                        ++genesis.nNonce;
+                        if (genesis.nNonce == 0)
+                        {
+                            printf("NONCE WRAPPED, incrementing time");
+                            std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+                            ++genesis.nTime;
+                        }
+                        if (genesis.nNonce % 10000 == 0)
+                        {
+                            printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
+                        }
+                    }
+                    printf("block.nTime = %u \n", genesis.nTime);
+                    printf("block.nNonce = %u \n", genesis.nNonce);
+                    printf("block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+                    printf("block.merklehash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+                }
+
         hashGenesisBlock = genesis.GetHash();
         assert(genesis.hashMerkleRoot == uint256("0x5343845516659ffdf8d65682c3241bedffdcb4f85a51b780f6ebfffe619a31a3"));
-        assert(hashGenesisBlock == uint256("0x00000c392c066ec40b4138a3642ac7c7c3a0b157be45553ea1adcce4196c968d")); 
-        
+        assert(hashGenesisBlock == uint256("0x00000c392c066ec40b4138a3642ac7c7c3a0b157be45553ea1adcce4196c968d"));
+
         // Zerocoin, activated never
         nZerocoinStartHeight = INT_MAX;
         nZerocoinStartTime = INT_MAX;
 
-        vSeeds.push_back(CDNSSeedData("blocknode.tech", "seeds.blocknode.tech"));             // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("gig8.com", "seeds.blocknode.gig8.com"));      // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("0", "209.250.240.118"));             // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("0", "199.247.13.213"));             // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("0", "95.179.170.102"));           // Third DNS Seeder
 
-        // https://en.bitcoin.it/wiki/List_of_address_prefixes        
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);     // starts with B
+        // https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);     // starts with G
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);     // starts with S
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 75);        // starts with X
-        
+
         /* if tempted to change below consider https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki
-            Because this scheme can be used to generate nodes for more cryptocurrencies at once, 
-            or even something totally unrelated to cryptocurrencies, there's no point in using a 
-            special version magic described in section "Serialization format" of BIP32. We suggest 
-            to use always 0x0488B21E for public and 0x0488ADE4 for private nodes (leading to 
+            Because this scheme can be used to generate nodes for more cryptocurrencies at once,
+            or even something totally unrelated to cryptocurrencies, there's no point in using a
+            special version magic described in section "Serialization format" of BIP32. We suggest
+            to use always 0x0488B21E for public and 0x0488ADE4 for private nodes (leading to
             prefixes "xpub" and "xprv" respectively).
         */
-                
+
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x0b)(0x7d).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x90)(0x00)(0x1b)(0x6a).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -213,7 +238,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04a6065e38403a4f95bed7349cdf1a8f10c4f7193ce2f2ad08f8e94f208eb7dd60445bf9d8f34cf1bd51755301260c99ac21d5ea815fe2b4492dc17c41512db8cd";
+        strSporkKey = "047ff78a093ca911fbe3c7cd9b8b81976696d92e6ad3d987b00a4cc4841fe9689ed6902be9c6942ef77492d0531bf68cf2e53dc0ac683359f938a7a52a988ced8c";
         strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = genesis.nTime + 60 * 60; // 1 hr after genesis
 
@@ -253,30 +278,30 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0xb1;
-        pchMessageStart[1] = 0x1c;
-        pchMessageStart[2] = 0x70;
-        pchMessageStart[3] = 0xd4;
-        vAlertPubKey = ParseHex("04fa09d4703acfa6d6330a3a54d030a7b05a1f4a9cffd4d6ff90181d06cd89790dc53b05300902f351cf9b8e52bb9115abfc1526289ffe293f99a83c25c4f79d0f");
-        nDefaultPort = 37003;
+        pchMessageStart[0] = 0xc1;
+        pchMessageStart[1] = 0x2c;
+        pchMessageStart[2] = 0x60;
+        pchMessageStart[3] = 0xd2;
+        vAlertPubKey = ParseHex("047ff78a093ca911fbe3c7cd9b8b81976696d92e6ad3d987b00a4cc4841fe9689ed6902be9c6942ef77492d0531bf68cf2e53dc0ac683359f938a7a52a988ced8c");
+        nDefaultPort = 27003;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 60 * 60; // Blocknode: 1 hr
-        nTargetSpacing = 120;  // Blocknode: 2 min
+        nTargetTimespan = 60 * 60; // Gocoin: 1 hr
+        nTargetSpacing = 120;  // Gocoin: 2 min
         nLastPOWBlock = 500;
         nMaturity = 30;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 0; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut =  600000000LL * COIN; 
-        
+        nMaxMoneyOut =  600000000LL * COIN;
+
         // nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         // nBlockRecalculateAccumulators = -1; //Trigger a recalculation of accumulators
         // nBlockFirstFraudulent = -1; //First block that bad serials emerged
         // nBlockLastGoodCheckpoint = 0; //Last valid accumulator checkpoint
         // nBlockEnforceInvalidUTXO = 1; //Start enforcing the invalid UTXO's
-        
+
         /*
             ```
             python ~/gig8/GenesisH0/genesis.py -a quark-hash \
@@ -302,24 +327,24 @@ public:
         genesis.nNonce = 601665;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000002244385b8f9a32b98ab6b9eb0c0e30acfce4f76fb63fbd5b6ba3d4936cf"));
-        
+        //assert(hashGenesisBlock == uint256("0x000002244385b8f9a32b98ab6b9eb0c0e30acfce4f76fb63fbd5b6ba3d4936cf"));
+
         // Zerocoin, activated by default
         nZerocoinStartHeight = INT_MAX;
         nZerocoinStartTime = INT_MAX;
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("blocknode.tech", "testnet-seeds.blocknode.tech"));             // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("gig8.com", "testnet-seeds.blocknode.gig8.com"));      // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("gocoin.tech", "testnet-seeds.gocoin.tech"));             // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("gig8.com", "testnet-seeds.gocoin.gig8.com"));      // Secondary DNS Seeder
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 85); // Testnet blocknode addresses start with 'b''
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 125);  // Testnet blocknode script addresses start with 's'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 97); // Testnet gocoin addresses start with 'g''
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 125);  // Testnet gocoin script addresses start with 's'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 137);     // Testnet private keys start with 'x'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet blocknode BIP44 coin type is '1' (All coin's testnet default)
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
+        // Testnet gocoin BIP44 coin type is '1' (All coin's testnet default)
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x50)(0x00)(0x10)(0x02).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
@@ -331,7 +356,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04571fa1de7d79fb01ff9004069ad0d638f46daa9e7766733b67b091b03e4efe2b30d9446b7afbf342d8d95c9a21fe0dff5a98325ad6040d4d85cb364850af95d9";
+        strSporkKey = "047ff78a093ca911fbe3c7cd9b8b81976696d92e6ad3d987b00a4cc4841fe9689ed6902be9c6942ef77492d0531bf68cf2e53dc0ac683359f938a7a52a988ced8c";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = genesis.nTime + 60 * 60; // 1 hr after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
@@ -355,19 +380,19 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0xb1;
-        pchMessageStart[1] = 0x1c;
-        pchMessageStart[2] = 0x70;
-        pchMessageStart[3] = 0xd5;
+        pchMessageStart[0] = 0xc1;
+        pchMessageStart[1] = 0x2d;
+        pchMessageStart[2] = 0x80;
+        pchMessageStart[3] = 0xd3;
         nSubsidyHalvingInterval = 150;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 60 * 60; // Blocknode: 1 hour
-        nTargetSpacing = 120;        // Blocknode: 2 min
+        nTargetTimespan = 60 * 60; // Gocoin: 1 hour
+        nTargetSpacing = 120;        // Gocoin: 2 min
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        
+
         /*
             ```
             python ~/gig8/GenesisH0/genesis.py -a quark-hash \
@@ -393,8 +418,8 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 37005;
-        assert(hashGenesisBlock == uint256("0x000006ba3bf77872f9c4747ed7451309cfc89c85f6b74f19254868211162de4a")); 
-        
+        //assert(hashGenesisBlock == uint256("0x000006ba3bf77872f9c4747ed7451309cfc89c85f6b74f19254868211162de4a"));
+
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
 

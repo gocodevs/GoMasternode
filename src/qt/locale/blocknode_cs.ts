@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše Blocknode adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše Gocoin adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše Blocknode adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše Gocoin adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,15 +176,15 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše BNDy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše BNDy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Opravdu chcete zašifrovat Vaši peněženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
         <translation>Varování: Pokud zašifrujete svou peněženku a ztratíte frázové heslo, tak &lt;b&gt;ZTRATÍTE VŠECHNY VAŠE BNDy&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte Blocknode adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte Gocoin adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Blocknode adresa pro podepsání zprávy</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Gocoin adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Blocknode adresu</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Gocoin adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Blocknode adresa zprávy byla podpsána</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Gocoin adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Blocknode adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Gocoin adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>Odeslat platbuna Blocknode adresu</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>Odeslat platbuna Gocoin adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a blocknode: URIs)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a gocoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>&amp;O Blocknode Core</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>&amp;O Gocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>Zobraz informace o Blocknode Core</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>Zobraz informace o Gocoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>Upravit možnosti konfigurace pro Blocknode</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>Upravit možnosti konfigurace pro Gocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší Blocknode adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší Gocoin adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Blocknode adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Gocoin adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a Blocknode: URI or payment request</source>
-        <translation>Otevřít Blocknode: URI nebo platební žádost</translation>
+        <source>Open a Gocoin: URI or payment request</source>
+        <translation>Otevřít Gocoin: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the Blocknode Core help message to get a list with possible Blocknode command-line options</source>
-        <translation>Zobrazit Blocknode Core pomocnou zpráv pro získání seznamu možných parametrů Blocknode pro příkazy do příkazové řádky</translation>
+        <source>Show the Gocoin Core help message to get a list with possible Gocoin command-line options</source>
+        <translation>Zobrazit Gocoin Core pomocnou zpráv pro získání seznamu možných parametrů Gocoin pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>Blocknode Core client</source>
-        <translation>Blocknode Core klient</translation>
+        <source>Gocoin Core client</source>
+        <translation>Gocoin Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (blocknode.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (blocknode.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (gocoin.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (gocoin.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -1066,8 +1066,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Blocknode address.</source>
-        <translation>Zadaná adresa "%1" není validní Blocknode adresa.</translation>
+        <source>The entered address "%1" is not a valid Gocoin address.</source>
+        <translation>Zadaná adresa "%1" není validní Gocoin adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1112,12 +1112,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
-        <source>About Blocknode Core</source>
-        <translation>O Blocknode Core</translation>
+        <source>About Gocoin Core</source>
+        <translation>O Gocoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1151,16 +1151,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to Blocknode Core.</source>
-        <translation>Vítejte v Blocknode Core.</translation>
+        <source>Welcome to Gocoin Core.</source>
+        <translation>Vítejte v Gocoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Blocknode Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Blocknode Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Gocoin Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Gocoin Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>Blocknode Core will download and store a copy of the Blocknode block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Blocknode Core stáhne a uloží kopii Blocknode blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>Gocoin Core will download and store a copy of the Gocoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Gocoin Core stáhne a uloží kopii Gocoin blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1171,8 +1171,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1438,24 +1438,24 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Vyberte úrpvěň ochrany soukromí</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 BND</source>
-        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 10000 BND</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 GOC</source>
+        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 10000 GOC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Použít 16 oddělených masternodů</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 BND to anonymize 10000 BND</source>
-        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 BND pro anonymizaci 10000 BND</translation>
+        <source>This option is the quickest and will cost about ~0.025 GOC to anonymize 10000 GOC</source>
+        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 GOC pro anonymizaci 10000 GOC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Toto je nejpomalejší a nejvíce bezpečná volba. Použití maximalní anonymity bude stát</translation>
     </message>
     <message>
-        <source>0.1 BND per 10000 BND you anonymize.</source>
-        <translation>0.1 BND za 10000 BND anonymizujete.</translation>
+        <source>0.1 GOC per 10000 GOC you anonymize.</source>
+        <translation>0.1 GOC za 10000 GOC anonymizujete.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1520,12 +1520,12 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Blocknode after logging in to the system.</source>
-        <translation>Automaticky spustit Blocknode po přihlášení do systému</translation>
+        <source>Automatically start Gocoin after logging in to the system.</source>
+        <translation>Automaticky spustit Gocoin po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Blocknode on system login</source>
-        <translation>&amp;Spusti Blocknode při přihlášení do systému</translation>
+        <source>&amp;Start Gocoin on system login</source>
+        <translation>&amp;Spusti Gocoin při přihlášení do systému</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2057,8 +2057,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Změna:</translation>
     </message>
     <message>
-        <source>0 BND</source>
-        <translation>0 BND</translation>
+        <source>0 GOC</source>
+        <translation>0 GOC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2186,8 +2186,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Blocknode adresa pro podepsání zprávy</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Gocoin adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2214,16 +2214,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Blocknode adresu</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Gocoin adresu</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Blocknode adresa zprávy byla podpsána</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Gocoin adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Blocknode adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Gocoin adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2265,8 +2265,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     </context>
 <context>
@@ -2376,7 +2376,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

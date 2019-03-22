@@ -5,7 +5,7 @@ UNSIGNED=$1
 SIGNATURE=$2
 ARCH=x86_64
 ROOTDIR=dist
-BUNDLE=${ROOTDIR}/Blocknode-Qt.app
+BUNDLE=${ROOTDIR}/Gocoin-Qt.app
 TEMPDIR=signed.temp
 OUTDIR=signed-app
 

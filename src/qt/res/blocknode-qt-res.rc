@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Blocknode"
-            VALUE "FileDescription",    "Blocknode Core (OSS GUI client for Blocknode)"
+            VALUE "CompanyName",        "Gocoin"
+            VALUE "FileDescription",    "Gocoin Core (OSS GUI client for Gocoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "blocknode-qt"
+            VALUE "InternalName",       "gocoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "blocknode-qt.exe"
-            VALUE "ProductName",        "Blocknode Core"
+            VALUE "OriginalFilename",   "gocoin-qt.exe"
+            VALUE "ProductName",        "Gocoin Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

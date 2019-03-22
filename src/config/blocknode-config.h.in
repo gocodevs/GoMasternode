@@ -1,4 +1,4 @@
-/* src/config/blocknode-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/gocoin-config.h.in.  Generated from configure.ac by autoheader.  */
 
 #ifndef BND_CONFIG_H
 

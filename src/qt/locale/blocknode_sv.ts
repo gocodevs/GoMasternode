@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina Blocknode adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina Gocoin adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina Blocknode adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina Gocoin adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,16 +160,16 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina BNDs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina BNDs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
-        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA BND&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
+        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA GOC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Ange en Blocknode adress som du vill kryptera med BIP 38.
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Ange en Gocoin adress som du vill kryptera med BIP 38.
 Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Blocknode adressen för signera meddelandet med</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Gocoin adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Blocknode adress</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Gocoin adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Blocknode adressen meddelandet blev signerat med</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Gocoin adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Blocknode adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Gocoin adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,16 +583,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kärna</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>Skicka mynt till en Blocknode adress</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>Skicka mynt till en Gocoin adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och blocknode: URls)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och gocoin: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -603,24 +603,24 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>Om Blocknode Kärnan</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>Om Gocoin Kärnan</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>Visa information om Blocknode Kärnan</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>Visa information om Gocoin Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>Ändra konfigurationsval för Blocknode</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>Ändra konfigurationsval för Gocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>Signera meddelanden med din Blocknode adress för att visa att du äger dem</translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>Signera meddelanden med din Gocoin adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Blocknode adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Gocoin adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>Blocknode Core client</source>
-        <translation>Blocknode kärn klient</translation>
+        <source>Gocoin Core client</source>
+        <translation>Gocoin kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -837,15 +837,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kärna</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kärna</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1157,8 +1157,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Blocknode adressen för signera meddelandet med</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Gocoin adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1181,16 +1181,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Blocknode adress</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Gocoin adress</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Blocknode adressen meddelandet blev signerat med</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Gocoin adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Blocknode adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Gocoin adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1232,8 +1232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kärna</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kärna</translation>
     </message>
     </context>
 <context>
@@ -1419,7 +1419,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     <name>ZBndControlDialog</name>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

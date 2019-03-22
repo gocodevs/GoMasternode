@@ -442,10 +442,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy BND</string>
+      <string>Buy GOC</string>
      </property>
      <property name="icon">
-      <iconset resource="../blocknode.qrc">
+      <iconset resource="../gocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>BND</string>
+      <string>GOC</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,7 +1704,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>BND</string>
+      <string>GOC</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="UnitsInputBND">
@@ -1751,10 +1751,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell BND</string>
+      <string>Sell GOC</string>
      </property>
      <property name="icon">
-      <iconset resource="../blocknode">
+      <iconset resource="../gocoin">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -1777,7 +1777,7 @@
          </font>
         </property>
         <property name="text">
-         <string>BND Available:</string>
+         <string>GOC Available:</string>
         </property>
        </widget>
       </item>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>BND</string>
+         <string>GOC</string>
         </property>
        </widget>
       </item>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>BND Balance:</string>
+      <string>GOC Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>BND Available:</string>
+      <string>GOC Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,7 +2832,7 @@
       </font>
      </property>
      <property name="text">
-      <string>BND Pending:</string>
+      <string>GOC Pending:</string>
      </property>
     </widget>
     <widget class="QLabel" name="BNDPendingLabel">
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex BND Deposit Address:</string>
+      <string>Bittrex GOC Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,10 +2941,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate Blocknode Deposit Address</string>
+      <string>Generate Gocoin Deposit Address</string>
      </property>
      <property name="icon">
-      <iconset resource="../blocknode.qrc">
+      <iconset resource="../gocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3206,7 +3206,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../blocknode.qrc">:/icons/transaction_1</pixmap>
+       <pixmap resource="../gocoin.qrc">:/icons/transaction_1</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3253,7 +3253,7 @@
       <string>Update API Keys</string>
      </property>
      <property name="icon">
-      <iconset resource="../blocknode.qrc">
+      <iconset resource="../gocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3408,7 +3408,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../blocknode.qrc"/>
+  <include location="../gocoin.qrc"/>
  </resources>
  <connections/>
 </ui>

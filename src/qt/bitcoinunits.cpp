@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Blocknode developers
+// Copyright (c) 2018 The Gocoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +20,7 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BND);
+    unitlist.append(GOC);
     unitlist.append(mBND);
     unitlist.append(uBND);
     return unitlist;
@@ -29,7 +29,7 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case BND:
+    case GOC:
     case mBND:
     case uBND:
         return true;
@@ -41,8 +41,8 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case BND:
-        return QString("blocknode");
+    case GOC:
+        return QString("gocoin");
     case mBND:
         return QString("mblocknode");
     case uBND:
@@ -56,18 +56,18 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BND:
-            return QString("BND");
+        case GOC:
+            return QString("GOC");
         case mBND:
             return QString("mBND");
         case uBND:
-            return QString::fromUtf8("μBND");
+            return QString::fromUtf8("μGOC");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BND:
+        case GOC:
             return QString("tBND");
         case mBND:
             return QString("mtBND");
@@ -83,18 +83,18 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BND:
-            return QString("BND");
+        case GOC:
+            return QString("GOC");
         case mBND:
-            return QString("Milli-BND (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-GOC (1 / 1" THIN_SP_UTF8 "000)");
         case uBND:
-            return QString("Micro-BND (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-GOC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BND:
+        case GOC:
             return QString("TestBNDs");
         case mBND:
             return QString("Milli-TestBND (1 / 1" THIN_SP_UTF8 "000)");
@@ -109,7 +109,7 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case BND:
+    case GOC:
         return COIN;
     case mBND:
         return COIN / 1000;
@@ -123,7 +123,7 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case BND:
+    case GOC:
         return 6;
     case mBND:
         return 3;

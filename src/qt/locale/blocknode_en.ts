@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -307,7 +307,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -318,7 +318,7 @@
     </message>
     <message>
         <location line="-355"/>
-        <source>The Blocknode address to sign the message with</source>
+        <source>The Gocoin address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -360,7 +360,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Blocknode address</source>
+        <source>Sign the message to prove you own this Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -391,12 +391,12 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The Blocknode address the message was signed with</source>
+        <source>The Gocoin address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -811,17 +811,17 @@
     <message>
         <location line="-427"/>
         <location line="+890"/>
-        <source>Blocknode Core</source>
+        <source>Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-707"/>
-        <source>Send coins to a Blocknode address</source>
+        <source>Send coins to a Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -841,27 +841,27 @@
     </message>
     <message>
         <location line="+31"/>
-        <source>&amp;About Blocknode Core</source>
+        <source>&amp;About Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Blocknode Core</source>
+        <source>Show information about Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Modify configuration options for Blocknode</source>
+        <source>Modify configuration options for Gocoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -901,7 +901,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Open a Blocknode: URI or payment request</source>
+        <source>Open a Gocoin: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -916,17 +916,17 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the Blocknode Core help message to get a list with possible Blocknode command-line options</source>
+        <source>Show the Gocoin Core help message to get a list with possible Gocoin command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+214"/>
-        <source>Blocknode Core client</source>
+        <source>Gocoin Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+212"/>
-        <source>%n active connection(s) to Blocknode network</source>
+        <source>%n active connection(s) to Gocoin network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1127,7 +1127,7 @@ Address: %4
     </message>
     <message>
         <location filename="../blockexplorer.cpp" line="+476"/>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (blocknode.conf).</source>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (gocoin.conf).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1496,7 +1496,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid Blocknode address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Gocoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1552,7 +1552,7 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>Blocknode Core</source>
+        <source>Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1563,7 +1563,7 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>About Blocknode Core</source>
+        <source>About Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1621,17 +1621,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Blocknode Core.</source>
+        <source>Welcome to Gocoin Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Blocknode Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Gocoin Core will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Blocknode Core will download and store a copy of the Blocknode block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Gocoin Core will download and store a copy of the Gocoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1646,7 +1646,7 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+77"/>
-        <source>Blocknode Core</source>
+        <source>Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1822,8 +1822,8 @@ Address: %4
     </message>
     <message>
         <location line="+16"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Blocknode addresses after it matures.
-To Add: enter percentage to give and Blocknode address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Gocoin addresses after it matures.
+To Add: enter percentage to give and Gocoin address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -2078,7 +2078,7 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Add destinations to send BND to</source>
+        <source>Add destinations to send GOC to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2210,12 +2210,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 BND</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 BND</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2225,12 +2225,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 BND to anonymize 10000 BND</source>
+        <source>This option is the quickest and will cost about ~0.025 GOC to anonymize 10000 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 BND to anonymize 10000 BND</source>
+        <source>This option is moderately fast and will cost about 0.05 GOC to anonymize 10000 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2240,7 +2240,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 BND per 10000 BND you anonymize.</source>
+        <source>0.1 GOC per 10000 GOC you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2252,17 +2252,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Blocknode&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Gocoin&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Blocknode&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Gocoin&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Blocknode&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Gocoin&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2338,7 +2338,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the Blocknode client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Gocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2363,12 +2363,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-176"/>
-        <source>Automatically start Blocknode after logging in to the system.</source>
+        <source>Automatically start Gocoin after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Blocknode on system login</source>
+        <source>&amp;Start Gocoin on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2403,13 +2403,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Blocknode.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Gocoin.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/blocknode-project/blocknode-project-translations</source>
+https://www.transifex.com/gocoin-project/gocoin-project-translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2419,7 +2419,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     </message>
     <message>
         <location line="-133"/>
-        <source>Percentage of incoming BND which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming GOC which get automatically converted to zBND via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2430,7 +2430,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough BND for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough GOC for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2440,7 +2440,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     </message>
     <message>
         <location line="+114"/>
-        <source>Connect to the Blocknode network through a SOCKS5 proxy.</source>
+        <source>Connect to the Gocoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2605,7 +2605,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     </message>
     <message>
         <location line="+43"/>
-        <source>BND Balances</source>
+        <source>GOC Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2644,7 +2644,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     <message>
         <location line="-153"/>
         <location line="+1393"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Blocknode network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Gocoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2706,7 +2706,7 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</sour
     </message>
     <message>
         <location line="+36"/>
-        <source>BND:</source>
+        <source>GOC:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2729,7 +2729,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="-46"/>
         <location line="+13"/>
-        <source>Locked BND or Masternode collaterals. These are excluded from zBND minting.</source>
+        <source>Locked GOC or Masternode collaterals. These are excluded from zBND minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2738,7 +2738,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+189"/>
         <location line="+31"/>
         <location line="+44"/>
-        <source>0.000 000 00 BND</source>
+        <source>0.000 000 00 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2819,13 +2819,13 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     </message>
     <message>
         <location line="+1"/>
-        <source>To disable AutoMint add &apos;enablezeromint=0&apos; in blocknode.conf.</source>
+        <source>To disable AutoMint add &apos;enablezeromint=0&apos; in gocoin.conf.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>AutoMint is currently disabled.
-To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1&apos; in blocknode.conf</source>
+To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1&apos; in gocoin.conf</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2865,12 +2865,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="-108"/>
-        <source>Cannot start blocknode: click-to-pay handler</source>
+        <source>Cannot start gocoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+114"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Blocknode address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Gocoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2973,12 +2973,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <name>PrivacyDialog</name>
     <message>
         <location filename="../forms/privacydialog.ui" line="+55"/>
-        <source>BND which were anonymized via Zerocin Protocol</source>
+        <source>GOC which were anonymized via Zerocin Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Zerocoin BND (zBND)</source>
+        <source>Zerocoin GOC (zBND)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2988,13 +2988,13 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+10"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Blocknode network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Gocoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+52"/>
         <location line="+46"/>
-        <source>Enter an amount of Bnd to convert to zBnd</source>
+        <source>Enter an amount of Goc to convert to zBnd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3029,7 +3029,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+13"/>
-        <source>0.000 000 00 BND</source>
+        <source>0.000 000 00 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3147,7 +3147,7 @@ zBND are mature when they have more than 20 confirmations AND more than 2 mints 
     </message>
     <message>
         <location line="+27"/>
-        <source>The Blocknode address to send the payment to. Creates local payment to yourself when empty.</source>
+        <source>The Gocoin address to send the payment to. Creates local payment to yourself when empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3497,7 +3497,7 @@ Please be patient...</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Invalid Blocknode Address</source>
+        <source>Invalid Gocoin Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3625,7 +3625,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+113"/>
-        <source>Enter a Blocknode address (e.g. %1)</source>
+        <source>Enter a Gocoin address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3820,7 +3820,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+79"/>
-        <source>Open the Blocknode debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Gocoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4047,7 +4047,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-36"/>
-        <source>Welcome to the Blocknode RPC console.</source>
+        <source>Welcome to the Gocoin RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4163,12 +4163,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-37"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Blocknode network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Gocoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Blocknode network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Gocoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4451,7 +4451,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+7"/>
-        <source>0 BND</source>
+        <source>0 GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4532,7 +4532,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Blocknode transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4592,7 +4592,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+35"/>
-        <source>Anonymized BND</source>
+        <source>Anonymized GOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4663,7 +4663,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+622"/>
-        <source>Warning: Invalid Blocknode address</source>
+        <source>Warning: Invalid Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4802,7 +4802,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>The Blocknode address to send the payment to</source>
+        <source>The Gocoin address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4856,7 +4856,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Blocknode: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Blocknode network.</source>
+        <source>A message that was attached to the Gocoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Gocoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4891,7 +4891,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+75"/>
-        <source>Blocknode Core is shutting down...</source>
+        <source>Gocoin Core is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4919,7 +4919,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>The Blocknode address to sign the message with</source>
+        <source>The Gocoin address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4961,17 +4961,17 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Blocknode address</source>
+        <source>Sign the message to prove you own this Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The Blocknode address the message was signed with</source>
+        <source>The Gocoin address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5086,7 +5086,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Blocknode Core</source>
+        <source>Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5111,7 +5111,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>    
     <message>
         <location line="+1"/>
-        <source>The Blocknode Core developers</source>
+        <source>The Gocoin Core developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5538,7 +5538,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted Bnd to zBnd</source>
+        <source>Converted Goc to zBnd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5548,7 +5548,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Received Bnd from zBnd</source>
+        <source>Received Goc from zBnd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5558,7 +5558,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted zBnd to Bnd</source>
+        <source>Converted zBnd to Goc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5707,7 +5707,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Received Bnd from zBnd</source>
+        <source>Received Goc from zBnd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5879,7 +5879,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 BND.</source>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 GOC.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5966,7 +5966,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <location filename="../blocknodestrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
@@ -6004,7 +6004,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Cannot obtain a lock on data directory %s. Blocknode Core is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Gocoin Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6069,12 +6069,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in BND/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in GOC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in BND/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in GOC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6199,7 +6199,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+4"/>
-        <source>To use blocknoded, or the -server option to blocknode-qt, you must set an rpcpassword in the configuration file:
+        <source>To use blocknoded, or the -server option to gocoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
 rpcuser=blocknoderpc
@@ -6208,13 +6208,13 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Gocoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Unable to bind to %s on this computer. Blocknode Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Gocoin Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6224,12 +6224,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 1000000 BND.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 1000000 GOC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000000 BND.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000000 GOC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6249,7 +6249,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Blocknode Core will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Gocoin Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6289,8 +6289,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>(37001 could be used only on mainnet)</source>
-        <translation type="unfinished">(37001 could be used only on mainnet)</translation>
+        <source>(27001 could be used only on mainnet)</source>
+        <translation type="unfinished">(27001 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6304,7 +6304,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>(must be 37001 for mainnet)</source>
+        <source>(must be 27001 for mainnet)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6449,7 +6449,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2018 The Blocknode Core Developers</source>
+        <source>Copyright (C) 2018 The Gocoin Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6564,7 +6564,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Blocknode Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Gocoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6644,7 +6644,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Fee (in BND/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in GOC/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6719,7 +6719,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. Blocknode Core is shutting down.</source>
+        <source>Initialization sanity check failed. Gocoin Core is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6836,7 +6836,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+38"/>
-        <source>Disable all Blocknode specific functionality (Masternodes, Zerocoin, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all Gocoin specific functionality (Masternodes, Zerocoin, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7596,7 +7596,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Blocknode Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Blocknode Core to complete</source>
+        <source>Wallet needed to be rewritten: restart Gocoin Core to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

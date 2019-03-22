@@ -12,7 +12,7 @@ To add more blocknoded tests, add `BOOST_AUTO_TEST_CASE` functions to the existi
 .cpp files in the test/ directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the blocknode-qt tests manually, launch src/qt/test/blocknode-qt_test
+To run the gocoin-qt tests manually, launch src/qt/test/gocoin-qt_test
 
-To add more blocknode-qt tests, add them to the `src/qt/test/` directory and
+To add more gocoin-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

@@ -1,6 +1,6 @@
 [Protocol]
-exec=blocknode-qt '%u'
-protocol=blocknode
+exec=gocoin-qt '%u'
+protocol=gocoin
 input=none
 output=none
 helper=true

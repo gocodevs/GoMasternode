@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Blocknode
-Comment=Blocknode P2P Cryptocurrency
-Comment[fr]=Blocknode, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Blocknode, eşten eşe kriptografik sanal para birimi
-Exec=blocknode-qt %u
+Name=Gocoin
+Comment=Gocoin P2P Cryptocurrency
+Comment[fr]=Gocoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Gocoin, eşten eşe kriptografik sanal para birimi
+Exec=gocoin-qt %u
 Terminal=false
 Type=Application
 Icon=blocknode128
-MimeType=x-scheme-handler/blocknode;
+MimeType=x-scheme-handler/gocoin;
 Categories=Office;Finance;

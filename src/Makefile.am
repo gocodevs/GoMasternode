@@ -84,11 +84,11 @@ if BUILD_BITCOIND
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += blocknode-cli blocknode-tx
+  bin_PROGRAMS += gocoin-cli gocoin-tx
 endif
 
 .PHONY: FORCE
-# blocknode core #
+# gocoin core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   accumulators.h \
@@ -196,7 +196,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between blocknoded and blocknode-qt
+# server: shared between blocknoded and gocoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -242,7 +242,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between blocknoded and blocknode-qt, but only linked
+# wallet: shared between blocknoded and gocoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -337,7 +337,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between blocknoded, and blocknode-qt and non-server tools
+# common: shared between blocknoded, and gocoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -399,7 +399,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between blocknode-cli and blocknode-qt
+# cli: shared between gocoin-cli and gocoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -433,14 +433,14 @@ blocknoded_LDADD = \
 
 blocknoded_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# blocknode-cli binary #
-blocknode_cli_SOURCES = blocknode-cli.cpp
+# gocoin-cli binary #
+blocknode_cli_SOURCES = gocoin-cli.cpp
 blocknode_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 blocknode_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 blocknode_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-blocknode_cli_SOURCES += blocknode-cli-res.rc
+blocknode_cli_SOURCES += gocoin-cli-res.rc
 endif
 
 blocknode_cli_LDADD = \
@@ -452,14 +452,14 @@ blocknode_cli_LDADD = \
 blocknode_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# blocknode-tx binary #
-blocknode_tx_SOURCES = blocknode-tx.cpp
+# gocoin-tx binary #
+blocknode_tx_SOURCES = gocoin-tx.cpp
 blocknode_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 blocknode_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 blocknode_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-blocknode_tx_SOURCES += blocknode-tx-res.rc
+blocknode_tx_SOURCES += gocoin-tx-res.rc
 endif
 
 blocknode_tx_LDADD = \

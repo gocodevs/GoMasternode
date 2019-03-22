@@ -62,12 +62,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços Blocknode para envio de pagamentos. Sempre verifique a quantia e os endereços de recebimento antes de enviar moedas.</translation>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços Gocoin para envio de pagamentos. Sempre verifique a quantia e os endereços de recebimento antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Esses são seus endereços Blocknode para recebimento de pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Esses são seus endereços Gocoin para recebimento de pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Confirmar criptografia de carteira</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas BNDs de serem roubadas por malwares infectando seu computador.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas BNDs de serem roubadas por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Você tem certeza que deseja criptografar sua carteira?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
-        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS BND&lt;b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
+        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS GOC&lt;b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,7 +235,7 @@
         <translation>&amp;Encriptação BIP 38</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Insira um endereço que você deseja criptografar usando a BIP 38. Insira a palavra-chave na caixa do meio. Pressione criptografar para computar a chave privada criptografada.</translation>
     </message>
     <message>
@@ -243,8 +243,8 @@
         <translation>Endereço:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>O endereço Blocknode para assinar a mensagem</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>O endereço Gocoin para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Copia a assinatura atual do sistema de transferência</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Assine a mensagem para provar que você possui este endereço Blocknode</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Assine a mensagem para provar que você possui este endereço Gocoin</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -291,12 +291,12 @@
         <translation>Limpar &amp;Tudo</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>O endereço Blocknode que assinou a mensagem</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>O endereço Gocoin que assinou a mensagem</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço Blocknode especificado.</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço Gocoin especificado.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -586,16 +586,16 @@
         <translation>Ferramentas de abas</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>Enviar moedas para um endereço Blocknode</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>Enviar moedas para um endereço Gocoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>Requisitar pagamentos (gera códigos QR e blocknode: URIs)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>Requisitar pagamentos (gera códigos QR e gocoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -606,24 +606,24 @@
         <translation>Procurar masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>&amp;Sobre o Blocknode Core</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>&amp;Sobre o Gocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>Mostra informação sobre o Blocknode Core</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>Mostra informação sobre o Gocoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>Modificar opções de configuração para Blocknode</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>Modificar opções de configuração para Gocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>Assine mensagens com seus endereços Blocknode para provar que você os detém</translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>Assine mensagens com seus endereços Gocoin para provar que você os detém</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>Verifique as mensagens para ter certeza que estão assinadas com os endereços Blocknode especificados</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>Verifique as mensagens para ter certeza que estão assinadas com os endereços Gocoin especificados</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -654,8 +654,8 @@
         <translation>Abrir arquivo de configuração de Masternode</translation>
     </message>
     <message>
-        <source>Open a Blocknode: URI or payment request</source>
-        <translation>Abrir um Blocknode: URI ou requisição de pagamento</translation>
+        <source>Open a Gocoin: URI or payment request</source>
+        <translation>Abrir um Gocoin: URI ou requisição de pagamento</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -666,12 +666,12 @@
         <translation>Janela de exploração de blocos</translation>
     </message>
     <message>
-        <source>Show the Blocknode Core help message to get a list with possible Blocknode command-line options</source>
-        <translation>Mostra a ajuda da Blocknode Core para receber uma lista com possíveis opções de linha de comando Blocknode</translation>
+        <source>Show the Gocoin Core help message to get a list with possible Gocoin command-line options</source>
+        <translation>Mostra a ajuda da Gocoin Core para receber uma lista com possíveis opções de linha de comando Gocoin</translation>
     </message>
     <message>
-        <source>Blocknode Core client</source>
-        <translation>Cliente Core Blocknode</translation>
+        <source>Gocoin Core client</source>
+        <translation>Cliente Core Gocoin</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -804,8 +804,8 @@ MultiSend: %1</translation>
         <translation>Rótulo</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (blocknode.conf).</source>
-        <translation>Nem todas as transações serão exibidas. Para visualizar todas as transações você precisa definir txindex=1 no arquivo de configuração (blocknode.conf). </translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (gocoin.conf).</source>
+        <translation>Nem todas as transações serão exibidas. Para visualizar todas as transações você precisa definir txindex=1 no arquivo de configuração (gocoin.conf). </translation>
     </message>
 </context>
 <context>
@@ -1085,8 +1085,8 @@ MultiSend: %1</translation>
         <translation>Editar endereço remetente</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Blocknode address.</source>
-        <translation>O endereço que você selecionou, "%1" , não é um endereço válido de Blocknode</translation>
+        <source>The entered address "%1" is not a valid Gocoin address.</source>
+        <translation>O endereço que você selecionou, "%1" , não é um endereço válido de Gocoin</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1131,16 +1131,16 @@ MultiSend: %1</translation>
         <translation>versão</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Blocknode Core</source>
-        <translation>Sobre o Blocknode Core</translation>
+        <source>About Gocoin Core</source>
+        <translation>Sobre o Gocoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1174,16 +1174,16 @@ MultiSend: %1</translation>
         <translation>Bem-vindo</translation>
     </message>
     <message>
-        <source>Welcome to Blocknode Core.</source>
-        <translation>Bem-vindo ao Blocknode Core.</translation>
+        <source>Welcome to Gocoin Core.</source>
+        <translation>Bem-vindo ao Gocoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Blocknode Core will store its data.</source>
-        <translation>Como essa é a primeira vez que o programa é utilizado, você pode escolher onde Blocknode Core vai armazenar os seus dados.</translation>
+        <source>As this is the first time the program is launched, you can choose where Gocoin Core will store its data.</source>
+        <translation>Como essa é a primeira vez que o programa é utilizado, você pode escolher onde Gocoin Core vai armazenar os seus dados.</translation>
     </message>
     <message>
-        <source>Blocknode Core will download and store a copy of the Blocknode block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Blocknode Core vai baixar e armazenar uma cópia da blockchain Blocknode. Pelo menos %1GB de informação será armazenado neste diretório e irá aumentar com o tempo. A carteira também será armazenada neste diretório.</translation>
+        <source>Gocoin Core will download and store a copy of the Gocoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Gocoin Core vai baixar e armazenar uma cópia da blockchain Gocoin. Pelo menos %1GB de informação será armazenado neste diretório e irá aumentar com o tempo. A carteira também será armazenada neste diretório.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1194,8 +1194,8 @@ MultiSend: %1</translation>
         <translation>Usar um diretório personalizado de dados:</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1450,48 +1450,48 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Favor selecionar o nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 BND</source>
-        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 BND</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 GOC</source>
+        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 GOC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 BND</source>
-        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 BND</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 GOC</source>
+        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 GOC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 masternodes separados</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 BND to anonymize 10000 BND</source>
-        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 BND para anonimizar 10000 BND</translation>
+        <source>This option is the quickest and will cost about ~0.025 GOC to anonymize 10000 GOC</source>
+        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 GOC para anonimizar 10000 GOC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 BND to anonymize 10000 BND</source>
-        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 BND para anonimizar 10000 BND</translation>
+        <source>This option is moderately fast and will cost about 0.05 GOC to anonymize 10000 GOC</source>
+        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 GOC para anonimizar 10000 GOC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta é a opção mais lenta e mais segura. Usando a anonimização máxima vai custar</translation>
     </message>
     <message>
-        <source>0.1 BND per 10000 BND you anonymize.</source>
-        <translation>0.1 BND por 10000 BND que deixar anônima.</translation>
+        <source>0.1 GOC per 10000 GOC you anonymize.</source>
+        <translation>0.1 GOC por 10000 GOC que deixar anônima.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
         <translation>Configuração de ofuscação</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Blocknode's configuration screen.</source>
-        <translation>Ofuscação foi definida com sucesso para o básico (%1 e 2 rodadas) Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Blocknode's.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
+        <translation>Ofuscação foi definida com sucesso para o básico (%1 e 2 rodadas) Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Gocoin's.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Blocknode's configuration screen.</source>
-        <translation>Ofuscação foi definida com sucesso para alto (%1 e 8 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Blocknode's.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
+        <translation>Ofuscação foi definida com sucesso para alto (%1 e 8 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Gocoin's.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Blocknode's configuration screen.</source>
-        <translation>Ofuscação foi definida com sucesso para máxima (%1 e 16 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Blocknode's.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Gocoin's configuration screen.</source>
+        <translation>Ofuscação foi definida com sucesso para máxima (%1 e 16 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela Gocoin's.</translation>
     </message>
 </context>
 <context>
@@ -1544,8 +1544,8 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>C&amp;arteira</translation>
     </message>
     <message>
-        <source>Automatically open the Blocknode client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automaticamente a porta do cliente Blocknode no roteador. Isto somente funciona quando seu roteador suporta UPnP e este esteja habilitado.</translation>
+        <source>Automatically open the Gocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automaticamente a porta do cliente Gocoin no roteador. Isto somente funciona quando seu roteador suporta UPnP e este esteja habilitado.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1564,12 +1564,12 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Blocknode after logging in to the system.</source>
-        <translation>Iniciar automaticamente Blocknode depois de logar no sistema.</translation>
+        <source>Automatically start Gocoin after logging in to the system.</source>
+        <translation>Iniciar automaticamente Gocoin depois de logar no sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Blocknode on system login</source>
-        <translation>&amp;Iniciar Blocknode ao logar no sistema</translation>
+        <source>&amp;Start Gocoin on system login</source>
+        <translation>&amp;Iniciar Gocoin ao logar no sistema</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1584,18 +1584,18 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>&amp;Rede</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Blocknode.</source>
-        <translation>A linguagem da interface pode ser definida aqui. Está configuração terá efeito após reinício do Blocknode.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Gocoin.</source>
+        <translation>A linguagem da interface pode ser definida aqui. Está configuração terá efeito após reinício do Gocoin.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/blocknode-project/blocknode-project-translations</source>
+https://www.transifex.com/gocoin-project/gocoin-project-translations</source>
         <translation>Linguagem não encontrada ou tradução incompleta? Ajude contribuido com traduções aqui:
-https://www.transifex.com/blocknode-project/blocknode-project-translations</translation>
+https://www.transifex.com/gocoin-project/gocoin-project-translations</translation>
     </message>
     <message>
-        <source>Connect to the Blocknode network through a SOCKS5 proxy.</source>
-        <translation>Conectar à rede Blocknode através de um proxy SOCKS5</translation>
+        <source>Connect to the Gocoin network through a SOCKS5 proxy.</source>
+        <translation>Conectar à rede Gocoin através de um proxy SOCKS5</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1729,8 +1729,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Imaturo:</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Blocknode network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede Blocknode após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Gocoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede Gocoin após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -1818,8 +1818,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Blocknode network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede Blocknode após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Gocoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede Gocoin após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
     </message>
     <message>
         <source>0</source>
@@ -1925,8 +1925,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Quantidade</translation>
     </message>
     <message>
-        <source>Enter a Blocknode address (e.g. %1)</source>
-        <translation>Insira um endereço Blocknode (e.g. %1)</translation>
+        <source>Enter a Gocoin address (e.g. %1)</source>
+        <translation>Insira um endereço Gocoin (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2175,8 +2175,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>saída:</translation>
     </message>
     <message>
-        <source>Welcome to the Blocknode RPC console.</source>
-        <translation>Bem-vindo ao console da Blocknode RPC</translation>
+        <source>Welcome to the Gocoin RPC console.</source>
+        <translation>Bem-vindo ao console da Gocoin RPC</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2427,8 +2427,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Tamanho UTXO:</translation>
     </message>
     <message>
-        <source>0 BND</source>
-        <translation>0 BND</translation>
+        <source>0 GOC</source>
+        <translation>0 GOC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2471,8 +2471,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Se a taxa padrão estiver definida para 1000 uBNDs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uBNDs em taxa,&lt;br /&gt; pagará pelo menos 1000 uBNDs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Blocknode transactions than the network can process.</source>
-        <translation>Pagar a taxa mínima é aceitável desde que existe menos volume de transações que espaço nos blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de Blocknode do que a rede pode processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Gocoin transactions than the network can process.</source>
+        <translation>Pagar a taxa mínima é aceitável desde que existe menos volume de transações que espaço nos blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de Gocoin do que a rede pode processar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -2559,8 +2559,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>fundos anônimos</translation>
     </message>
     <message>
-        <source>Warning: Invalid Blocknode address</source>
-        <translation>Aviso: endereço Blocknode inválido</translation>
+        <source>Warning: Invalid Gocoin address</source>
+        <translation>Aviso: endereço Gocoin inválido</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2654,8 +2654,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Pagar &amp;Para:</translation>
     </message>
     <message>
-        <source>The Blocknode address to send the payment to</source>
-        <translation>O endereço Blocknode para enviar o pagamento</translation>
+        <source>The Gocoin address to send the payment to</source>
+        <translation>O endereço Gocoin para enviar o pagamento</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2717,8 +2717,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Blocknode Core is shutting down...</source>
-        <translation>Blocknode Core está desligando...</translation>
+        <source>Gocoin Core is shutting down...</source>
+        <translation>Gocoin Core está desligando...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2736,8 +2736,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>&amp;Assinar mensagem</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>O endereço Blocknode para assinar a mensagem</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>O endereço Gocoin para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2768,16 +2768,16 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Copia a assinatura atual do sistema de transferência</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Assine a mensagem para provar que você possui este endereço Blocknode</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Assine a mensagem para provar que você possui este endereço Gocoin</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>O endereço Blocknode que assinou a mensagem</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>O endereço Gocoin que assinou a mensagem</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço Blocknode especificado.</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço Gocoin especificado.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2859,8 +2859,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2879,8 +2879,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Os desenvolvedores do PIVX Core</translation>
     </message>
     <message>
-        <source>The Blocknode Core developers</source>
-        <translation>Os desenvolvedores do Blocknode Core</translation>
+        <source>The Gocoin Core developers</source>
+        <translation>Os desenvolvedores do Gocoin Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3363,8 +3363,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Enviar Moedas</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 BND.</source>
-        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 BND.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GOC.</source>
+        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 GOC.</translation>
     </message>
 </context>
 <context>
@@ -3414,14 +3414,14 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
     </message>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes da blockchain através de -rescan na inicialização</translation>
     </message>
     <message>
-        <source>Disable all Blocknode specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Desabilitar todas as funcionalidades específicas Blocknode (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, padrão: %u)</translation>
+        <source>Disable all Gocoin specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Desabilitar todas as funcionalidades específicas Gocoin (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, padrão: %u)</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -3436,12 +3436,12 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Executar o comando quando uma transação da carteira mudar (%s no cmd será substituído pela TxID)</translation>
     </message>
     <message>
-        <source>Fees (in BND/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Taxas (em BND/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
+        <source>Fees (in GOC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Taxas (em GOC/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
     </message>
     <message>
-        <source>Fees (in BND/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Taxas (em BND/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
+        <source>Fees (in GOC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Taxas (em GOC/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
     </message>
     <message>
         <source>In this mode -genproclimit controls how many blocks are generated immediately.</source>
@@ -3464,8 +3464,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>SwiftTX requer inputs com pelo menos 6 confirmações, você precisar aguardar alguns minutos e tentar novamente.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000000 BND.</source>
-        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 1000000 BND.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000000 GOC.</source>
+        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 1000000 GOC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3480,8 +3480,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Aviso: -paytxfee está definido como muito alto! Está e a taxa de transação que você irá pagar se enviar uma transação.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Blocknode Core will not work properly.</source>
-        <translation>Aviso: Favor verificar se o horário e data de seu computador estão corretos! Se o seu relógio estiver errado o Core Blocknode não vai funcionar corretamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Gocoin Core will not work properly.</source>
+        <translation>Aviso: Favor verificar se o horário e data de seu computador estão corretos! Se o seu relógio estiver errado o Core Gocoin não vai funcionar corretamente.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -3496,8 +3496,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(37001 could be used only on mainnet)</source>
-        <translation>(37001 could be used only on mainnet)</translation>
+        <source>(27001 could be used only on mainnet)</source>
+        <translation>(27001 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3508,8 +3508,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 37001 for mainnet)</source>
-        <translation>(deve ser 37001 para mainnet)</translation>
+        <source>(must be 27001 for mainnet)</source>
+        <translation>(deve ser 27001 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
@@ -3564,8 +3564,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do PIVX Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2018 The Blocknode Core Developers</source>
-        <translation>Todos os direitos reservados (C) 2018 aos Desenvolvedores do Blocknode Core</translation>
+        <source>Copyright (C) 2018 The Gocoin Core Developers</source>
+        <translation>Todos os direitos reservados (C) 2018 aos Desenvolvedores do Gocoin Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -3616,8 +3616,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Erro no carregamento da wallet.dat: Carteira corrompida</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Blocknode Core</source>
-        <translation>Erro ao carregar wallet.dat: A Carteira requer uma nova versão da Blocknode Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Gocoin Core</source>
+        <translation>Erro ao carregar wallet.dat: A Carteira requer uma nova versão da Gocoin Core</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -3656,8 +3656,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Falhou em ler o bloco</translation>
     </message>
     <message>
-        <source>Fee (in BND/kB) to add to transactions you send (default: %s)</source>
-        <translation>Taxa (em BND/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
+        <source>Fee (in GOC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Taxa (em GOC/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4096,8 +4096,8 @@ https://www.transifex.com/blocknode-project/blocknode-project-translations</tran
         <translation>Carteira está travada.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Blocknode Core to complete</source>
-        <translation>A carteira precisa ser reescrita: reinicia o Blocknode Core para completar</translation>
+        <source>Wallet needed to be rewritten: restart Gocoin Core to complete</source>
+        <translation>A carteira precisa ser reescrita: reinicia o Gocoin Core para completar</translation>
     </message>
     <message>
         <source>Wallet options:</source>

@@ -62,11 +62,11 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Dit zijn uw Blocknodeadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Dit zijn uw Blocknodeadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
@@ -172,16 +172,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw BNDs stelen.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw BNDs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW BND VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW GOC VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een Blocknode adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een Gocoin adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Het Blocknode adres om het bericht met te ondertekenen</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Het Gocoin adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Blocknode adres bezit</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het Gocoin adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Het Blocknode adres waarmee het bericht was ondertekend</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Het Gocoin adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Blocknode adres</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Gocoin adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,16 +594,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kern</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kern</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>Verstuur munten naar een Blocknode adres</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>Verstuur munten naar een Gocoin adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en Blocknode: URI's)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en Gocoin: URI's)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -614,24 +614,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>&amp;Over Blocknode Kern</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>&amp;Over Gocoin Kern</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>Toon informatie over Blocknode Kern</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>Toon informatie over Gocoin Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>Wijzig Blocknode configuratie opties</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>Wijzig Gocoin configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Blocknode adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Gocoin adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde Blocknode adressen</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde Gocoin adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -662,8 +662,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a Blocknode: URI or payment request</source>
-        <translation>Open een Blocknode: URI of betaalverzoek</translation>
+        <source>Open a Gocoin: URI or payment request</source>
+        <translation>Open een Gocoin: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -674,12 +674,12 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>Blocknode Core client</source>
-        <translation>Blocknode Core client</translation>
+        <source>Gocoin Core client</source>
+        <translation>Gocoin Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Blocknode network</source>
-        <translation><numerusform>%n actieve verbinding(en) naar het Blocknode netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Blocknode netwerk</numerusform></translation>
+        <source>%n active connection(s) to Gocoin network</source>
+        <translation><numerusform>%n actieve verbinding(en) naar het Gocoin netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Gocoin netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -825,8 +825,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (blocknode.conf).</source>
-        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (blocknode.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (gocoin.conf).</source>
+        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (gocoin.conf).</translation>
     </message>
 </context>
 <context>
@@ -1042,8 +1042,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Blocknode address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig Blocknode adres.</translation>
+        <source>The entered address "%1" is not a valid Gocoin address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig Gocoin adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1072,16 +1072,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kern</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Blocknode Core</source>
-        <translation>Over Blocknode Core</translation>
+        <source>About Gocoin Core</source>
+        <translation>Over Gocoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1111,16 +1111,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to Blocknode Core.</source>
-        <translation>Welkom bij Blocknode Core</translation>
+        <source>Welcome to Gocoin Core.</source>
+        <translation>Welkom bij Gocoin Core</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard datafolder </translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kern</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1336,20 +1336,20 @@ MultiSend: %1</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Blocknode after logging in to the system.</source>
-        <translation>Blocknode automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start Gocoin after logging in to the system.</source>
+        <translation>Gocoin automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start Blocknode on system login</source>
-        <translation>&amp;Blocknode starten bij systeemlogin</translation>
+        <source>&amp;Start Gocoin on system login</source>
+        <translation>&amp;Gocoin starten bij systeemlogin</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Blocknode.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Blocknode.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Gocoin.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Gocoin.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1500,8 +1500,8 @@ MultiSend: %1</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>Enter an amount of Bnd to convert to zBnd</source>
-        <translation>Vul de hoeveleheid in om Bnd te converteren naar zBnd</translation>
+        <source>Enter an amount of Goc to convert to zBnd</source>
+        <translation>Vul de hoeveleheid in om Goc te converteren naar zBnd</translation>
     </message>
     <message>
         <source>0</source>
@@ -1619,8 +1619,8 @@ MultiSend: %1</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a Blocknode address (e.g. %1)</source>
-        <translation>Voer een Blocknode adres in (b.v. %1)</translation>
+        <source>Enter a Gocoin address (e.g. %1)</source>
+        <translation>Voer een Gocoin adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1821,8 +1821,8 @@ MultiSend: %1</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the Blocknode RPC console.</source>
-        <translation>Welkom bij de Blocknode RPC console.</translation>
+        <source>Welcome to the Gocoin RPC console.</source>
+        <translation>Welkom bij de Gocoin RPC console.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -2029,8 +2029,8 @@ MultiSend: %1</translation>
         <translation>Wijzig:</translation>
     </message>
     <message>
-        <source>0 BND</source>
-        <translation>0 BND</translation>
+        <source>0 GOC</source>
+        <translation>0 GOC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2121,8 +2121,8 @@ MultiSend: %1</translation>
         <translation>anonieme financiën</translation>
     </message>
     <message>
-        <source>Warning: Invalid Blocknode address</source>
-        <translation>Waarschuwing: Ongeldig Blocknode adres</translation>
+        <source>Warning: Invalid Gocoin address</source>
+        <translation>Waarschuwing: Ongeldig Gocoin adres</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2176,8 +2176,8 @@ MultiSend: %1</translation>
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The Blocknode address to send the payment to</source>
-        <translation>Het Blocknode adres om de betaling naar te verzenden</translation>
+        <source>The Gocoin address to send the payment to</source>
+        <translation>Het Gocoin adres om de betaling naar te verzenden</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2231,8 +2231,8 @@ MultiSend: %1</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Blocknode Core is shutting down...</source>
-        <translation>Blocknode Core is aan het afsluiten...</translation>
+        <source>Gocoin Core is shutting down...</source>
+        <translation>Gocoin Core is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2250,8 +2250,8 @@ MultiSend: %1</translation>
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>Het Blocknode adres om het bericht met te ondertekenen</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>Het Gocoin adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2282,16 +2282,16 @@ MultiSend: %1</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Blocknode adres bezit</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het Gocoin adres bezit</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>Het Blocknode adres waarmee het bericht was ondertekend</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>Het Gocoin adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Blocknode adres</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Gocoin adres</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2361,8 +2361,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Kern</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2378,11 +2378,11 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>De Blocknode Core ontwikkelaars</translation>
+        <translation>De Gocoin Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The Blocknode Core developers</source>
-        <translation>De Blocknode Core ontwikkelaars</translation>
+        <source>The Gocoin Core developers</source>
+        <translation>De Gocoin Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2768,7 +2768,7 @@ MultiSend: %1</translation>
     </message>
 </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     <message>
         <source>(default: %s)</source>
         <translation>(standaard: %s)</translation>
@@ -2810,8 +2810,8 @@ MultiSend: %1</translation>
         <translation>Copyright (C) 2015-%i The PIVX Core Ontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2018 The Blocknode Core Developers</source>
-        <translation>Copyright (C) 2018 The Blocknode Core Ontwikkelaars</translation>
+        <source>Copyright (C) 2018 The Gocoin Core Developers</source>
+        <translation>Copyright (C) 2018 The Gocoin Core Ontwikkelaars</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>

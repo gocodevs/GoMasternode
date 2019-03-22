@@ -1,2 +1,2 @@
 usr/local/bin/blocknoded usr/bin
-usr/local/bin/blocknode-cli usr/bin
+usr/local/bin/gocoin-cli usr/bin

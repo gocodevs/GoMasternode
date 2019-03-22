@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Blocknode"
-            VALUE "FileDescription",    "Blocknode-cli (OSS RPC client for Blocknode)"
+            VALUE "CompanyName",        "Gocoin"
+            VALUE "FileDescription",    "Gocoin-cli (OSS RPC client for Gocoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "blocknode-cli"
+            VALUE "InternalName",       "gocoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "blocknode-cli.exe"
-            VALUE "ProductName",        "Blocknode-cli"
+            VALUE "OriginalFilename",   "gocoin-cli.exe"
+            VALUE "ProductName",        "Gocoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -1,17 +1,17 @@
-.TH BND-QT "1" "February 2017" "blocknode-qt 1"
+.TH GOC-QT "1" "February 2017" "gocoin-qt 1"
 .SH NAME
-blocknode-qt \- peer-to-peer network based digital currency
+gocoin-qt \- peer-to-peer network based digital currency
 .SH DESCRIPTION
 .SS "Usage:"
 .IP
-blocknode\-qt [command\-line options]
+gocoin\-qt [command\-line options]
 .SH OPTIONS
 .TP
 \-?
 This help message
 .TP
 \fB\-conf=\fR<file>
-Specify configuration file (default: blocknode.conf)
+Specify configuration file (default: gocoin.conf)
 .TP
 \fB\-pid=\fR<file>
 Specify pid file (default: blocknoded.pid)
@@ -41,7 +41,7 @@ Use proxy to reach tor hidden services (default: same as \fB\-proxy\fR)
 Allow DNS lookups for \fB\-addnode\fR, \fB\-seednode\fR and \fB\-connect\fR
 .TP
 \fB\-port=\fR<port>
-Listen for connections on <port> (default: 37001 or testnet: 37003)
+Listen for connections on <port> (default: 27001 or testnet: 27003)
 .TP
 \fB\-maxconnections=\fR<n>
 Maintain at most <n> connections to peers (default: 125)
@@ -122,7 +122,7 @@ Username for JSON\-RPC connections
 Password for JSON\-RPC connections
 .TP
 \fB\-rpcport=\fR<port>
-Listen for JSON\-RPC connections on <port> (default: 37002 or testnet: 37004)
+Listen for JSON\-RPC connections on <port> (default: 27002 or testnet: 27004)
 .TP
 \fB\-rpcallowip=\fR<ip>
 Allow JSON\-RPC connections from specified IP address

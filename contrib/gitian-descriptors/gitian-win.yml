@@ -1,5 +1,5 @@
 ---
-name: "blocknode-win-0.1"
+name: "gocoin-win-0.1"
 enable_cache: true
 sudo: true
 suites:
@@ -27,8 +27,8 @@ packages:
 - "xutils-dev"
 reference_datetime: "2018-04-06 00:00:00"
 remotes:
-- "url": "git@gitlab.com:gig8/blocknode.git"
-  "dir": "blocknode"
+- "url": "git@gitlab.com:gig8/gocoin.git"
+  "dir": "gocoin"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -113,7 +113,7 @@ script: |
   create_per-host_linker_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd blocknode
+  cd gocoin
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -131,14 +131,14 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
-  SOURCEDIST=`echo blocknode-*.tar.gz`
+  SOURCEDIST=`echo gocoin-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
 
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar xf ../$SOURCEDIST
-  find blocknode-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find gocoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   mkdir -p $OUTDIR/src
   cp ../$SOURCEDIST $OUTDIR/src
   popd
@@ -157,7 +157,7 @@ script: |
     make ${MAKEOPTS}
     make deploy
     make install DESTDIR=${INSTALLPATH}
-    cp -f blocknode-*setup*.exe $OUTDIR/
+    cp -f gocoin-*setup*.exe $OUTDIR/
     cd installed
     # mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/ # temporarily disabled for Zerocoin
     # find . -name "lib*.la" -delete            # temporarily disabled for Zerocoin

@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>選擇要匯出Blocknode幣的位址</translation>
+        <translation>選擇要匯出Gocoin幣的位址</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>選擇要接收Blocknode幣的位址</translation>
+        <translation>選擇要接收Gocoin幣的位址</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>接收的位址</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>這是你用來付款的 Blocknode 位址, 送出前, 請務必確認金額及接收位址是否正確.</translation>
+        <source>These are your Gocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>這是你用來付款的 Gocoin 位址, 送出前, 請務必確認金額及接收位址是否正確.</translation>
     </message>
     <message>
-        <source>These are your Blocknode addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>這是你用來接收款項的 Blocknode 位址, 建議你每次付款都使用新的位址.</translation>
+        <source>These are your Gocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>這是你用來接收款項的 Gocoin 位址, 建議你每次付款都使用新的位址.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,16 +164,16 @@
         <translation>錢包確認加密</translation>
     </message>
     <message>
-        <source>Blocknode will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
-        <translation>Blocknode 現在會關閉程式來處理加密流程, 請注意, 僅僅是加密你的錢包並不能完全保護你的 BND 幣被可疑軟體或病毒偷走的風險.</translation>
+        <source>Gocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BNDs from being stolen by malware infecting your computer.</source>
+        <translation>Gocoin 現在會關閉程式來處理加密流程, 請注意, 僅僅是加密你的錢包並不能完全保護你的 GOC 幣被可疑軟體或病毒偷走的風險.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>確定要加密你的錢包?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BND&lt;/b&gt;!</source>
-        <translation>請注意: 如果你加密了你的錢包但是卻忘記你設定的密碼, &lt;b&gt;你將會失去錢包裡的錢(BND)&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GOC&lt;/b&gt;!</source>
+        <translation>請注意: 如果你加密了你的錢包但是卻忘記你設定的密碼, &lt;b&gt;你將會失去錢包裡的錢(GOC)&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,16 +227,16 @@
         <translation>&amp;BIP 38 加密</translation>
     </message>
     <message>
-        <source>Enter a Blocknode Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>輸入你想 BIP 38 加密的 Blocknode 位址, 輸入密碼在中間欄, 按下加密按鈕來產生加密私鑰.</translation>
+        <source>Enter a Gocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>輸入你想 BIP 38 加密的 Gocoin 位址, 輸入密碼在中間欄, 按下加密按鈕來產生加密私鑰.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>位址:</translation>
     </message>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>對訊息簽名的 Blocknode 位址</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>對訊息簽名的 Gocoin 位址</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -267,8 +267,8 @@
         <translation>拷貝目前的簽章到系統剪貼簿</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>使用簽章來證明你是該  Blocknode 位址的擁有者,</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>使用簽章來證明你是該  Gocoin 位址的擁有者,</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -287,12 +287,12 @@
         <translation>&amp;BIP 38 解密</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>此訊息之 Blocknode 位址已簽章於</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>此訊息之 Gocoin 位址已簽章於</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>驗證訊息以確保該  Blocknode 位址已被簽章</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>驗證訊息以確保該  Gocoin 位址已被簽章</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -582,16 +582,16 @@
         <translation>Tabs 工具列</translation>
     </message>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Blocknode address</source>
-        <translation>送出錢幣到 Blocknode 地址</translation>
+        <source>Send coins to a Gocoin address</source>
+        <translation>送出錢幣到 Gocoin 地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and blocknode: URIs)</source>
-        <translation>請求付款 (會產生 QR Code跟 blocknode 位址)</translation>
+        <source>Request payments (generates QR codes and gocoin: URIs)</source>
+        <translation>請求付款 (會產生 QR Code跟 gocoin 位址)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -602,24 +602,24 @@
         <translation>瀏覽 Masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Blocknode Core</source>
-        <translation>&amp;關於 Blocknode Core</translation>
+        <source>&amp;About Gocoin Core</source>
+        <translation>&amp;關於 Gocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Blocknode Core</source>
-        <translation>顯示 Blocknode Core 相關資訊</translation>
+        <source>Show information about Gocoin Core</source>
+        <translation>顯示 Gocoin Core 相關資訊</translation>
     </message>
     <message>
-        <source>Modify configuration options for Blocknode</source>
-        <translation>修改 Blocknode 設定</translation>
+        <source>Modify configuration options for Gocoin</source>
+        <translation>修改 Gocoin 設定</translation>
     </message>
     <message>
-        <source>Sign messages with your Blocknode addresses to prove you own them</source>
-        <translation>使用你的 Blocknode 位址對訊息簽章, 來證明你是擁有者</translation>
+        <source>Sign messages with your Gocoin addresses to prove you own them</source>
+        <translation>使用你的 Gocoin 位址對訊息簽章, 來證明你是擁有者</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Blocknode addresses</source>
-        <translation>驗證訊息簽章與 Blocknode 位址吻合</translation>
+        <source>Verify messages to ensure they were signed with specified Gocoin addresses</source>
+        <translation>驗證訊息簽章與 Gocoin 位址吻合</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -650,8 +650,8 @@
         <translation>打開Masternode設定檔</translation>
     </message>
     <message>
-        <source>Open a Blocknode: URI or payment request</source>
-        <translation>打開Blocknode: 位址或付款請求 </translation>
+        <source>Open a Gocoin: URI or payment request</source>
+        <translation>打開Gocoin: 位址或付款請求 </translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -662,12 +662,12 @@
         <translation>區塊鏈瀏覽視窗</translation>
     </message>
     <message>
-        <source>Show the Blocknode Core help message to get a list with possible Blocknode command-line options</source>
-        <translation>顯示 Blocknode Core 幫助訊息以取得 Blocknode 命令列表選項</translation>
+        <source>Show the Gocoin Core help message to get a list with possible Gocoin command-line options</source>
+        <translation>顯示 Gocoin Core 幫助訊息以取得 Gocoin 命令列表選項</translation>
     </message>
     <message>
-        <source>Blocknode Core client</source>
-        <translation>Blocknode Core 客戶端</translation>
+        <source>Gocoin Core client</source>
+        <translation>Gocoin Core 客戶端</translation>
     </message>
     </context>
 <context>
@@ -696,15 +696,15 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     </context>
 <context>
@@ -836,8 +836,8 @@
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Blocknode address to sign the message with</source>
-        <translation>對訊息簽名的 Blocknode 位址</translation>
+        <source>The Gocoin address to sign the message with</source>
+        <translation>對訊息簽名的 Gocoin 位址</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -860,16 +860,16 @@
         <translation>拷貝目前的簽章到系統剪貼簿</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Blocknode address</source>
-        <translation>使用簽章來證明你是該  Blocknode 位址的擁有者,</translation>
+        <source>Sign the message to prove you own this Gocoin address</source>
+        <translation>使用簽章來證明你是該  Gocoin 位址的擁有者,</translation>
     </message>
     <message>
-        <source>The Blocknode address the message was signed with</source>
-        <translation>此訊息之 Blocknode 位址已簽章於</translation>
+        <source>The Gocoin address the message was signed with</source>
+        <translation>此訊息之 Gocoin 位址已簽章於</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Blocknode address</source>
-        <translation>驗證訊息以確保該  Blocknode 位址已被簽章</translation>
+        <source>Verify the message to ensure it was signed with the specified Gocoin address</source>
+        <translation>驗證訊息以確保該  Gocoin 位址已被簽章</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -907,8 +907,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Blocknode Core</source>
-        <translation>Blocknode Core</translation>
+        <source>Gocoin Core</source>
+        <translation>Gocoin Core</translation>
     </message>
     </context>
 <context>
@@ -974,6 +974,6 @@
     <name>ZBndControlDialog</name>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     </context>
 </TS>

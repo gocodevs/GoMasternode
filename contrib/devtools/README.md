@@ -18,7 +18,7 @@ For example:
   ./github-merge.py 3077
 
 (in any git repository) will help you merge pull request #3077 for the
-Blocknode-Project/Blocknode repository.
+Gocoin-Project/Gocoin repository.
 
 What it does:
 * Fetch master and the pull request.
@@ -36,16 +36,16 @@ couldn't mess with the sources.
 
 Setup
 ---------
-Configuring the github-merge tool for the Blocknode repository is done in the following way:
+Configuring the github-merge tool for the Gocoin repository is done in the following way:
 
-    git config githubmerge.repository Blocknode-Project/Blocknode
+    git config githubmerge.repository Gocoin-Project/Gocoin
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid (if you want to GPG sign)
 
 optimize-pngs.py
 ================
 
-A script to optimize png files in the Blocknode
+A script to optimize png files in the Gocoin
 repository (requires pngcrush).
 
 fix-copyright-headers.py

@@ -266,6 +266,6 @@
     <name>ZBndControlDialog</name>
     </context>
 <context>
-    <name>blocknode-core</name>
+    <name>gocoin-core</name>
     </context>
 </TS>

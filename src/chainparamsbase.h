@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between blocknode-cli and blocknoded)
- * of a given instance of the Blocknode system.
+ * CBaseChainParams defines the base parameters (shared between gocoin-cli and blocknoded)
+ * of a given instance of the Gocoin system.
  */
 class CBaseChainParams
 {
